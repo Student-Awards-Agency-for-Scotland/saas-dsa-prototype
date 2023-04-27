@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>DSA alpha prototype</title>
+		 
+		 <link href="../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
+		 <link href="../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">  
+ 
+	
+	</head>
+	 
+	<body>
+    <div class="ds_page">
+        <div class="ds_page__top"> 
+			 <div class="ds_notification  ds_reversed" data-module="ds-notification">
+			    <!--  <div class="ds_wrapper">
+			      <div class="ds_notification__content  ds_notification__content--has-close">
+			            <h2 class="visually-hidden">Information</h2>
+			
+			            <div class="ds_notification__text">
+			                <p>We need to tell you about <a href="#">something</a></p>
+			            </div>
+
+
+			
+			            <button class="ds_notification__close  js-close-notification" type="button">
+			                <span class="visually-hidden">Close this notification</span>
+			                <svg class="ds_icon  ds_icon--fill" aria-hidden="true" role="img"><use href="https://designsystem.gov.scot/assets/images/icons/icons.stack.svg#close"></use></svg>
+			            </button>
+
+
+			        </div>
+			    </div>
+			</div> -->
+			<header class="ds_site-header  ds_site-header--gradient  ds_site-header--shadow banner" role="banner">
+				    <div class="ds_wrapper">
+				        <div class="ds_site-header__content">
+				            <div class="ds_site-branding">
+				                <a class="ds_site-branding__logo  ds_site-branding__link" href="./index.html" data-header="header-logo">
+				                    <img class="ds_site-branding__logo-image"  src="../static/images/saas-logo.png" alt="SAAS">
+				                </a>
+				                <div class="ds_site-branding__title" data-header="header-title">
+									
+										<span class="small_text">Student</span>
+										<span class="small_text">Awards</span>
+										<span class="small_text">Agency</span>
+										<span class="small_text">Scotland</span>
+	                			</div>
+	 			            </div>
+				        </div>
+				    </div>
+				</header>
+	    </div>
+        <div class="ds_page__middle"> 
+        	<div class="ds_wrapper">
+                <main class="ds_layout  ds_layout--article">
+				    <div class = "ds_layout__content">
+				    	<br />
+					    <h1 class = "ds_h1 dsa_h1">DSA prototypes</h1>
+					    <h2 class = "journey_name">Advisor create account and populates DSA application</h2>
+					    <p>Covers an advisor creating an account, finding a student, applying and signing declaration.</p>
+
+						  
+					  	<div class="ds_button-group">
+							<a href="../public/J1/start.html" class="ds_button dsa_button">Launch prototype</a><br />
+						</div>
+
+						<hr />
+
+
+						<h2 class = "journey_name">Student submits application</h2>
+					    <p>Covers student pending application notification email, declaration, bank account confirmation and application submit</p>
+
+						  
+					  	<div class="ds_button-group">
+							<a href="../public/J2/emailStudent.html" class="ds_button dsa_button">Launch prototype</a><br />
+						</div>
+
+	<hr />
+
+
+						<h2 class = "journey_name">Student view application status</h2>
+					    <p>Covers student signs in to their account and views application status and key events</p>
+
+						  <div class="ds_button-group">
+							<a href="../public/J4/studentPendingNotification.html" class="ds_button dsa_button">Launch prototype</a><br />
+						</div>
+
+					  	<hr />
+
+
+
+
+						<h2 class = "journey_name">Advisor views award notice</h2>
+					    <p>Covers Advisor award notification email, sign in, finds student, DSA dashboard, view award notice as an Advisor</p>
+
+ 						<div class="ds_button-group">
+							<a href="../public/J5 - adviser/adviserAwardNotification.html" class="ds_button dsa_button">Launch prototype</a><br />
+						</div>
+
+						 
+	<hr />
+
+
+						<h2 class = "journey_name">Student views award notice</h2>
+					    <p>Covers student award notification email, sign in, DSA dashboard, view award notice as a student</p>
+					    <div class="ds_button-group">
+							<a href="../public/J5 - student/studentAwardNotification.html" class="ds_button dsa_button">Launch prototype</a><br />
+						</div>
+
+						  
+					  	
+
+<!-- 						<div class="ds_accordion" data-module="ds-accordion">
+						    <button data-accordion="accordion-open-all" type="button" class="ds_link  ds_accordion__open-all  js-open-all">Open all <span class="visually-hidden">sections</span></button>
+						
+						    <div class="ds_accordion-item">
+						        <input type="checkbox" class="visually-hidden  ds_accordion-item__control" id="panel-1" aria-labelledby="panel-1-heading" />
+						        <div class="ds_accordion-item__header">
+						            <h3 id="panel-1-heading" class="ds_accordion-item__title">
+						                Create Account Journey
+						            </h3>
+						            <span class="ds_accordion-item__indicator"></span>
+						            <label class="ds_accordion-item__label" for="panel-1"><span class="visually-hidden">Show this section</span></label>
+						        </div>
+						        <div class="ds_accordion-item__body">
+						            <ul>
+															  		<li>Create Account Journey
+															  			<ul>
+															  				<li>
+															  					<a href="../public/J1/Not started.html">Not started</a>
+															  				</li>
+															  			</ul>
+															  		</li>
+															  	</ul>
+						        </div>
+						    </div>
+						
+						    </div> -->
+						
+<!--
+
+<h2 class = "journey_name">Misc page links</h2>
+
+							
+							<a href="../public/J2/findStudent.html">Find student</a><br />
+							<a href="../public/J2/studentResult.html">Student Result</a><br />
+							<a href="../public/J2/applyForDSA.html">Apply for DSA</a><br />
+							
+							<a href="../public/J2/applyForDSAParts.html">Apply for DSA Sections screen</a><br />
+							<a href="../public/J2/aboutDisabilities.html">About disabilities</a><br />
+							
+							
+							
+							
+							<a href="../public/J2/aboutStudent.html">About student</a><br />
+							<a href="../public/J2/aboutCourse.html">About course</a><br />
+							<a href="../public/J2/aboutAllowances.html">About Allowances</a><br />
+							<a href="../public/J2/allowancesSummary.html">Allowance summary</a><br />
+							
+ 		        			<a href="../public/J2/paymentAssessmentReport.html">Assessment fee </a>
+
+ 		        		-->
+
+ 		        		
+					</div>
+               </main>
+        	</div>
+        </div>
+        <div class="ds_page__bottom">
+ 			<footer class="ds_site-footer">
+    			<div class="ds_wrapper">
+    				 <div class="ds_site-footer__content">
+    					 <div class="ds_site-footer__copyright">
+    		                <p class="small_text">Last login: <strong>12/07/2022 at 12:56</strong></p>
+			                <p class="small_text"><a href="#">Does this look suspicious?</a></p>
+			            </div>
+	    				 <div class="ds_site-footer__org dsa_footer">
+										  
+											<p class="small_text"><strong>Student Awards Agency Scotland</strong></p>
+											<p class="small_text">Saughton House</p>
+											<p class="small_text">Broomhouse Drive</p>
+											<p class="small_text">Edinburgh</p>
+											<p class="small_text">EH11 3UT</p>
+											<p class="small_text">&nbsp;</p>
+											<p class="small_text"><strong>0300 555 0505</strong></p>					
+										 			
+										
+			                
+			            </div>
+    				 </div>
+    			</div>
+			</footer>    			
+        </div>
+    </div>
+</body>
+</html>
