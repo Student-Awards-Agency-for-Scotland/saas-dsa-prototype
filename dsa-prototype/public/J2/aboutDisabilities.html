@@ -102,35 +102,59 @@
 
         <div class="ds_field-group">
             <div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="specific_learning_disability" type="checkbox" />
-                <label class="ds_checkbox__label" for="specific_learning_disability">Dyslexia, dyscalculia or a specific learning disability</label>
+                <input class="ds_checkbox__input" id="unseen_learning" type="checkbox" />
+                <label class="ds_checkbox__label" for="unseen_learning">A longstanding illness or health condition</label>
+				<p class="ds_hint-text" id="ds_hint">An ongoing, often unseen condition such as diabetes, MS, arthritis, epilepsy, 
+						asthma, back pain or chronic heart disease.</p>
             </div>
 
             <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="social_impairment" type="checkbox" />
+                <label class="ds_checkbox__label" for="social_impairment">A social or communication impairment</label>
+                <p class="ds_hint-text" id="ds_hint">Including and not limited to Asperger’s Syndrome, autistic spectrum disorder, 
+                		ADHD, a speech disorder, or social, emotional or behavioural difficulty.</p>
+                
+            </div>
+
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="physical_impairment" type="checkbox" />
+                <label class="ds_checkbox__label" for="physical_impairment">A physical impairment or mobility issues</label>
+                <p class="ds_hint-text" id="ds_hint">A physical health issue that limits motor skills and mobility, 
+                	such as difficulty using arms, or a wheelchair or crutches user. </p>
+                
+            </div>
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="mental_health" type="checkbox" />
+                <label class="ds_checkbox__label" for="mental_health">Mental health difficulties</label>
+                <p class="ds_hint-text" id="ds_hint">A mental health condition including and not limited to depression, 
+                	bipolar disorder, PTSD, schizophrenia or anxiety.</p>
+                
+            </div>
+            <div class="ds_checkbox">
                 <input class="ds_checkbox__input" id="visual_impairment" type="checkbox" />
-                <label class="ds_checkbox__label" for="visual_impairment">Visual impairment</label>
+                <label class="ds_checkbox__label" for="visual_impairment">Visual impairment</label>   
+                <p class="ds_hint-text" id="ds_hint">Blind or serious visual impairment.</p>
+
             </div>
 
             <div class="ds_checkbox">
                 <input class="ds_checkbox__input" id="hearing_impairment" type="checkbox" />
                 <label class="ds_checkbox__label" for="hearing_impairment">Hearing impairment</label>
-            </div>
-            <div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="wheel_chair" type="checkbox" />
-                <label class="ds_checkbox__label" for="wheel_chair">Wheelchair user or difficulties getting around</label>
-            </div>
-            <div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="mental_health" type="checkbox" />
-                <label class="ds_checkbox__label" for="mental_health">Mental health difficulties</label>
-            </div>
-
-            <div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="unseen" type="checkbox" />
-                <label class="ds_checkbox__label" for="unseen">An unseen disability, such as diabetes, autistic spectrum disorder, epilepsy or asthma</label>
+                 <p class="ds_hint-text" id="ds_hint">Deaf or partial hearing.</p>
+                
             </div>
 			<div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="unseen_learning" type="checkbox" />
-                <label class="ds_checkbox__label" for="unseen_learning">A disability or specific learning difficulty that is not listed above</label>
+                <input class="ds_checkbox__input" id="specific_learning_disability" type="checkbox" />
+                <label class="ds_checkbox__label" for="specific_learning_disability">Learning difficulty</label>
+                <p class="ds_hint-text" id="ds_hint">A specific learning difficulty such as dyslexia, dyspraxia or ADHD.</p>
+                
+            </div>
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="not_listed" type="checkbox" />
+                <label class="ds_checkbox__label" for="not_listed">A disability not listed</label>
+                <p class="ds_hint-text" id="ds_hint">Please describe the condition:</p>
+				<input class="ds_input  ds_input--fixed-200" type="text" id="not_listed_text" value=""/>
+                
             </div>
         </div>
     </fieldset>
