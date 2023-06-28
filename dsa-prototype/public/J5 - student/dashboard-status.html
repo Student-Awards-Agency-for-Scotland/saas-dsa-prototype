@@ -1,32 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
 <head>
-<meta name="robots" content="noindex">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>DSA dashboard</title>
-<link href="../../scripts/pattern-library/dist/css/pattern-library.css"
-	type="text/css" rel="stylesheet">
-<link href="../../static/css/dsaCustomStyle.css" type="text/css"
-	rel="stylesheet">
+	<meta name="robots" content="noindex">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>DSA dashboard</title>
+	<link href="../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
+	<link href="../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 	<div class="ds_page">
 		<div class="ds_page__top">
 
-			<header
-				class="ds_site-header  ds_site-header--gradient  ds_site-header--shadow banner"
-				role="banner">
+			<header class="ds_site-header  ds_site-header--gradient  ds_site-header--shadow banner" role="banner">
 				<div class="ds_wrapper">
 					<div class="ds_site-header__content">
 						<div class="ds_site-branding">
-							<a class="ds_site-branding__logo  ds_site-branding__link"
-								href="./findStudent.html" data-header="header-logo"> <img
-								class="ds_site-branding__logo-image"
-								src="../../static/images/saas-logo.png" alt="SAAS">
+							<a class="ds_site-branding__logo  ds_site-branding__link" href="./findStudent.html"
+								data-header="header-logo"> <img class="ds_site-branding__logo-image"
+									src="../../static/images/saas-logo.png" alt="SAAS">
 							</a>
 							<div class="ds_site-branding__title" data-header="header-title">
 
@@ -41,11 +35,11 @@
 
 						<nav aria-label="Breadcrumb">
 							<ol class="ds_breadcrumbs">
-								<li class="ds_breadcrumbs__item"><a
-									class="ds_breadcrumbs__link" href="#"> My account </a></li>
+								<li class="ds_breadcrumbs__item"><a class="ds_breadcrumbs__link" href="#"> My account
+									</a></li>
 
-								<li class="ds_breadcrumbs__item"><a
-									class="ds_breadcrumbs__link" href="#"> Sign out </a></li>
+								<li class="ds_breadcrumbs__item"><a class="ds_breadcrumbs__link" href="#"> Sign out </a>
+								</li>
 
 
 							</ol>
@@ -73,9 +67,8 @@
                             </a>
                         
                     </li> -->
-								<li class="ds_site-navigation__item"><span
-									class="ds_site-navigation__link  ds_current"
-									data-device="desktop" data-header="header-link-5"> DSA
+								<li class="ds_site-navigation__item"><span class="ds_site-navigation__link  ds_current"
+										data-device="desktop" data-header="header-link-5"> DSA
 										profile </span></li>
 
 							</ul>
@@ -90,9 +83,11 @@
 			<div class="ds_wrapper">
 				<main class="ds_layout  ds_layout--article">
 					<div class="ds_layout__content">
-						<br /> <span class="ds_page-header__label  ds_content-label"><p>
+						<br /> <span class="ds_page-header__label  ds_content-label">
+							<p>
 								<strong>SAAS reference</strong> 1234567
-							</p></span>
+							</p>
+						</span>
 						<h1>John Gray</h1>
 
 
@@ -103,7 +98,8 @@
 						<div id="non_med_allowance_table">
 							<table class="ds_table dsa_allowance_table">
 								<caption>
-									<h2>Awards</h2>
+									<h2>Tution and living cost awards</h2>
+									<p>Funding awarded for tution fee, bursary/grand and loans</p>
 								</caption>
 								<thead>
 									<tr>
@@ -116,11 +112,40 @@
 								<tbody>
 									<tr>
 										<td>2023-24</td>
-										<td>Main funding</td>
+										<td>Tution fee</td>
 										<td>May 2, 2023</td>
 										<td><a href="#">View award notice</a></td>
 
 									</tr>
+									<tr>
+										<td>2023-24</td>
+										<td>Student loan</td>
+										<td>May 2, 2023</td>
+										<td><a href="#">View award notice</a></td>
+
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+
+						<br />
+						<div id="non_med_allowance_table">
+							<table class="ds_table dsa_allowance_table">
+								<caption>
+									<h2>Additional support awards</h2>
+									<p>Funding awarded for learning support neede to study</p>
+								</caption>
+								<thead>
+									<tr>
+										<th scope="col">Academic year</th>
+										<th scope="col">Award</th>
+										<th scope="col">Date awarded</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+
 									<tr>
 										<td>2023-24</td>
 										<td>Disabled Students' Allowance</td>
@@ -133,20 +158,6 @@
 								</tbody>
 							</table>
 						</div>
-
-						<br />
-
-
-
-
-
-
-
-
-
-
-
-
 
 					</div>
 			</div>
@@ -199,4 +210,5 @@
 	</div>
 	</div>
 </body>
+
 </html>
