@@ -144,7 +144,7 @@ function Div() {
 										<option value="No"></option>
 										<option value="No">Own car</option>
 										<option value="Yes">Someone else's car</option>
-										<option value="No">Taxi</option>
+										<!--<option value="No">Taxi</option>-->
 										<option value="No">Other</option>
 
 										</select>
@@ -157,7 +157,7 @@ function Div() {
 									
 										<div id="description" class="description"style="display: none">
 										
-  										<label class="ds_label" for="basic-total-cost">Is the student claiming for 2 return journeys per day?</label>
+  										<legend class="ds_label" for="basic-total-cost">Is the student claiming for 2 return journeys per day?</legend>
   										<p class="ds_hint-text">i.e. the parent or carer is returning home in between journeys.</p>
   										
 
@@ -206,21 +206,21 @@ function Div() {
 
 
 											<div id="return" class="description">
-												<div>
-													<label class="ds_label" for="component">Is this a return journey</label>
-													
-												 <div class="ds_field-group">
-											        <div class="ds_radio">
-											            <input class="ds_radio__input" id="useful-yes" name="feedback-type" type="radio" value="yes" />
-											            <label class="ds_radio__label" for="useful-yes">Yes</label>
-											        </div>
+												
+													<legend class="ds_label" for="component">Is this a return journey</legend>
 
-											        <div class="ds_radio">
-											            <input class="ds_radio__input" id="useful-no" name="feedback-type" type="radio" value="no" />
-											            <label class="ds_radio__label" for="useful-no">No</label>
-											        </div>
-												</div>
+													<div class="ds_radio">
+											                <input class="ds_radio__input" id="return-yes" name="feedback-type" type="radio" value="yes" />
+											                <label class="ds_radio__label" for="return-yes">Yes</label>
+											            </div>
 
+											            <div class="ds_radio">
+											                <input class="ds_radio__input" id="return-no" name="feedback-type" type="radio" value="no" />
+											                <label class="ds_radio__label" for="return-no">No</label>
+											            </div>
+
+
+												
 
 	              	<div class="ds_button-group">
 					    <a href="#" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;<a href="#" >Cancel</a><br />
@@ -229,13 +229,10 @@ function Div() {
    
 
 
+	</div>
+												
+												
 
-
-</div>
-
-
-
-									</div>
 
 
 
