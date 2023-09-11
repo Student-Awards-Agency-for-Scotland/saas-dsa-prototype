@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-    	<meta name="robots" content="noindex">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		<title>Find a student results - Student details</title>
-		 <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
-		 <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">  
-	</head>
-	 
-	<body>
+        <meta name="robots" content="noindex">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Find Student results</title>
+         <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
+         <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+         <script src="../../../scripts/pattern-library/dist/scripts/pattern-library.js"></script>
+    </head>
+     
+    <body>
     <div class="ds_page">
         <div class="ds_page__top">
 
@@ -28,15 +29,9 @@
                         <div class="ds_wrapper">
                         <div class="ds_site-header__content">                  
                         <div class="ds_site-branding">
-                        <a class="ds_site-branding__logo  ds_site-branding__link"
-                        href="./Not started.html" data-header="header-logo"> <img
-                        class="ds_site-branding__logo-image"
-                        src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-                        </a>
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="../../../public/index.html" data-header="header-logo"> <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg" alt="SAAS"></a>
 
-                            <a class="dsa_access"
-                        href="#"> Sign Out
-                        </a>
+                        <a class="dsa_access" href="#"> Sign Out</a>
 
 
                         </div>
@@ -60,6 +55,7 @@
             </div>  
 
 </header>
+
 
            
         </div>
@@ -87,8 +83,9 @@
 										<th scope="col">Name</th>
 										<th scope="col">Date of birth</th>
 										<th scope="col">Last known institution</th>
+										<th scope="col"><span class="visually-hidden">Actions</span></th>
 
-										<th scope="col"></th>
+										
 										
 									</tr>
 								</thead>
@@ -98,7 +95,7 @@
 										<td>John Gray</td>
 										<td>16/10/2000</td>
 										<td>Glasgow Caledonian University</td>
-										<td><a href="Permission-denied.html" class="ds_button ds_button--secondary">View profile</a>
+										<td><a href="Permission-denied.html" class="ds_button dsa_button">Apply now</a>
 </td>
 										
 									
@@ -170,7 +167,7 @@
                 <a class="ds_site-branding__logo  ds_site-branding__link"
 						href="./Not started.html" data-header="header-logo"> <img
 						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
+						src="../../../static/images/SAAS_logo.svg" alt="SAAS footer logo">
 						</a>
 
 

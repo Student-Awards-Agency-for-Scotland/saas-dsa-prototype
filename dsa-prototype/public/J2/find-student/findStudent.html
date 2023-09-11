@@ -7,13 +7,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 		<title>About Disabilities</title>
 		 <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
-		 <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">  
+		 <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+		 <script src="../../../scripts/pattern-library/dist/scripts/dsa.js"></script>
+		 <script src="../../../scripts/pattern-library/dist/scripts/pattern-library.js"></script>
 	</head>
 	 
 	<body>
     <div class="ds_page">
         <div class="ds_page__top">
-
 
 
 
@@ -28,15 +29,9 @@
                         <div class="ds_wrapper">
                         <div class="ds_site-header__content">                  
                         <div class="ds_site-branding">
-                        <a class="ds_site-branding__logo  ds_site-branding__link"
-                        href="./Not started.html" data-header="header-logo"> <img
-                        class="ds_site-branding__logo-image"
-                        src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-                        </a>
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="../../../public/index.html" data-header="header-logo"> <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg" alt="SAAS"></a>
 
-                            <a class="dsa_access"
-                        href="#"> Sign Out
-                        </a>
+                        <a class="dsa_access" href="#"> Sign Out</a>
 
 
                         </div>
@@ -70,45 +65,63 @@
 				    	<br />
 
 					   
-					  	<h1>Find student</h1>
-					  	<p class="">Search for a student to start a new DSA application or to see the progress of an existing application.</p>
-					  	<div>
-							<label class="ds_label" for="first-name">First name</label>
-							<input class="ds_input  ds_input--fixed-20" type="text" id="first-name" value=""/>
-						</div>
+					 
+					  
+					  	<form>
 
-						<div>
-							<label class="ds_label" for="last-name">Last name</label>
-							<input class="ds_input  ds_input--fixed-20" type="text" id="last-name" value=""/>
-						</div>
+					  		<fieldset>
 
-						<div>
-							<fieldset> 
-						        <label class="ds_label" for="last-name">Date of birth</label>
-						        <p class="ds_hint-text">For example, 05 10 2003.</p>
+					  		<legend> 	<h1>Find student</h1> </legend>
+					  			<p class="">Search for a student to start a new DSA application or to see the progress of an existing application.</p>
+
+
+					  			<div class="ds_question" data-module="ds-character-count">
+							    <label class="ds_label" for="first-name">First name</label>
+							    <input maxlength="25" class="ds_input  ds_input--fixed-20" type="text" id="first-name" />
+							    <p class="ds_hint-text" style="margin-top: -15px;">You can enter up to 25 characters</p>
+								</div>
+
+								<div class="ds_question" data-module="ds-character-count">
+							    <label class="ds_label" for="first-name">Last name</label>
+							    <input maxlength="25" class="ds_input  ds_input--fixed-20" type="text" id="last-name" />
+							     <p class="ds_hint-text" style="margin-top: -15px;">You can enter up to 25 characters</p>
+								</div>
+
+<br />
+						
+						   <h4>Date of birth</h4>
+						    <p class="ds_hint-text">For example, 05 10 2003.</p>
+
 						
 						        <div class="ds_field-group  ds_field-group--inline">
 						            <div>
 						                <label class="ds_label" for="day">Day</label>
-						                <input id="day" class="ds_input ds_input--fixed-2" value=""/>
+						                <input maxlength="2" id="day" class="ds_input ds_input--fixed-2" value=""/>
 						            </div>
 						
 						            <div>
 						                <label class="ds_label" for="month">Month</label>
-						                <input id="month" class="ds_input ds_input--fixed-2" value=""/>
+						                <input maxlength="2" id="month" class="ds_input ds_input--fixed-2" value=""/>
 						            </div>
 						
 						            <div>
 						                <label class="ds_label" for="year">Year</label>
-						                <input id="year" class="ds_input ds_input--fixed-4" value=""/>
+						                <input maxlength="4" id="year" class="ds_input ds_input--fixed-4" value=""/>
 						            </div>
 						        </div>
 						    </fieldset>
+
+						    <div class="ds_button-group">
+								<a href="1-Result.html" role="button" draggable="false" class="ds_button dsa_button">Search</a><br />
+
+						</div>
+
+					</form>
+
+
 						</div>
 						
-					  	<div class="ds_button-group">
-								<a href="1-Result.html" class="ds_button dsa_button">Search</a><br />
-						</div>
+					  	
 					  	
 					</div> 
                 </main>
@@ -152,7 +165,7 @@
                 <a class="ds_site-branding__logo  ds_site-branding__link"
 						href="./Not started.html" data-header="header-logo"> <img
 						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
+						src="../../../static/images/SAAS_logo.svg" alt="SAAS footer logo">
 						</a>
 
 
@@ -169,7 +182,7 @@
     </div>
 
 
-
+<script src="../../../../scripts/pattern-library/dist/scripts/js-enabled.js"></script>
 
 
 </body>

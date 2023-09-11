@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-    	<meta name="robots" content="noindex">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		<title>Find a student results - Student details</title>
-		 <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
-		 <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">  
-	</head>
-	 
-	<body>
+        <meta name="robots" content="noindex">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Find Student results</title>
+         <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
+         <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+         <script src="../../../scripts/pattern-library/dist/scripts/pattern-library.js"></script>
+    </head>
+     
+    <body>
     <div class="ds_page">
         <div class="ds_page__top">
 
@@ -28,15 +29,9 @@
                         <div class="ds_wrapper">
                         <div class="ds_site-header__content">                  
                         <div class="ds_site-branding">
-                        <a class="ds_site-branding__logo  ds_site-branding__link"
-                        href="./Not started.html" data-header="header-logo"> <img
-                        class="ds_site-branding__logo-image"
-                        src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-                        </a>
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="../../../public/index.html" data-header="header-logo"> <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg" alt="SAAS"></a>
 
-                            <a class="dsa_access"
-                        href="#"> Sign Out
-                        </a>
+                        <a class="dsa_access" href="#"> Sign Out</a>
 
 
                         </div>
@@ -74,32 +69,19 @@
 					  	<h1>Student details</h1>
 					  	 	<p>We have found 1 student record:</p>
 					  	
-						<table class="ds_table">
- 						    <tbody>
-						       <tr >
-						            <td><strong>SAAS reference</strong></td>
-						            <td>1234567</td>
-						           
-						        </tr>
-						        <tr >
-						            <td><strong>Name</strong></td>
-						            <td>John Gray</td>
-						        </tr>
-						        <tr >
-						            <td><strong>Date of birth</strong></td>
-						            <td>16/10/2000</td> 
-						        </tr>
-						   		<tr>
-						            <td><strong>Last known institution</strong></td>
-						            <td>Glasgow Caledonian University</td> 
-						        </tr>
-						    </tbody>
-						</table>
+						<ol class="ds_summary-list" style="width:80%">
+ <li class="ds_summary-list__item"><span class="ds_summary-list__key">SAAS reference</span> <span class="ds_summary-list__value" id="q1"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">1234567</q> </span>
+</li>
+ <li class="ds_summary-list__item"><span class="ds_summary-list__key">Name</span> <span class="ds_summary-list__value" id="q2"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">John Gray</q> </span></li>
+ <li class="ds_summary-list__item"><span class="ds_summary-list__key">Date of birth</span> <span class="ds_summary-list__value" id="q3"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">16/10/2000</q> </span></li>
+ <li class="ds_summary-list__item"><span class="ds_summary-list__key">Last known institution</span> <span class="ds_summary-list__value" id="q4"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">Glasgow Caledonian University</q> </span></li>
+</ol>
+
 
 						<!--
-					<h2>Current DSA application</h2>
-					<p>Applications for the academic year 2023-24 are now open</p>
-				-->
+						<h2>Current DSA application</h2>
+						<p>Applications for the academic year 2023-24 are now open</p>
+						-->
 
 
 	                <div class="ds_button-group">
@@ -107,6 +89,9 @@
 <p><strong>OR</strong></p>
 						<p><a href="findStudent.html">Clear search results and search again</a></p>
 					</div> 
+
+
+
 
 
 
@@ -155,7 +140,7 @@
                 <a class="ds_site-branding__logo  ds_site-branding__link"
 						href="./Not started.html" data-header="header-logo"> <img
 						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
+						src="../../../static/images/SAAS_logo.svg" alt="SAAS footer logo">
 						</a>
 
 
