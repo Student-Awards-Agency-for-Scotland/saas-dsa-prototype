@@ -614,7 +614,7 @@
    font-size: .875rem;
     color: white;
     line-height: 1.7142857143;
-    background-color: #011B28;
+    background-color: #002D54;
     padding-top: 15px;
 }
 
@@ -630,7 +630,7 @@
 }
 
 .ds_site-footer__site-items {
-    border-bottom: 1px solid #000;
+  
     font-size: 14px;
     line-height: 1.7142857143;
     list-style-type: none;
@@ -656,7 +656,7 @@
 }
 
 .ds_site-footer__copyright-logo::after {
-    background-color: #011B28;
+    background-color: #002D54;
     bottom: -5px;
     content: "";
     height: 1px;
