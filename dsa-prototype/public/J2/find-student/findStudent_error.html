@@ -75,9 +75,24 @@
          <li>
             <a href="#last-name">Enter a last name</a>
         </li>
-         <li>
-            <a href="#day">Date of birth cannot be more then 100 years in the past</a>
+
+        <li>
+            <a href="#day">Date of birth must include a day</a>
         </li>
+
+<li><a href="#month">Date of birth must include a month </a></li>
+<li><a href="#year">Date of birth must be a year </a></li>
+<li><a href="#year">Date of birth must be a real date </a></li>
+<li><a href="#year">Date of birth cannot be more then 100 years in the past</a></li>
+<li><a href="#year">Enter a date of birth that is in the past</a></li>
+<li><a href="#year">Date suggests the student is less than 15 years old. Enter a valid date</a></li>
+
+
+
+
+
+      
+						
        
     </ul>
 </div>
@@ -100,14 +115,14 @@
 							    <label class="ds_label" for="first-name">First name</label>
 							    <p class="ds_question__error-message">Enter a first name</p>
 							    <input maxlength="25" class="ds_input  ds_input--fixed-20" type="text" id="first-name" />
-							    <p class="ds_hint-text" style="margin-top: -15px;">You can enter up to 25 characters</p>
+							    <p class="ds_question__error-message" style="margin-top: -15px;">First name must be no more than 25 characters</p>
 								</div>
 
 								<div class="ds_question ds_question--error" data-module="ds-character-count">
 							    <label class="ds_label" for="last-name">Last name</label>
 							    <p class="ds_question__error-message">Enter a last name</p>
 							    <input maxlength="25" class="ds_input  ds_input--fixed-20" type="text" id="last-name" />
-							     <p class="ds_hint-text" style="margin-top: -15px;">You can enter up to 25 characters</p>
+							     <p class="ds_question__error-message" style="margin-top: -15px;">Last name must be no more than 25 characters</p>
 								</div>
 
 
@@ -119,7 +134,14 @@
 						
 						   <h4>Date of birth (optional)</h4>
 						    <p class="ds_hint-text">For example, 05 10 2003.</p>
+						    <p class="ds_question__error-message">Date of birth must include a day</p>
+						    <p class="ds_question__error-message">Date of birth must be a real date</p>
+						    <p class="ds_question__error-message">Date of birth must include a month</p>
+						    <p class="ds_question__error-message">Date of birth must be a year</p>
+						    <p class="ds_question__error-message">Date of birth must be a real date</p>
 						    <p class="ds_question__error-message">Date of birth cannot be more then 100 years in the past</p>
+						    <p class="ds_question__error-message">Enter a date in the past</p>
+						    <p class="ds_question__error-message">Date suggests the student is less than 15 years old. Enter a valid date</p>
 
 
 						
