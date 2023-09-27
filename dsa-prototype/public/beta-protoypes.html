@@ -126,12 +126,58 @@
 
 							<div class="ds_tag">Allowances - interation 3</div>
 							
-<br /><br />
+<br />
+
+<h3 class="journey_name"><a href="../public/J2/allowances-iteration3/apply.html">DSA Apply - Advisor - Allowances</a></h3>
 						
-							<p>Design in progress.</p>
+							<ul>
+								<li>Package option for equipment, software and accessories, which details cost and recommended supplier on a package level</li>
+								<li>Itemised option for equipment, software and accessories, which details cost and recommended supplier on a product level</li>
+								<li>Allowance labelling and content update</li>
+							</ul>
 							
 
 <hr />
+
+<h3>Script to navigate to package or item</h3>
+
+<script>
+
+
+      function myFunction() {
+        var x = document.getElementById("x");
+        var y = document.getElementById("y")
+
+        var a = document.createElement("a");
+
+        if (x.checked == true)
+        {
+          a.setAttribute('href', 'index.html');
+          a.setAttribute('target', '');
+        }else if (y.checked == true)
+        {
+          a.setAttribute('href', 'alpha-protoypes.html');
+          a.setAttribute('target', '');
+        }
+      
+        a.click()
+      }
+</script>
+
+
+ <form action="/action_page.php">
+       <input type="radio" name="converter" value="grams" id="x"> Index<br>
+       <input type="radio" name="converter" value="ounces" id="y"> Alpha prototypes<br>
+       <br>
+       <input type="button" onclick="myFunction()" value="Continue">
+       <br>
+       </form>
+
+
+
+<br />
+
+
 
 
 							<div class="ds_tag">Allowances - interation 2</div>
