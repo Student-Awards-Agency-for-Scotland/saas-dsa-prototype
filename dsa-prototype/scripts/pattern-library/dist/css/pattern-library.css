@@ -7569,22 +7569,26 @@
 {
 	background-color:#fff
 }
-.ds_site-footer
-{
-	font-size:.875rem;
-	color:#fff;
-	line-height:1.7142857143;
-	background-color:#011B28;
-	border-top:1px solid #b3b3b3;
-	padding-top:15px
+
+
+.ds_site-footer {
+   font-size: .875rem;
+    color: white;
+    line-height: 1.7142857143;
+    background-color: #002D54;
+    padding-top: 15px;
 }
-	@media(min-width: 768px)
-{
-.ds_site-footer
-{
-	font-size:1rem;
-	line-height:1.5
+
+@media(min-width: 768px) {
+    .ds_site-footer {
+        font-size:1rem;
+        line-height: 1.5;
+         background-color: #002D54;
+    }
 }
+
+
+
 
 }
 .ds_site-footer__content
