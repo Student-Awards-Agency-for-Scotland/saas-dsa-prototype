@@ -143,13 +143,13 @@
 
 
 .description::before {
-    background-color: #333;
+    background-color: #006DA2;
     bottom: 0;
     content: "";
     left: -22px;
     position: absolute;
     top: 0;
-    width: 4px
+    width: 6px
 }
 
 .dsa_section_button__Completed {
@@ -595,10 +595,18 @@
 
 
 
-
 .ds_input--fixed-40 {
     max-width: calc(32px + 40em)
 }
+
+.ds_input__wrapper .ds_input
+{
+    float:left;
+    margin-bottom:0;
+    margin-right:10px;
+    padding-right:0;
+}
+
 
 
 /* buttons */
@@ -731,7 +739,7 @@
 }
 
 .ds_table tbody>tr:last-child {
-	border-bottom: 1px solid #CFE1E5;
+	border-bottom: 1px solid #F2F2F2;
 }
 
 .ds_table tbody>tr:nth-child(even)>td {
@@ -768,7 +776,7 @@
 }
 
 .ds_table.dsa_allowance_table tbody>tr:last-child {
-    border-bottom: 2px solid #333333;
+    border-bottom: 1px solid #333333;
 }
 
 .ds_hint-text.dsa_vat {
