@@ -148,12 +148,32 @@
                 <p class="ds_hint-text" id="ds_hint">A specific learning difficulty such as dyslexia, dyspraxia or ADHD.</p>
                 
             </div>
-            <div class="ds_checkbox">
-                <input class="ds_checkbox__input" id="not_listed" type="checkbox" />
-                <label class="ds_checkbox__label" for="not_listed"><strong>A disability not listed</strong></label>
-                <p class="ds_hint-text" id="ds_hint">Please describe the disability or specific learning difficulty:</p>
-				<input class="ds_input  ds_input--fixed-40" type="text" id="not_listed_text" value=""/>
+            
 
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="not_listed" onclick="myFunction()" type="checkbox" />
+                <label class="ds_checkbox__label" for="not_listed">A disability not listed</label>
+            </div>
+
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("not_listed");
+  var text = document.getElementById("description");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+
+
+            <div id="description" class="description"style="display: none">
+                                        
+                 <label class="ds_label" for="not_listed_description">Description</label>
+                <textarea class="ds_input" rows="3" id="not_listed_description"></textarea>
 
                 
             </div>
