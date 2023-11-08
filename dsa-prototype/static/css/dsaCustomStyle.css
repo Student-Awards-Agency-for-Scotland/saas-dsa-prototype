@@ -85,6 +85,7 @@
     a:focus,.ds_link:focus
 {
     background-color:#CfE1E5;
+    box-shadow:0px 4px #333,0px 0px #333;
     text-decoration:underline;
     color: #333;
     outline:4px solid #CfE1E5;
