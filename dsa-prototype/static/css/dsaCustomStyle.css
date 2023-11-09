@@ -78,7 +78,7 @@
 .ds_select-arrow::before
 {
     bottom:0;
-    color:#fff;
+    color:#333;
     position:absolute;
     right:0;
     top:0;
