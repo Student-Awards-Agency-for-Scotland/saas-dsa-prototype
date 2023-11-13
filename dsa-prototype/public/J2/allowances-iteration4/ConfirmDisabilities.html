@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta name="robots" content="noindex">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<title>Payment for need assessment</title>
+<link href="../../../scripts/pattern-library/dist/css/pattern-library.css"
+	type="text/css" rel="stylesheet">
+<link href="../../../static/css/dsaCustomStyle.css" type="text/css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="ds_page">
+		<div class="ds_page__top">
+
+
+        	<header class="ds_site-header ds_site-header--shadow banner" role="banner">
+
+
+			<div class="ds_wrapper">
+			<div class="ds_site-header__content">                  
+			<div class="ds_site-branding">
+
+
+						<div class="ds_wrapper">
+						<div class="ds_site-header__content">                  
+						<div class="ds_site-branding">
+						<a class="ds_site-branding__logo  ds_site-branding__link"
+						href="../../index.html" data-header="header-logo"> <img
+						class="ds_site-branding__logo-image"
+						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
+						</a>
+
+							<a class="dsa_access"
+						href="#"> Sign Out
+						</a>
+
+
+						</div>
+						</div>
+						</div>
+
+
+			</div>
+			</div>
+			</div>
+
+			<div class="ds_phase-banner">
+			<div class="ds_wrapper">
+
+
+
+        
+					<h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+							
+			</div>
+			</div>	
+
+</header>
+
+	
+
+		</div>
+
+		<div class="ds_page__middle">
+			<div class="ds_wrapper">
+				<main class="ds_layout  ds_layout--article">
+					<div class="ds_layout__content">
+						
+
+
+<nav aria-label="Breadcrumb">
+    <ol class="ds_breadcrumbs">
+       
+        <li class="ds_breadcrumbs__item">
+            <a class="ds_breadcrumbs__link" href="applyPart2.html">
+               Disabilities and allowances
+            </a>
+        </li>
+        
+        <li class="ds_breadcrumbs__item" aria-current="page">
+            
+              <strong> Disabilities</strong>
+            
+        </li>
+
+       
+    </ol>
+</nav>
+
+
+
+
+
+
+						<h1 class="ds_h1 dsa_h1">John's disabilities</h1>
+						<p class="ds_hint-text" id="ds_hint">Please tell us about John's
+										disabilities and add all that apply.</p>
+
+
+<!--
+
+
+
+
+							<table class="ds_table dsa_allowance_table" style="width: 40%">
+					  		
+					  		<caption><h3>Disabilities you have told us about.</h3>	</caption>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 						    <tbody>
+ 						    	
+ 			
+						       <tr >
+						            <td>Visual impairment</td>
+						            <td><a href="#">Change</a></td>
+										<td><a href="#">Delete</a></td>
+						        </tr>
+
+  								
+						    </tbody>
+						</table>
+	
+
+
+
+
+<br /><hr /><br />-->
+
+
+
+<!-- Disabilities summary-->
+
+
+
+						 <div class="ds_question">
+    <fieldset aria-describedby="ds_hint">
+        
+       
+
+        <div class="ds_field-group">
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="unseen_learning" type="checkbox" />
+                <label class="ds_checkbox__label" for="unseen_learning"><strong>A longstanding illness or health condition</strong></label>
+				<p class="ds_hint-text" id="ds_hint">An ongoing, often unseen condition such as diabetes, MS, arthritis, epilepsy, 
+						asthma, back pain or chronic heart disease.</p>
+            </div>
+
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="social_impairment" type="checkbox" />
+                <label class="ds_checkbox__label" for="social_impairment"><strong>A social or communication impairment</strong></label>
+                <p class="ds_hint-text" id="ds_hint">Including and not limited to Asperger’s Syndrome, autistic spectrum disorder, 
+                		ADHD, a speech disorder, or social, emotional or behavioural difficulty.</p>
+                
+            </div>
+
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="physical_impairment" type="checkbox" />
+                <label class="ds_checkbox__label" for="physical_impairment"><strong>A physical impairment or mobility issues</strong></label>
+                <p class="ds_hint-text" id="ds_hint">A physical health issue that limits motor skills and mobility, 
+                	such as difficulty using arms, or a wheelchair or crutches user. </p>
+                
+            </div>
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="mental_health" type="checkbox" />
+                <label class="ds_checkbox__label" for="mental_health"><strong>A mental health condition</strong></label>
+                <p class="ds_hint-text" id="ds_hint">Including and not limited to depression, bipolar disorder, PTSD, schizophrenia or anxiety.</p>
+                
+            </div>
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="visual_impairment" type="checkbox" checked="true"/>
+                <label class="ds_checkbox__label" for="visual_impairment"><strong>Visual impairment</strong></label>   
+                <p class="ds_hint-text" id="ds_hint">Blind or serious visual impairment.</p>
+
+            </div>
+
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="hearing_impairment" type="checkbox" />
+                <label class="ds_checkbox__label" for="hearing_impairment"><strong>Hearing impairment</strong></label>
+                 <p class="ds_hint-text" id="ds_hint">Deaf or partial hearing.</p>
+                
+            </div>
+			<div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="specific_learning_disability" type="checkbox" />
+                <label class="ds_checkbox__label" for="specific_learning_disability"><strong>Learning difficulty</strong></label>
+                <p class="ds_hint-text" id="ds_hint">A specific learning difficulty such as dyslexia, dyspraxia or ADHD.</p>
+                
+            </div>
+            <div class="ds_checkbox">
+                <input class="ds_checkbox__input" id="not_listed" type="checkbox" />
+                <label class="ds_checkbox__label" for="not_listed"><strong>A disability not listed</strong></label>
+                <p class="ds_hint-text" id="ds_hint">Please describe the disability or specific learning difficulty:</p>
+				<input class="ds_input  ds_input--fixed-40" type="text" id="not_listed_text" value=""/>
+
+
+                
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+
+
+<br />
+						
+						
+	              	<div class="ds_button-group">
+					    <a href="applyPart2Complete.html" class="ds_button ds_button--secondary">Update</a>&nbsp;&nbsp;<a href="#" >Cancel</a><br />
+					    
+					</div>
+
+
+
+					</div>
+				</main>
+			</div>
+		</div>
+
+		<div class="ds_page__bottom">
+
+
+
+			<footer class="ds_site-footer">
+    <div class="ds_wrapper">
+        <div class="ds_site-footer__content">
+            <ul class="ds_site-footer__site-items">
+                <li class="ds_site-items__item">
+                    <a href="https://www.saas.gov.uk/about-saas">About SAAS</a>
+                </li>
+                <li class="ds_site-items__item">
+                    <a href="https://www.saas.gov.uk/data-protection">Privacy</a>
+                </li>
+                <li class="ds_site-items__item">
+                    <a href="https://www.saas.gov.uk/data-protection/cookies">Cookies</a>
+                </li>
+                <li class="ds_site-items__item">
+                    <a href="https://www.saas.gov.uk/tools/accessibility">Accessibility</a>
+                </li>
+                 <li class="ds_site-items__item">
+                    <a href="https://www.saas.gov.uk/contact-us">Contact Us</a>
+                </li>
+            </ul>
+
+            <div class="ds_site-footer__copyright">
+                
+				<p>Student Awards Agency Scotland<br />
+				Saughton House<br />
+				Broomhouse Drive<br />
+				Edinburgh<br />
+				EH11 3UT</p>
+			
+			</div>
+
+            <div class="ds_site-footer__org">
+                <a class="ds_site-branding__logo  ds_site-branding__link"
+						href="../../index.html" data-header="header-logo"> <img
+						class="ds_site-branding__logo-image"
+						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
+						</a>
+
+
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+
+			
+		</div>
+	</div>
+</body>
+</html>
