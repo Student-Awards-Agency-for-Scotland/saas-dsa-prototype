@@ -313,6 +313,18 @@
 .ds_site-branding__logo, .ds_site-branding__title {
 	color: white;
 }
+.ds_site-branding__logo:hover{
+    background: rgba(0,0,0,0);
+    outline-color: rgba(0,0,0,0);
+}
+.ds_site-branding__logo:focus{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    outline: none;
+}
+.ds_site-branding__link::after {
+    background-color: rgba(0,0,0,0);
+}
 
 
 /* phase banner */
@@ -1515,7 +1527,8 @@
 
 .ds_site-items__item {
     display: inline-block;
-    margin-bottom: 16px
+    margin-bottom: 16px;
+    vertical-align: top;
 }
 
 .ds_site-items__item:not(:last-child) {
