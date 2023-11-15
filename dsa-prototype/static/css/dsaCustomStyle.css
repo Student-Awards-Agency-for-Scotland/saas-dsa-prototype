@@ -270,11 +270,11 @@
 \*------------------------------------*/
 
 .ds_site-branding {
-    padding: 8px 0 20px 0;
+    padding: 12px 0 16px 0;
 }
 
 .ds_site-branding__logo-image {
-    height: 60px;
+    height: 50px;
 }
 
 
@@ -1582,7 +1582,6 @@
 
     .ds_site-footer__org {
         float: right;
-        margin-right: 12%;
         width: calc(100% * 0.25 - 62px)
     }
 
