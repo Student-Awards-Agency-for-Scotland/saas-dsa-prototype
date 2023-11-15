@@ -1,258 +1,205 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    <head>
-    	<meta name="robots" content="noindex">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-		<title>Select equipment allowance option</title>
-		 <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
-		 <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">  
-
-	
-		
-	</head>
-	 
-	<body>
-    <div class="ds_page">
-        <div class="ds_page__top">
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Select equipment allowance option</title>
+    <link href="../../../scripts/pattern-library/dist/css/pattern-library.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
 
 
+</head>
 
-        	<header class="ds_site-header ds_site-header--shadow banner" role="banner">
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="../../index.html"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
 
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
 
-			<div class="ds_wrapper">
-			<div class="ds_site-header__content">                  
-			<div class="ds_site-branding">
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
 
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="applyPart2.html">
+                            Disabilities and allowances
+                        </a>
+                    </li>
 
-						<div class="ds_wrapper">
-						<div class="ds_site-header__content">                  
-						<div class="ds_site-branding">
-						<a class="ds_site-branding__logo  ds_site-branding__link"
-						href="../../index.html" data-header="header-logo"> <img
-						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-						</a>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
 
-						<a class="dsa_access"
-						href="#"> Sign Out
-						</a>
+                        <strong>Allowances</strong>
 
-						</div>
-						</div>
-						</div>
-
-
-			</div>
-			</div>
-			</div>
-
-			<div class="ds_phase-banner">
-			<div class="ds_wrapper">
-
-
-
-        
-					<h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
-							
-			</div>
-			</div>	
-
-</header>
-					  	
+                    </li>
 
 
+                </ol>
+            </nav>
+
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+
+                    <form>
+                        <div class="ds_question">
+                            <fieldset id="dsa-allowances">
 
 
+                                <div class="ds_question">
+                                    <fieldset aria-describedby="ds_hint">
+                                        <p class="ds_hint-text" id="ds_hint">Part 1 of 4</p>
+                                        <h1>John’s equipment, software and accessories</h1>
+                                        <p>Equipment, software and accessories required to undertake the course. This
+                                            can include computing equipment, assistive software and other technical
+                                            aids.</p>
 
-     
-           
-        </div>
+                                        <p>Claimed for the duration of the course. Allowance limit per course: <strong>£5,160</strong>
+                                        </p>
 
-        <div class="ds_page__middle"> 
-        	<div class="ds_wrapper">
-
-        		<nav aria-label="Breadcrumb">
-    <ol class="ds_breadcrumbs">
-       
-        <li class="ds_breadcrumbs__item">
-            <a class="ds_breadcrumbs__link" href="applyPart2.html">
-                Disabilities and allowances
-            </a>
-        </li>
-        
-        <li class="ds_breadcrumbs__item" aria-current="page">
-            
-              <strong>Allowances</strong>
-            
-        </li>
-
-       
-    </ol>
-</nav>
-
-                <main class="ds_layout  ds_layout--article">
-				    <div class="ds_layout__content">
-
-						<form>
-							<div class="ds_question">
-								<fieldset id="dsa-allowances">
+                                        <!-- Start basic allowance form -->
 
 
-
-						 <div class="ds_question">
-							    <fieldset aria-describedby="ds_hint">
-							    		<p class="ds_hint-text" id="ds_hint">Part 1 of 4</p>
-							         <h1>John’s equipment, software and accessories</h1>
-							       <p>Equipment, software and accessories required to undertake the course. This can include computing equipment, assistive software and other technical aids.</p>
-
-							       <p>Claimed for the duration of the course. Allowance limit per course: <strong>£5,160</strong></p>
-
-							        <!-- Start basic allowance form -->
+                                        <script>
 
 
+                                            function myFunction() {
+                                                var x = document.getElementById("package");
+                                                var y = document.getElementById("itemised")
 
-							        
+                                                var a = document.createElement("a");
 
+                                                if (x.checked == true) {
+                                                    a.setAttribute('href', 'Equipment-Allowance-Package.html');
+                                                    a.setAttribute('target', '');
 
+                                                } else if (y.checked == true) {
+                                                    a.setAttribute('href', 'Equipment-Allowance-Item.html');
+                                                    a.setAttribute('target', '');
+                                                }
 
-									<script>
-									                    
+                                                a.click()
+                                            }
+                                        </script>
 
-									      function myFunction() {
-									        var x = document.getElementById("package");
-									        var y = document.getElementById("itemised")
-
-									        var a = document.createElement("a");
-
-									        if (x.checked == true)
-									        {
-									          a.setAttribute('href', 'Equipment-Allowance-Package.html');
-									          a.setAttribute('target', '');
-
-									        }else if (y.checked == true)
-									        {
-									          a.setAttribute('href', 'Equipment-Allowance-Item.html');
-									          a.setAttribute('target', '');
-									        }
-									      
-									        a.click()
-									      }
-									</script>
-
-<br />
+                                        <br/>
 
 
-						<div class="ds_question">
-					
-
-									 <form action="/action_page.php">
-									    <fieldset>
-
-									    	  <legend>Select an option</legend>
-									        
-
-									        	<div class="ds_field-group">
-
-										            <div class="ds_radio">
-										                <input type="radio" name="converter" class="ds_radio__input" id="package"  />
-										                <label class="ds_radio__label" for="package"><strong>Package</strong></label>
-										                 <p>We will ask for a total cost for all items from a single recommended supplier. The cost should not exceed your allowance limit.</p>
-										            </div>
-
-									            <div class="ds_radio">
-									                <input type="radio" name="converter" class="ds_radio__input" id="itemised"  />
-									                <label class="ds_radio__label" for="itemised"><strong>Itemised</strong></label>
-									                <p>We will ask for a individual cost for each item from any supplier. The overall cost should not exceed your allowance limit.</p>
-									            </div>
-
-									           </div>
-									    
-									    </fieldset>
-
-									    <div class="ds_button-group">
-							
-												 <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-												 <input class="ds_button dsa_button" onclick="myFunction()" value="Confirm and continue"><br />
-
-												<a href="NMPH-Allowance.html" >Skip equipment, software and accessories</a>
-										</div>
+                                        <div class="ds_question">
 
 
+                                            <form action="/action_page.php">
+                                                <fieldset>
 
-									</form>
-
-
-
-
+                                                    <legend>Select an option</legend>
 
 
-					
-				</div>
+                                                    <div class="ds_field-group">
+
+                                                        <div class="ds_radio">
+                                                            <input type="radio" name="converter" class="ds_radio__input"
+                                                                   id="package"/>
+                                                            <label class="ds_radio__label"
+                                                                   for="package"><strong>Package</strong></label>
+                                                            <p>We will ask for a total cost for all items from a single
+                                                                recommended supplier. The cost should not exceed your
+                                                                allowance limit.</p>
+                                                        </div>
+
+                                                        <div class="ds_radio">
+                                                            <input type="radio" name="converter" class="ds_radio__input"
+                                                                   id="itemised"/>
+                                                            <label class="ds_radio__label" for="itemised"><strong>Itemised</strong></label>
+                                                            <p>We will ask for a individual cost for each item from any
+                                                                supplier. The overall cost should not exceed your
+                                                                allowance limit.</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </fieldset>
+
+                                                <div class="ds_button-group">
+
+                                                    <a href="#" class="ds_button ds_button--cancel"
+                                                       onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input class="ds_button dsa_button" onclick="myFunction()"
+                                                           value="Confirm and continue"><br/>
+
+                                                    <a href="NMPH-Allowance.html">Skip equipment, software and
+                                                        accessories</a>
+                                                </div>
+
+
+                                            </form>
+
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
             </main>
-       	</div>
-    </div>
-        
-        <div class="ds_page__bottom">
- 			
-
-<footer class="ds_site-footer">
-    <div class="ds_wrapper">
-        <div class="ds_site-footer__content">
-            <ul class="ds_site-footer__site-items">
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/about-saas">About SAAS</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/data-protection">Privacy</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/data-protection/cookies">Cookies</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/tools/accessibility">Accessibility</a>
-                </li>
-                 <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/contact-us">Contact Us</a>
-                </li>
-            </ul>
-
-            <div class="ds_site-footer__copyright">
-                
-				<p>Student Awards Agency Scotland<br />
-				Saughton House<br />
-				Broomhouse Drive<br />
-				Edinburgh<br />
-				EH11 3UT</p>
-			
-			</div>
-
-            <div class="ds_site-footer__org">
-                <a class="ds_site-branding__logo  ds_site-branding__link"
-						href="../../index.html" data-header="header-logo"> <img
-						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-						</a>
-
-
-		            </div>
-		        </div>
-		    </div>
-		</footer>
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
 </body>
 </html>

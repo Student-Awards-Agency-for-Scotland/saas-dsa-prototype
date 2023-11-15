@@ -1,513 +1,411 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-<meta name="robots" content="noindex">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<title>Payment for need assessment</title>
-<link href="../../../scripts/pattern-library/dist/css/pattern-library.css"
-	type="text/css" rel="stylesheet">
-<link href="../../../static/css/dsaCustomStyle.css" type="text/css"
-	rel="stylesheet">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Payment for need assessment</title>
+    <link href="../../../scripts/pattern-library/dist/css/pattern-library.css"
+          type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css"
+          rel="stylesheet">
 </head>
 <body>
-	<div class="ds_page">
-		<div class="ds_page__top">
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="../../index.html"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
 
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+                    <div class="ds_h1 dsa_h1"></div>
+                    <p class="">Disabilities and allowances</p>
+                    <h1 class="ds_h1 dsa_h1">Confirm disabilities, allowances and Needs Assessment Report costs</h1>
+
+
+                    <!-- Disabilities summary-->
+
+
+                    <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                        <caption><h3>Disabilities</h3></caption>
+
+                        <tbody>
 
-	
-        	<header class="ds_site-header ds_site-header--shadow banner" role="banner">
 
+                        <tr>
+                            <td>Visual impairment</td>
+                            <td><a href="#">Change</a></td>
+                            <td><a href="#">Delete</a></td>
+                        </tr>
 
-			<div class="ds_wrapper">
-			<div class="ds_site-header__content">                  
-			<div class="ds_site-branding">
 
+                        </tbody>
+                    </table>
 
-						<div class="ds_wrapper">
-						<div class="ds_site-header__content">                  
-						<div class="ds_site-branding">
-						<a class="ds_site-branding__logo  ds_site-branding__link"
-						href="../../index.html" data-header="header-logo"> <img
-						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-						</a>
 
-							<a class="dsa_access"
-						href="#"> Sign Out
-						</a>
+                    <br/>
+
+                    <!-- Consumable -->
+                    <h2>Consumable Allowance</h2>
+                    <p>Total: <strong>£200.00</strong></p>
+
+
+                    <!-- Basic Allowance Additions -->
+
+                    <div>
+                        <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Cost
+                                    <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                </th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Paper</td>
+                                <td>£100.00</td>
+                                <td></td>
+
+                                <td></td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ink cartridges</td>
+                                <td>£100.00</td>
+                                <td></td>
+
+                                <td></td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <br/>
+
+
+                    <h2>Hardware</h2>
+                    <p>Total <strong>£1,999.00</strong></p>
+
+                    <!-- HARDWARE TABLE -->
+
+                    <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                        <thead>
+                        <tr>
+                            <th scope="col">Product name</th>
+                            <th scope="col">Recommended supplier</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Surface laptop go</td>
+                            <td>Sight and Sound</td>
+                            <td>£799</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Envision glassses</td>
+                            <td>Sight and Sound</td>
+                            <td>£1200</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+
+
+                    <h2>Software</h2>
+                    <p>Total <strong>£1,480.80</strong></p>
+
+                    <!-- HARDWARE TABLE -->
+
+                    <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                        <thead>
+                        <tr>
+                            <th scope="col">Product name</th>
+                            <th scope="col">Recommended supplier</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>JAWS home</td>
+                            <td>Assitive IT</td>
+                            <td>£882.00</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Zoom text magnifier</td>
+                            <td>Sight and Sound</td>
+                            <td>£598.80</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
 
 
-						</div>
-						</div>
-						</div>
+                        </tbody>
+                    </table>
 
 
-			</div>
-			</div>
-			</div>
+                    <h2>Accessories</h2>
+                    <p>Total <strong>£150</strong></p>
 
-			<div class="ds_phase-banner">
-			<div class="ds_wrapper">
+                    <!-- HARDWARE TABLE -->
 
+                    <table class="ds_table dsa_allowance_table" style="width: 80%">
 
+                        <thead>
+                        <tr>
+                            <th scope="col">Product name</th>
+                            <th scope="col">Recommended supplier</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Laptop bag</td>
+                            <td>Currys</td>
+                            <td>£100</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>Currys</td>
+                            <td>£50</td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
 
-        
-					<h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
-							
-			</div>
-			</div>	
 
-</header>
+                        </tbody>
+                    </table>
 
-	
 
-		</div>
+                    <br/>
 
-		<div class="ds_page__middle">
-			<div class="ds_wrapper">
-				<main class="ds_layout  ds_layout--article">
-					<div class="ds_layout__content">
-						<div class="ds_h1 dsa_h1"></div>
-						<p class="">Disabilities and allowances</p>
-						<h1 class="ds_h1 dsa_h1">Confirm disabilities, allowances and Needs Assessment Report costs</h1>
+                    <!-- NMPH -->
 
 
+                    <h2>Non-Medical Personal Help (NMPH) allowance</h2>
+                    <p>Total <strong>£4,389.60</strong></p>
+
+
+                    <div>
+                        <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Cost
+                                    <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                </th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Study support</td>
+                                <td>£3,189.60</td>
+                                <td></td>
+
+                                <td></td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Notetaker</td>
+                                <td>£1,200.00</td>
+                                <td></td>
 
+                                <td></td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
 
 
+                            </tbody>
+                        </table>
+                    </div>
 
-<!-- Disabilities summary-->
 
+                    <!-- Travel-->
 
 
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-					  		
-					  		<caption><h3>Disabilities</h3></caption>
+                    <br/>
 
- 						    <tbody>
- 						    	
- 			
-						       <tr >
-						            <td>Visual impairment</td>
-						            <td><a href="#">Change</a></td>
-										<td><a href="#">Delete</a></td>
-						        </tr>
 
-  								
-						    </tbody>
-						</table>
-	
+                    <h2>Travel expense allowance</h2>
+                    <p>Total: <strong>£5,500.00</strong></p>
 
 
-
-<br />
-
-<!-- Consumable -->
-  <h2>Consumable Allowance</h2>
-							        <p>Total: <strong>£200.00</strong></p>
-
-
-
-
-
-							<!-- Basic Allowance Additions -->
-
-						<div id="large_allowance_table">
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Type</th>
-										<th scope="col">Cost
-											<p class="ds_hint-text dsa_vat" id="ds_vat">Including VAT.</p>
-										</th>
-										<th scope="col"></th>
-										<th scope="col"></th>
-										<th scope="col"></th>
-										
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Paper</td>
-										<td>£100.00</td>
-										<td></td>
-											
-										<td></td>
-										<td><a href="#">Delete</a></td>
-									</tr>
-
-									<tr>
-										<td>Ink cartridges</td>
-										<td>£100.00</td>
-										<td></td>
-											
-										<td></td>
-										<td><a href="#">Delete</a></td>
-									</tr>
-
-									
-								</tbody>
-							</table>
-						</div>
-						
-
-	
-		
-<br />				
-
-
-
-			<h2>Hardware</h2> 
-<p>Total <strong>£1,999.00</strong></p>
-
-	<!-- HARDWARE TABLE -->
-					
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Product name</th>
-										<th scope="col">Recommended supplier</th>
-										<th scope="col">Cost</th>
-										<th scope="col"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Surface laptop go</td>
-										<td>Sight and Sound</td>
-										<td>£799</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-									<tr>
-										<td>Envision glassses</td>
-										<td>Sight and Sound</td>
-										<td>£1200</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-								
-
-									
-									
-								</tbody>
-							</table>
-
-
-
-<h2>Software</h2> 
-<p>Total <strong>£1,480.80</strong></p>
-
-	<!-- HARDWARE TABLE -->
-					
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Product name</th>
-										<th scope="col">Recommended supplier</th>
-										<th scope="col">Cost</th>
-										<th scope="col"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>JAWS home</td>
-										<td>Assitive IT</td>
-										<td>£882.00</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-									<tr>
-										<td>Zoom text magnifier</td>
-										<td>Sight and Sound</td>
-										<td>£598.80</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-								
-
-									
-									
-								</tbody>
-							</table>
-					
-
-						
-
-<h2>Accessories</h2> 
-<p>Total <strong>£150</strong></p>
-
-	<!-- HARDWARE TABLE -->
-					
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Product name</th>
-										<th scope="col">Recommended supplier</th>
-										<th scope="col">Cost</th>
-										<th scope="col"></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Laptop bag</td>
-										<td>Currys</td>
-										<td>£100</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-									<tr>
-										<td>Mouse</td>
-										<td>Currys</td>
-										<td>£50</td>
-										<td><a href="">Delete</a></td>
-									</tr>
-								
-
-									
-									
-								</tbody>
-							</table>
-
-   
-
-
-
-
-					
-
-
-
-
-
-
-						
-
-
-
-<br />
-
-							<!-- NMPH -->		
-
-
-<h2>Non-Medical Personal Help (NMPH) allowance</h2>
-<p>Total <strong>£4,389.60</strong></p>
-
-
-						
-
-						<div id="large_allowance_table">
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Type</th>
-										<th scope="col">Cost
-											<p class="ds_hint-text dsa_vat" id="ds_vat">Including VAT.</p>
-										</th>
-										<th scope="col"></th>
-										<th scope="col"></th>
-										<th scope="col"></th>
-										
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Study support</td>
-										<td>£3,189.60</td>
-										<td></td>
-											
-										<td></td>
-										<td><a href="#">Delete</a></td>
-									</tr>
-
-									<tr>
-										<td>Notetaker</td>
-										<td>£1,200.00</td>
-										<td></td>
-											
-										<td></td>
-										<td><a href="#">Delete</a></td>
-									</tr>
-
-									
-								</tbody>
-							</table>
-						</div>
-						
-
-							<!-- Travel-->		
-
-
-
-<br />
-
-
- <h2>Travel expense allowance</h2>
-							        <p>Total: <strong>£5,500.00</strong></p>
-
-
-
-
-
-						<div id="travel_table">
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								
-								<thead>
-									<tr>
-										<th scope="col">Transport type</th>
-										<th scope="col">Start location</th>
-										<th scope="col">End location</th>
-										<th scope="col">Cost of journey
-											<p class="ds_hint-text dsa_vat" id="ds_vat">Including VAT.</p>
-										</th>
-										<th scope="col">Days</th>
-										<th scope="col">Weeks</th>
-										<th scope="col"></th>
-										
-										
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Taxis</td>
-										<td>EH4 2PG</td>
-										<td>G5 9XB</td>
-										<td>£55</td>
-										<td>4</td>
-										<td>25</td>
-										<td><a href="#">Delete</a></td>
-									</tr>
-
-									
-
-									
-								</tbody>
-							</table>
-						</div>
-						
-
-
-
-
-
-<br />
-
-
-
-
-
-
-
-						<!-- Needs assessment fee -->
-						<div id="non_med_allowance_table">
-							<table class="ds_table dsa_allowance_table" style="width: 80%">
-								<caption><h2>Needs Assessment Fee</h2>
-									<p>Total: <strong>£450.00</strong></p>
-								</caption>
-								<thead>
-									<tr>
-										<th scope="col">Assessment centre</th>
-										<th scope="col">Assessor</th>
-										<th scope="col">Total hours</th>
-										<th scope="col">Hourly rate</th>
-										<th scope="col">Cost
-											<p class="ds_hint-text dsa_vat" id="ds_vat">Including VAT.</p>
-										</th>
-										<th></th>
-										<th></th>
-										
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Edinburgh Outreach Centre</td>
-										<td>Tom Blue</td>
-										<td>8</td>
-										<td>50</td>
-										<td>£450</td>
-										<td><a href="#">Change</a></td>
-										<td><a href="#">Delete</a></td>
-										
-									</tr>
-									
-									
-								</tbody>
-							</table>
-						</div>
-
-				
-			
-<br /><br />
-
-
-						
-							
-						<div class="ds_button-group">
-						
-							
-									<a href="applyPart2Complete.html" class="ds_button dsa_button">Confirm and continue</a>
-						</div>
-
-
-
-					</div>
-				</main>
-			</div>
-		</div>
-
-		<div class="ds_page__bottom">
-
-
-
-			<footer class="ds_site-footer">
-    <div class="ds_wrapper">
-        <div class="ds_site-footer__content">
-            <ul class="ds_site-footer__site-items">
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/about-saas">About SAAS</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/data-protection">Privacy</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/data-protection/cookies">Cookies</a>
-                </li>
-                <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/tools/accessibility">Accessibility</a>
-                </li>
-                 <li class="ds_site-items__item">
-                    <a href="https://www.saas.gov.uk/contact-us">Contact Us</a>
-                </li>
-            </ul>
-
-            <div class="ds_site-footer__copyright">
-                
-				<p>Student Awards Agency Scotland<br />
-				Saughton House<br />
-				Broomhouse Drive<br />
-				Edinburgh<br />
-				EH11 3UT</p>
-			
-			</div>
-
-            <div class="ds_site-footer__org">
-                <a class="ds_site-branding__logo  ds_site-branding__link"
-						href="../../index.html" data-header="header-logo"> <img
-						class="ds_site-branding__logo-image"
-						src="../../../static/images/SAAS_logo.svg" alt="SAAS">
-						</a>
-
-
-		            </div>
-		        </div>
-		    </div>
-		</footer>
-
-			
-		</div>
-	</div>
+                    <div id="travel_table">
+                        <table class="ds_table dsa_allowance_table" style="width: 80%">
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Transport type</th>
+                                <th scope="col">Start location</th>
+                                <th scope="col">End location</th>
+                                <th scope="col">Cost of journey
+                                    <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                </th>
+                                <th scope="col">Days</th>
+                                <th scope="col">Weeks</th>
+                                <th scope="col"></th>
+
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Taxis</td>
+                                <td>EH4 2PG</td>
+                                <td>G5 9XB</td>
+                                <td>£55</td>
+                                <td>4</td>
+                                <td>25</td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <br/>
+
+
+                    <!-- Needs assessment fee -->
+                    <div id="non_med_allowance_table">
+                        <table class="ds_table dsa_allowance_table" style="width: 80%">
+                            <caption><h2>Needs Assessment Fee</h2>
+                                <p>Total: <strong>£450.00</strong></p>
+                            </caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Assessment centre</th>
+                                <th scope="col">Assessor</th>
+                                <th scope="col">Total hours</th>
+                                <th scope="col">Hourly rate</th>
+                                <th scope="col">Cost
+                                    <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                </th>
+                                <th></th>
+                                <th></th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Edinburgh Outreach Centre</td>
+                                <td>Tom Blue</td>
+                                <td>8</td>
+                                <td>50</td>
+                                <td>£450</td>
+                                <td><a href="#">Change</a></td>
+                                <td><a href="#">Delete</a></td>
+
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <br/><br/>
+
+
+                    <div class="ds_button-group">
+
+
+                        <a href="applyPart2Complete.html" class="ds_button dsa_button">Confirm and continue</a>
+                    </div>
+
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
 </body>
 </html>
