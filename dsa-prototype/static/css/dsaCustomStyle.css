@@ -944,7 +944,7 @@ a > svg, .ds_link > svg {
 
 }
 
-.ds_button:hover {
+.ds_button.ds_button--secondary:hover {
     background-color: #CFE1E5;
     color: #333;
     outline-color: rgba(0, 0, 0, 0);
@@ -1162,8 +1162,7 @@ a > svg, .ds_link > svg {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
-}
+/*@media (min-width: 768px) {}*/
 
 .ds_feature-header.dsa_table_header {
     margin-bottom: 0px;
@@ -1321,7 +1320,6 @@ a > svg, .ds_link > svg {
     .ds_site-footer {
         font-size: 1rem;
         line-height: 1.5;
-        background-color: #002D54;
     }
 }
 
@@ -1439,6 +1437,10 @@ a > svg, .ds_link > svg {
     margin-right: 20px
 }
 
+.ds_site-items__item:last-child {
+    margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
     .ds_site-footer {
         line-height: 24px
@@ -1486,7 +1488,7 @@ a > svg, .ds_link > svg {
 
     .ds_site-footer__org {
         float: right;
-        width: calc(100% * 0.25 - 62px)
+        width: calc(100% * 0.25 - 32px)
     }
 
     @supports (display: grid) {
