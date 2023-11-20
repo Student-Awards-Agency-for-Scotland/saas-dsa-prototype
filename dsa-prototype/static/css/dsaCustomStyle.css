@@ -952,19 +952,11 @@ a > svg, .ds_link > svg {
 }
 
 .ds_button:focus {
+    outline: highlight solid 0 !important;
     background-color: #CFE1E5;
     color: #333;
-    outline: 0;
-    transition-duration: 0s
+    transition-duration: 0s;
 }
-
-
-.ds_button:focus {
-    outline-color: highlight !important;
-    outline-style: solid !important;
-    outline-width: 4px !important
-}
-
 
 .ds_button .ds_icon {
     pointer-events: none
@@ -1011,13 +1003,6 @@ a > svg, .ds_link > svg {
     outline-color: rgba(0, 0, 0, 0);
     transition-duration: .2s
 }
-
-.ds_button:focus {
-    outline-color: highlight !important;
-    outline-style: solid !important;
-    outline-width: 0px !important;
-}
-
 
 .ds_button.dsa_button_green {
     background-color: green;
