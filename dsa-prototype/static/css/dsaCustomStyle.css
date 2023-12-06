@@ -310,6 +310,19 @@ a > svg, .ds_link > svg {
     margin: 10px 0;
 }
 
+.ds_warning-text-new{
+    border:4px solid #333;
+    font-weight: 400;
+}
+
+.close_button_fml{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    background: none;
+    border: 0;
+}
+
 /* task list */
 .ds_task-list__task {
     border-top: 1px #ebebeb solid;
@@ -963,9 +976,9 @@ a > svg, .ds_link > svg {
 }
 
 .ds_button[disabled] {
-    background-color: #727272;
+    background-color: #F8F8F8;
     box-shadow: none;
-    color: #fff;
+    color: #727272;
     font-weight: 400;
     outline: none;
     pointer-events: none
@@ -1035,6 +1048,17 @@ a > svg, .ds_link > svg {
     color: #333;
     outline: 2px solid currentColor;
     outline-offset: -2px
+}
+
+
+
+.cancel_link:hover{
+    text-decoration: none;
+}
+.cancel_link:focus {
+    outline: highlight solid 0 !important;
+    text-decoration: none;
+    box-shadow: 0 3px #333;
 }
 
 /*------------------------------------*\
@@ -1162,8 +1186,6 @@ a > svg, .ds_link > svg {
     margin-bottom: 1rem;
 }
 
-/*@media (min-width: 768px) {}*/
-
 .ds_feature-header.dsa_table_header {
     margin-bottom: 0px;
 }
@@ -1282,6 +1304,32 @@ a > svg, .ds_link > svg {
     height: calc(100% - 70px);
 }
 
+/* colour palette */
+.dss_palette {
+    table-layout: initial;
+}
+
+.dss_palette, .dss_palette tr {
+    border: 0;
+}
+
+.dss_palette td {
+    padding-bottom: 24px;
+}
+
+.dss_palette__name {
+    padding-left: 60px;
+    position: relative;
+    width: 20%;
+}
+
+.dss_palette__swatch {
+    position: absolute;
+    height: 40px;
+    left: 0;
+    margin-top: -4px;
+    width: 40px;
+}
 
 /*------------------------------------*\
     #ACCORDION
