@@ -9,12 +9,9 @@
 
     <link href="../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
-    <style>
-        .ds_table tbody > tr > td {
-            background-color: #ffffff;
-            vertical-align: middle;
-        }
-    </style>
+    <script src="../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../scripts/purify.min.js"></script>
+    <script src="../../scripts/dsa.js"></script>
 </head>
 <body>
 <div class="ds_page">
@@ -193,16 +190,17 @@
                         </tr>
                         <tr>
                             <td>
-                                <label class="ds_label" for="description">Text area with character count</label>
-                                <textarea class="ds_input" rows="3" id="description"></textarea>
-                                <div class="ds_input__message ds_hint-text">You can enter up to XX
-                                    characters
+                                <div class="ds_question" data-module="ds-character-count" data-maxlength="250">
+                                    <label class="ds_label" for="description">Text area with character count</label>
+                                    <textarea class="ds_input" rows="3" id="description" maxlength="250"></textarea>
                                 </div>
                             </td>
                             <td>
-                                <label class="ds_label" for="description2">Text area with hint</label>
-                                <span class="small_text_grey">Hint text</span>
-                                <textarea class="ds_input" rows="3" id="description2"></textarea>
+                                <div class="ds_question">
+                                    <label class="ds_label" for="description2">Text area with hint</label>
+                                    <span class="small_text_grey">Hint text</span>
+                                    <textarea class="ds_input" rows="3" id="description2"></textarea>
+                                </div>
                             </td>
                         </tr>
                     </table>
@@ -377,6 +375,111 @@
                             <img src="../../static/images/icon-cross.svg" alt=""/>
                         </button>
                     </div>
+                    <div>Confirmation banner</div>
+                    <div class="panel--container">
+                        <div class="ds_notification-panel ds_notification-panel--success">
+                            <h1 class="ds_notification-panel__title">Account created</h1>
+                            <div class="ds_notification-panel__content">
+                                <p>You have successfully created a DSA online account and can use the Apply for Disabled
+                                    Student’s Allowances service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="ds_table">
+                        <tr>
+                            <td style="vertical-align: top;">
+                                DSA application status tags<br>
+                                <div class="govuk-tag govuk-tag--grey">
+                                    APPLICATION INCOMPLETE
+                                </div>
+                                <br>
+                                <div class="govuk-tag govuk-tag--green">
+                                    APPLICATION COMPLETE
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                Application section status tags<br>
+                                <div class="govuk-tag govuk-tag--green">
+                                    COMPLETE
+                                </div>
+                                <br>
+                                <div class="govuk-tag govuk-tag--grey">
+                                    CANNOT START
+                                </div>
+                                <br>
+                                <div class="govuk-tag govuk-tag--yellow">
+                                    NOT STARTED
+                                </div>
+                                <br>
+                                <div class="govuk-tag govuk-tag--yellow">
+                                    STARTED
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                Eligibility status tags
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>Table</h3>
+                    <hr>
+                    <div>Do not use buttons within a table, always html links.</div>
+                    <table class="ds_table dsa_allowance_table">
+                        <caption class="visually-hidden">Table example</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col">Product name</th>
+                            <th scope="col">COST<br>
+                                <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>JAWS home</td>
+                            <td>&pound;882</td>
+                            <td><a href="">Cancel</a></td>
+                            <td><a href="">Remove</a></td>
+                        </tr>
+                        <tr>
+                            <td>Zoom text magnifier</td>
+                            <td>&pound;598.80</td>
+                            <td>
+                                <a href="">Cancel</a>
+                            </td>
+                            <td>
+                                <a href="">Remove</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="">Add another product</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>Lists</h3>
+                    <hr>
+                    <ol class="ds_summary-list">
+                        <li class="ds_summary-list__item">
+                            <span class="ds_summary-list__key">Heading</span>
+                            <span class="ds_summary-list__value" id="q1">
+                            <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">Description</q></span>
+                        </li>
+                        <li class="ds_summary-list__item">
+                            <span class="ds_summary-list__key">Heading</span>
+                            <span class="ds_summary-list__value" id="q2">
+                            <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">Description</q></span>
+                        </li>
+                        <li class="ds_summary-list__item">
+                            <span class="ds_summary-list__key">Heading</span>
+                            <span class="ds_summary-list__value" id="q3">
+                            <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">Description</q>
+                                <br><span class="ds_hint-text dsa_vat">secondary content</span> </span>
+                        </li>
+                    </ol>
+                    <h3>Timeout</h3>
+                    <hr>
                 </div>
             </main>
         </div>

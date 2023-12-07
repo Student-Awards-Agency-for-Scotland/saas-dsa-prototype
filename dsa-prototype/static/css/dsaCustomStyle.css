@@ -1163,11 +1163,11 @@ a > svg, .ds_link > svg {
 }
 
 .ds_table.dsa_allowance_table tbody > tr:first-child {
-    border-top: 2px solid #333333;
+    border-top: 3px solid #333333;
 }
 
 .ds_table.dsa_allowance_table tbody > tr:last-child {
-    border-bottom: 1px solid #333333;
+    border-bottom: 4px solid #333333;
 }
 
 .ds_hint-text.dsa_vat {
