@@ -310,12 +310,12 @@ a > svg, .ds_link > svg {
     margin: 10px 0;
 }
 
-.ds_warning-text-new{
-    border:4px solid #333;
+.ds_warning-text-new {
+    border: 4px solid #333;
     font-weight: 400;
 }
 
-.close_button_fml{
+.close_button_fml {
     position: absolute;
     top: 10px;
     right: 25px;
@@ -1051,11 +1051,11 @@ a > svg, .ds_link > svg {
 }
 
 
-
-.cancel_link:hover{
+.secondary_form:hover {
     text-decoration: none;
 }
-.cancel_link:focus {
+
+.secondary_form:focus {
     outline: highlight solid 0 !important;
     text-decoration: none;
     box-shadow: 0 3px #333;
@@ -1329,6 +1329,28 @@ a > svg, .ds_link > svg {
     left: 0;
     margin-top: -4px;
     width: 40px;
+}
+
+/*------------------------------------*\
+    #TIMEOUT
+\*------------------------------------*/
+
+.timeout-background {
+    background: rgba(51, 51, 51, 0.20);
+    width: 100% !important;
+    height: 100% !important;
+    padding: 5em 0;
+}
+
+.timeout-background--internal {
+    background: white;
+    width: 65%;
+    padding: 2em 4em;
+    margin: 0 auto;
+}
+
+.timeout-background--internal .countdown {
+    color: #D4351C;
 }
 
 /*------------------------------------*\
