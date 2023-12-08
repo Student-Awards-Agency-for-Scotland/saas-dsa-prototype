@@ -950,6 +950,14 @@ a > svg, .ds_link > svg {
 
 }
 
+.ds_button:hover {
+    background-color: #CFE1E5;
+    color: #333;
+    outline-color: rgba(0, 0, 0, 0);
+    transition-duration: .2s;
+    text-decoration: none;
+}
+
 .ds_button.ds_button--secondary:hover {
     background-color: #CFE1E5;
     color: #333;
@@ -1000,14 +1008,6 @@ a > svg, .ds_link > svg {
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
     outline-color: currentColor
-}
-
-.ds_button:hover {
-    background-color: #CFE1E5;
-    text-decoration: none;
-    color: #333;
-    outline-color: rgba(0, 0, 0, 0);
-    transition-duration: .2s
 }
 
 .ds_button.dsa_button_green {
