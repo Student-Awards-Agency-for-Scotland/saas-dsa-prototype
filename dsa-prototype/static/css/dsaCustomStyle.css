@@ -149,9 +149,7 @@ a, .ds_link {
     color: #006DA2;
     text-decoration: underline;
     outline: 0px solid rgba(0, 0, 0, 0);
-
 }
-
 
 a:hover, .ds_link:hover, h3 a:hover, .ds_link:hover {
     background-color: #CfE1E5;
@@ -201,7 +199,6 @@ a > svg, .ds_link > svg {
     outline-color: red;
 }
 
-
 /*------------------------------------*\
     #DESCRIPTION REVEAL
 \*------------------------------------*/
@@ -232,7 +229,6 @@ a > svg, .ds_link > svg {
     display: none;
 }
 
-
 /*------------------------------------*\
     #BRANDING
 \*------------------------------------*/
@@ -244,7 +240,6 @@ a > svg, .ds_link > svg {
 .ds_site-branding__logo-image {
     height: 50px;
 }
-
 
 .dsa_access {
     padding-left: 840px;
@@ -324,6 +319,7 @@ a > svg, .ds_link > svg {
 }
 
 /* task list */
+
 .ds_task-list__task {
     border-top: 1px #ebebeb solid;
     display: flex;
@@ -342,6 +338,7 @@ a > svg, .ds_link > svg {
 /*------------------------------------*\
     #SUMMARY LIST
 \*------------------------------------*/
+
 .ds_summary-list {
     margin-bottom: 1.5rem;
     list-style-type: none;
@@ -662,7 +659,6 @@ a > svg, .ds_link > svg {
     }
 }
 
-
 /*------------------------------------*\
     #BREADCRUBS
 \*------------------------------------*/
@@ -675,7 +671,6 @@ a > svg, .ds_link > svg {
     margin: 24px 0 16px;
     content: "";
 }
-
 
 .ds_breadcrumbs__item {
     display: inline-block;
@@ -901,9 +896,7 @@ a > svg, .ds_link > svg {
     padding-right: 0;
 }
 
-
 /* buttons */
-
 
 .ds_button {
     font-size: .875rem;
@@ -1050,7 +1043,6 @@ a > svg, .ds_link > svg {
     outline-offset: -2px
 }
 
-
 .secondary_form:hover {
     text-decoration: none;
 }
@@ -1088,7 +1080,6 @@ a > svg, .ds_link > svg {
     }
 }
 
-
 /*------------------------------------*\
     #EMAIL
 \*------------------------------------*/
@@ -1101,7 +1092,6 @@ a > svg, .ds_link > svg {
 
 .email-section {
     border-bottom: solid 2px #CFE1E5;
-
 }
 
 .email-side-heading {
@@ -1196,7 +1186,6 @@ a > svg, .ds_link > svg {
 
 .ds_feature-header__secondary.dsa_table_header_secondary {
     text-align: right;
-
 }
 
 .ds_table.dsa_student_result_table tbody > tr {
@@ -1362,12 +1351,14 @@ a > svg, .ds_link > svg {
     border-top: 1px solid #ebebeb;
 }
 
-.ds_accordion-item__header:hover:not(:focus), .ds_accordion-item__header-button:hover:not(:focus) {
+.ds_accordion-item__header:hover:not(:focus),
+.ds_accordion-item__header-button:hover:not(:focus) {
     background-color: #29789E;
     color: #333;
 }
 
-.ds_accordion-item__control:focus ~ .ds_accordion-item__header, .ds_accordion-item__control:focus:hover ~ .ds_accordion-item__header {
+.ds_accordion-item__control:focus ~ .ds_accordion-item__header,
+.ds_accordion-item__control:focus:hover ~ .ds_accordion-item__header {
     background: #29789E;
     box-shadow: 0 3px #333;
     color: #333;
@@ -1584,7 +1575,6 @@ a > svg, .ds_link > svg {
         }
     }
 }
-
 
 /*------------------------------------*\
     #GOV TAGS
