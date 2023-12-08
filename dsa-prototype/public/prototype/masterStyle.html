@@ -15,6 +15,12 @@
 </head>
 <body>
 <div class="ds_page">
+
+    <!-------------------------------------
+         DEVS DO NOT COPY TABLES
+         (except the actual table style)
+    -------------------------------------->
+
     <div class="ds_page__top">
 
         <!--------------------------
@@ -40,6 +46,7 @@
         </header>
 
     </div>
+
     <div class="ds_page__middle">
         <div class="ds_wrapper">
             <main class="ds_layout  ds_layout--article">
@@ -229,6 +236,7 @@
                             </td>
                         </tr>
                     </table>
+
                     <table>
                         <tr>
                             <td>
@@ -291,6 +299,7 @@
                             </td>
                         </tr>
                     </table>
+
                     <table class="ds_table">
                         <tr>
                             <td style="width: 50%;vertical-align: top;">
@@ -568,12 +577,82 @@
                         </li>
                     </ol>
 
+                    <h3>Email example</h3>
+                    <hr>
+                    <a href="email-list.html"></a>
+
                     <h3>Timeout</h3>
                     <hr>
+
+                    <!--------------------------
+                               Timeout
+                    ---------------------------->
+
+
+                    <table class="ds_table">
+                        <tr>
+                            <td>Download component</td>
+                            <td>Doc upload component</td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                <!--------------------------
+                                          DOWNLOAD
+                                ---------------------------->
+                                <div class="ds_file-download ds_input--fixed-20">
+                                    <div class="ds_file-download__content">
+                                        <h3>Other formats</h3>
+                                        <a href="#" class="ds_file-download__title"
+                                           aria-describedby="file-download-1">Download as pdf (77kb)</a>
+
+                                        <div id="file-download-1" class="ds_file-download__details">
+                                            <dl class="ds_metadata  ds_metadata--inline">
+                                                <div class="ds_metadata__item">
+                                                    <dt class="ds_metadata__key  visually-hidden">File type</dt>
+                                                    <dd class="ds_metadata__value">44 page PDF</dd>
+                                                </div>
+                                                <div class="ds_metadata__item">
+                                                    <dt class="ds_metadata__key  visually-hidden">File size</dt>
+                                                    <dd class="ds_metadata__value">77 KB</dd>
+                                                </div>
+                                                <div>
+                                                    <p> We can also help you by providing information in a different
+                                                        format
+                                                        like:</p>
+                                                    <ul>
+                                                        <li>accessible PDF</li>
+                                                        <li>large print</li>
+                                                        <li>easy read</li>
+                                                        <li>audio recording</li>
+                                                        <li>braille</li>
+                                                    </ul>
+                                                    <span>Call us on <a href="#">0300 555 0505</a>.</span>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                            <td>
+
+                                <!--------------------------
+                                          UPLOAD
+                                ---------------------------->
+                                <button class="ds_button  ds_button--cancel ds_input--fixed-20" id="upload-document-1">
+                                    Choose document
+                                </button>
+                                <label for="upload-document-1">Drag and drop documents</label>
+
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </main>
         </div>
     </div>
+
     <div class="ds_page__bottom">
 
         <!--------------------------
@@ -614,7 +693,7 @@
                 </div>
             </div>
         </footer>
-        
+
     </div>
 </div>
 

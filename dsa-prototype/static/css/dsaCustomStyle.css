@@ -1180,7 +1180,7 @@ a > svg, .ds_link > svg {
 }
 
 .ds_file-download {
-    background-color: #f8f8f8;
+    background-color: transparent;
     display: flex;
     padding: 1rem;
     margin-bottom: 1rem;
