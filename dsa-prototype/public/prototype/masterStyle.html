@@ -178,7 +178,8 @@
                         <tr>
                             <td>Disabled</td>
                             <td>
-                                <button disabled="true" class="ds_button ds_button--max">Confirm and continue</button>
+                                <button disabled="disabled" class="ds_button ds_button--max">Confirm and continue
+                                </button>
                             </td>
                         </tr>
                     </table>
@@ -375,10 +376,10 @@
                     ---------------------------->
                     <div class="ds_question">
                         <div>Error alert</div>
-                        <label class="ds_label">Error</label>
+                        <label class="ds_label" for="textarea-error-1">Error</label>
                         <p class="ds_question__error-message">This field is required</p>
-                        <textarea rows="5" class="ds_input  ds_input--error" aria-invalid="true" aria-required="true"
-                                  aria-describedby="hint-text-more-detail"></textarea>
+                        <textarea rows="5" class="ds_input  ds_input--error" aria-invalid="true"
+                                  id="textarea-error-1" aria-required="true" aria-describedby=""></textarea>
                     </div>
 
                     <table class="ds_table">
@@ -390,10 +391,10 @@
                                     INLINE ERROR MESSAGE
                                 ---------------------------->
                                 <div class="ds_question ds_question--error">
-                                    <label class="ds_label">Error</label>
+                                    <label class="ds_label" for="textarea-error-2">Error</label>
                                     <p class="ds_question__error-message">This field is required</p>
                                     <textarea rows="5" class="ds_input  ds_input--error" aria-invalid="true"
-                                              aria-required="true" aria-describedby="hint-text-more-detail"></textarea>
+                                              id="textarea-error-2" aria-required="true" aria-describedby=""></textarea>
                                 </div>
 
                             </td>
@@ -406,12 +407,12 @@
                                 <div class="ds_question ds_question--error">
                                     <p class="ds_question__error-message">This field is required</p>
                                     <div class="ds_checkbox">
-                                        <input class="ds_checkbox__input" type="checkbox"/>
-                                        <label class="ds_checkbox__label">Label</label>
+                                        <input class="ds_checkbox__input" type="checkbox" id="checkbox-1"/>
+                                        <label class="ds_checkbox__label" for="checkbox-1">Label</label>
                                     </div>
                                     <div class="ds_checkbox">
-                                        <input class="ds_checkbox__input" type="checkbox"/>
-                                        <label class="ds_checkbox__label">Label</label>
+                                        <input class="ds_checkbox__input" type="checkbox" id="checkbox-2"/>
+                                        <label class="ds_checkbox__label" for="checkbox-2">Label</label>
                                     </div>
                                 </div>
 
@@ -425,12 +426,12 @@
                                 <div class="ds_question ds_question--error">
                                     <p class="ds_question__error-message">This field is required</p>
                                     <div class="ds_radio">
-                                        <input class="ds_radio__input" type="radio" name="radios"/>
-                                        <label class="ds_radio__label">Label</label>
+                                        <input class="ds_radio__input" type="radio" name="radios" id="radio-1"/>
+                                        <label class="ds_radio__label" for="radio-1">Label</label>
                                     </div>
                                     <div class="ds_radio">
-                                        <input class="ds_radio__input" type="radio" name="radios"/>
-                                        <label class="ds_radio__label">Label</label>
+                                        <input class="ds_radio__input" type="radio" name="radios" id="radio-2"/>
+                                        <label class="ds_radio__label" for="radio-2">Label</label>
                                     </div>
                                 </div>
 
@@ -451,9 +452,9 @@
                             If you do not receive the new link and are unable to continue please
                             <a href="https://www.saas.gov.uk/contact-us">contact us</a>.
                         </div>
-                        <button class="close_button_fml">
+                        <span class="close_button_fml">
                             <img src="../../static/images/icon-cross.svg" alt=""/>
-                        </button>
+                        </span>
                     </div>
 
                     <div>Confirmation banner</div>
@@ -523,8 +524,6 @@
                             <th scope="col">Product name</th>
                             <th scope="col">COST<br>
                                 <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -620,14 +619,14 @@
                                            aria-describedby="file-download-1">Download as pdf (77kb)</a>
 
                                         <div id="file-download-1" class="ds_file-download__details">
-                                            <dl class="ds_metadata  ds_metadata--inline">
+                                            <div class="ds_metadata  ds_metadata--inline">
                                                 <div class="ds_metadata__item">
-                                                    <dt class="ds_metadata__key  visually-hidden">File type</dt>
-                                                    <dd class="ds_metadata__value">44 page PDF</dd>
+                                                    <span class="ds_metadata__key  visually-hidden">File type</span>
+                                                    <span class="ds_metadata__value">44 page PDF</span>
                                                 </div>
                                                 <div class="ds_metadata__item">
-                                                    <dt class="ds_metadata__key  visually-hidden">File size</dt>
-                                                    <dd class="ds_metadata__value">77 KB</dd>
+                                                    <span class="ds_metadata__key  visually-hidden">File size</span>
+                                                    <span class="ds_metadata__value">77 KB</span>
                                                 </div>
                                                 <div>
                                                     <p> We can also help you by providing information in a different
@@ -642,7 +641,7 @@
                                                     </ul>
                                                     <span>Call us on <a href="#">0300 555 0505</a>.</span>
                                                 </div>
-                                            </dl>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
