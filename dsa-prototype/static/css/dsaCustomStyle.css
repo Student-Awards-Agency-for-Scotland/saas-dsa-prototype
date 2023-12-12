@@ -375,6 +375,50 @@ a > svg, .ds_link > svg {
     position: relative;
 }
 
+.ds_summary-list__item_progress {
+    border-left: 0.3em solid #000000;
+    border-bottom: 0 none;
+    position: relative;
+    padding-top: 0;
+}
+
+.ds_summary-list__item_progress div:first-child {
+    padding: 0 0 3em 2em;
+}
+
+.ds_summary-list__item_progress:last-child {
+    border: 0;
+}
+
+.ds_summary-list__item_progress:last-child div {
+    padding-bottom: 0;
+}
+
+.ds_summary-list__item_progress:last-child .ds_summary-list_progress_circle,
+.ds_summary-list__item_progress:last-child .ds_summary-list_progress_circle_reversed {
+    left: -0.7em;
+}
+
+.ds_summary-list_progress_circle,
+.ds_summary-list_progress_circle_reversed {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: #F4F3F3;
+    text-align: center;
+    line-height: 22px;
+    position: absolute;
+    top: -0.1em;
+    left: -0.9em;
+}
+
+.ds_summary-list_progress_circle_reversed {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 @media (min-width: 768px) {
     .ds_summary-list__item {
         padding-top: 1rem;
