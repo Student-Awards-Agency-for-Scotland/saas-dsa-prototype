@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Index</title>
+    <title>Student Confirmation</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
@@ -25,19 +25,75 @@
                     </div>
                 </div>
             </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
         </header>
     </div>
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Student Information
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>About John</strong>
+                    </li>
+                </ol>
+            </nav>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-                    <p></p>
-                    <h2>Figma Updates</h2>
-                    <h3><a href="applyForDSA.html">DSAO-975 Apply for DSA</a></h3>
-                    <h3><a href="resumeApplication.html">DSAO-975 Resume application</a></h3>
-                    <h3><a href="studentNotEligible.html">DSAO-976</a></h3>
-                    <h3><a href="studentConfirmed.html">DSAO-977</a></h3>
+
+                    <div class="ds_question">
+                        <h1>About John</h1>
+
+                        <table class="ds_table dsa_allowance_table">
+                            <tr>
+                                <td><strong>SAAS reference</strong></td>
+                                <td>1234567</td>
+
+                            </tr>
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td>John Gray</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Date of birth</strong></td>
+                                <td>16 October 2000</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Funding eligibility status</strong>
+                                    <p class="small_text_grey">For Private Beta the student can only apply for DSA
+                                        using this service if they have secured SAAS funding for this academic
+                                        year.</p>
+                                    <p class="small_text_grey">The student has SAAS funding in place and is eligible
+                                        to apply for DSA using this service.</p>
+                                </td>
+                                <td>
+                                    <div class="govuk-tag govuk-tag--green">
+                                        CONFIRMED
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <p>
+                            If this information is incorrect, please <a href="#">contact
+                            us.</a>
+                        </p>
+                    </div>
+                    <div class="ds_button-group">
+                        <a href="#" class="ds_button ds_button--cancel">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="courseDetails.html" class="ds_button dsa_button">Continue</a><br/>
+                    </div>
+
                 </div>
             </main>
         </div>
