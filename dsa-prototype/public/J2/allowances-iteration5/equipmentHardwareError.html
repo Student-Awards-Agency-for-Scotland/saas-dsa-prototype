@@ -43,10 +43,7 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="#">You must add a recommended supplier.</a>
-                    </li>
-                    <li>
-                        <a href="#">You must add a quote reference.</a>
+                        <a href="#">You must add a product name.</a>
                     </li>
                     <li>
                         <a href="#">You must add a cost.</a>
@@ -55,6 +52,7 @@
                         <a href="#">Cost can only contain numbers and a decimal point.</a>
                     </li>
                 </ul>
+                <p>If you no longer want to add these items, <a href="#">cancel.</a></p>
             </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
@@ -75,29 +73,25 @@
                         <div class="ds_question">
                             <div class="ds_question">
                                 <fieldset aria-describedby="ds_hint">
-                                    <p class="ds_hint-text" id="ds_hint">Part 2 of 5</p>
-                                    <h1>Quote details</h1>
-                                    <div class="ds_question">
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="supplier">Name of recommended supplier</label>
-                                            <p class="ds_question__error-message">You must add a recommended
-                                                supplier.</p>
-                                            <input class="ds_input ds_input--fixed-10" type="text" id="supplier"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="ref">Quote reference</label>
-                                            <p class="ds_question__error-message">You must add a quote reference.</p>
-                                            <input class="ds_input ds_input--fixed-10" type="text" id="ref"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="total">Total cost quoted</label>
-                                            <span class="small_text_grey">Including VAT.</span>
-                                            <p class="ds_question__error-message">You must add a cost.</p>
-                                            <p class="ds_question__error-message">Cost can only contain numbers and a
-                                                decimal point.</p>
-                                            <div class="ds_currency-wrapper" data-symbol="£">
-                                                <input class="ds_input ds_input--fixed-10" type="text" id="total"/>
-                                            </div>
+                                    <p class="ds_hint-text" id="ds_hint">Part 4 of 5</p>
+                                    <h1>Add hardware</h1>
+                                    <p class="small_text_grey">Electronic equipment such as laptop, PC, mouse printer or
+                                        scanner and ergonomic items such as a chair or desk</p>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="productName">Product Name</label>
+                                        <span class="small_text_grey">Make and model, for example, HP 250 G9 laptop.</span>
+                                        <p class="ds_question__error-message">You must add a product name.</p>
+                                        <input class="ds_input ds_input--fixed-20" type="text" id="productName"/>
+                                    </div>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="cost">Cost</label>
+                                        <span class="small_text_grey">Including VAT.</span>
+                                        <p class="ds_question__error-message">You must add a cost.</p>
+                                        <p class="ds_question__error-message">Cost can only contain numbers and a
+                                            decimal point.</p>
+                                        <div class="ds_currency-wrapper" data-symbol="£">
+                                            <input class="ds_input ds_input--fixed-10" type="text" value=""
+                                                   id="cost"/>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -107,8 +101,8 @@
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="equipmentCategories.html" class="ds_button dsa_button">Confirm and continue</a><br/>
-                        <a href="#" class="secondary_form">Skip equipment,software and accessories</a>
+                        <a href="#" class="ds_button dsa_button">Confirm and
+                            continue</a><br/>
                     </div>
 
                 </div>
@@ -158,4 +152,3 @@
 
 </body>
 </html>
-
