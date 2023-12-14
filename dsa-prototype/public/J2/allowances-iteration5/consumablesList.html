@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>DSA Allowances - Consumable Items Add</title>
+    <title>DSA Allowances - Consumable Items List</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
@@ -38,19 +38,18 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
-            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
-                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
-
-                <ul class="ds_error-summary__list">
-                    <li>
-                        <a href="#">&lt;paper&gt; field must contain numbers and decimal point only.</a>
-                    </li>
-                    <li>
-                        <a href="#">&lt;ink cartridges&gt; field must contain numbers and decimal point only.</a>
-                    </li>
-                </ul>
-                <p>If you no longer want to add these items, <a href="#">cancel</a> andd reselect or <a href="#">skip
-                    consumables.</a></p>
+            <span></span>
+            <div class="ds_warning-text ds_warning-text-new">
+                <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+                <strong class="visually-hidden">Warning</strong>
+                <div class="ds_warning-text__text">
+                    You have exceeded your allowance limit of <strong>&pound;1,725</strong> for the academic year. You
+                    can still continue with the application and we will review this along with your other allowance
+                    recommendations.
+                </div>
+                <a href="#" class="close_button_fml">
+                    <img src="../../../static/images/icon-cross.svg" alt="close"/>
+                </a>
             </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
@@ -68,31 +67,38 @@
                 <div class="ds_layout__content">
 
                     <div class="ds_question">
-                        <fieldset>
-                            <span class="small_text_grey">Part 2 of 3</span>
-                            <h1>Enter cost for consumable items</h1>
-                            <div class="ds_field-group">
-                                <div class="ds_question ds_question--error">
-                                    <label class="ds_label" for="paper">Paper</label>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10" type="text" value="twenty"
-                                               id="paper"/>
-                                    </div>
-                                </div>
-                                <div class="ds_question ds_question--error">
-                                    <label class="ds_label" for="ink">Ink cartridges</label>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10" type="text" value="@#!!!!"
-                                               id="ink"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </fieldset>
+                        <span class="small_text_grey">Part 3 of 3</span>
+                        <h1>John's consumable items allowance</h1>
+                        <h2>Total:&nbsp;&nbsp;&nbsp; &pound;200</h2>
+                        <p>You have added <strong>2</strong> consumable items</p>
+                        <table class="ds_table dsa_allowance_table">
+                            <caption class="visually-hidden">Consumable items list</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Consumable items</th>
+                                <th scope="col">COST<br>
+                                    <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td>Paper</td>
+                                <td>&pound;100</td>
+                                <td><a href="#">Change</a></td>
+                                <td><a href="#">Remove</a></td>
+                            </tr>
+                            <tr>
+                                <td>Ink</td>
+                                <td>&pound;100</td>
+                                <td><a href="#">Change</a></td>
+                                <td><a href="#">Remove</a></td>
+                            </tr>
+                        </table>
+                        <a href="">Add another consumable item</a>
                     </div>
 
                     <div class="ds_button-group">
-                        <a href="consumablesList.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="secondary_form">Cancel</a>
+                        <a href="#" class="ds_button ds_button--cancel">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="consumablesListRemove.html" class="ds_button dsa_button">Confirm and continue</a><br/>
                     </div>
 
                 </div>
