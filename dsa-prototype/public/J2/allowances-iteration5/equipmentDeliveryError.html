@@ -38,6 +38,22 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="#">You must select a delivery and installation option.</a>
+                    </li>
+                    <li>
+                        <a href="#">You must add a cost.</a>
+                    </li>
+                    <li>
+                        <a href="#">Cost can only contain numbers and a decimal point.</a>
+                    </li>
+                </ul>
+                <p>If you no longer want to add these items, <a href="#">cancel.</a></p>
+            </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
                     <li class="ds_breadcrumbs__item">
@@ -62,26 +78,29 @@
                                     <p class="small_text_grey">Delivery and installation costs.</p>
                                     <div class="ds_question">
                                         <h3>Choose an option</h3>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="delivery" type="radio" name="radios"/>
-                                            <label class="ds_radio__label"
-                                                   for="delivery"><strong>Delivery</strong></label>
-                                        </div>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="installation" type="radio"
-                                                   name="radios"/>
-                                            <label class="ds_radio__label"
-                                                   for="installation"><strong>Installation</strong></label>
-                                        </div>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="both" type="radio" name="radios"/>
-                                            <label class="ds_radio__label" for="both"><strong>Delivery and
-                                                Installation</strong></label>
+                                        <div class="ds_field-group ds_question--error">
+                                            <p class="ds_question__error-message">You must select a delivery and installation option.</p>
+                                            <div class="ds_radio">
+                                                <input class="ds_radio__input" id="delivery" type="radio" name="radios"/>
+                                                <label class="ds_radio__label" for="delivery"><strong>Delivery</strong></label>
+                                            </div>
+                                            <div class="ds_radio">
+                                                <input class="ds_radio__input" id="installation" type="radio"
+                                                       name="radios"/>
+                                                <label class="ds_radio__label" for="installation"><strong>Installation</strong></label>
+                                            </div>
+                                            <div class="ds_radio">
+                                                <input class="ds_radio__input" id="both" type="radio" name="radios"/>
+                                                <label class="ds_radio__label" for="both"><strong>Delivery and Installation</strong></label>
+                                            </div>
                                         </div>
                                         <br>
-                                        <div class="ds_field-group">
+                                        <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="cost">Cost</label>
                                             <span class="small_text_grey">Including VAT.</span>
+                                            <p class="ds_question__error-message">You must add a cost.</p>
+                                            <p class="ds_question__error-message">Cost can only contain numbers and a
+                                                decimal point.</p>
                                             <div class="ds_currency-wrapper" data-symbol="£">
                                                 <input class="ds_input ds_input--fixed-10" type="text" value=""
                                                        id="cost"/>
@@ -94,7 +113,7 @@
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="equipmentDeliveryError.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="#" class="secondary_form">Cancel</a>
                     </div>
 
