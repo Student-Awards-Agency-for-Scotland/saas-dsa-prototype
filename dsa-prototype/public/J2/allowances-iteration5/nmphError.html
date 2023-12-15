@@ -90,44 +90,62 @@
                                     <p>Personal helpers including note takers, mental health mentors, sign language
                                         interpreters and study skills support. It does not cover disability related
                                         expenditure needed outside of the student's studies.</p>
-                                    <p>Claimed yearly. Allowance limit per academic year: <strong>&pound;20,520</strong></p>
+                                    <p>Claimed yearly. Allowance limit per academic year: <strong>&pound;20,520</strong>
+                                    </p>
                                     <br>
                                     <div class="ds_question">
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="type">Type of support</label>
                                             <p class="ds_question__error-message">You must enter a type of support.</p>
-                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="type"/>
+                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
+                                                   id="type"/>
                                         </div>
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="provider">Recommended provider</label>
-                                            <p class="ds_question__error-message">You must add a recommended provider.</p>
-                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="provider"/>
+                                            <p class="ds_question__error-message">You must add a recommended
+                                                provider.</p>
+                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
+                                                   id="provider"/>
                                         </div>
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="rate">Hourly rate</label>
                                             <p class="ds_question__error-message">You must add an hourly rate.</p>
-                                            <p class="ds_question__error-message">Hourly rate can only contain numbers and a decimal point.</p>
-                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="rate"/>
+                                            <p class="ds_question__error-message">Hourly rate can only contain numbers
+                                                and a decimal point.</p>
+                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                                   id="rate"/>
                                         </div>
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="hour">Hours</label>
                                             <p class="ds_hint-text">Per week.</p>
                                             <p class="ds_question__error-message">You must add hours per week.</p>
-                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="hour"/>
+                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                                   id="hour"/>
                                         </div>
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="week">Weeks</label>
                                             <p class="ds_hint-text">Per academic year.</p>
-                                            <p class="ds_question__error-message">You must select a number of weeks per academic year.</p>
-                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="week"/>
+                                            <p class="ds_question__error-message">You must select a number of weeks per
+                                                academic year.</p>
+                                            <div class="ds_select-wrapper ds_input--fixed-10">
+                                                <select class="ds_select ds_input--fixed-10" id="week">
+                                                    <option></option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                                <span class="ds_select-arrow" aria-hidden="true"></span>
+                                            </div>
                                         </div>
                                         <div class="ds_field-group ds_question--error">
                                             <label class="ds_label" for="total">Cost</label>
                                             <span class="small_text_grey">Including VAT.</span>
                                             <p class="ds_question__error-message">You must add a cost.</p>
-                                            <p class="ds_question__error-message">Cost can only contain numbers and a decimal point.</p>
+                                            <p class="ds_question__error-message">Cost can only contain numbers and a
+                                                decimal point.</p>
                                             <div class="ds_currency-wrapper" data-symbol="£">
-                                                <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="total"/>
+                                                <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                                       id="total"/>
                                             </div>
                                         </div>
                                     </div>
