@@ -53,49 +53,43 @@
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
 
-                    <form>
+                    <div class="ds_question">
                         <div class="ds_question">
-                            <div class="ds_question">
-                                <fieldset aria-describedby="ds_hint">
-                                    <p class="ds_hint-text" id="ds_hint">Part 4 of 5</p>
-                                    <h1>Add delivery and installation</h1>
-                                    <p class="small_text_grey">Delivery and installation costs.</p>
-                                    <div class="ds_question">
-                                        <h3>Choose an option</h3>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="delivery" type="radio" name="radios"/>
-                                            <label class="ds_radio__label"
-                                                   for="delivery"><strong>Delivery</strong></label>
-                                        </div>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="installation" type="radio"
-                                                   name="radios"/>
-                                            <label class="ds_radio__label"
-                                                   for="installation"><strong>Installation</strong></label>
-                                        </div>
-                                        <div class="ds_radio">
-                                            <input class="ds_radio__input" id="both" type="radio" name="radios"/>
-                                            <label class="ds_radio__label" for="both"><strong>Delivery and
-                                                Installation</strong></label>
-                                        </div>
-                                        <br>
-                                        <div class="ds_field-group">
-                                            <label class="ds_label" for="cost">Cost</label>
-                                            <span class="small_text_grey">Including VAT.</span>
-                                            <div class="ds_currency-wrapper" data-symbol="£">
-                                                <input class="ds_input ds_input--fixed-10" type="text" value=""
-                                                       id="cost"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
+                            <fieldset aria-describedby="ds_hint">
+                                <p class="ds_hint-text" id="ds_hint">Part 5 of 5</p>
+                                <h1>John's equipment, software and accessories allowance</h1>
+                                <p class="small_text_grey">Study accessories such as a laptop carry case, laptop stand or a bundle.</p>
+                                <h2>Product quotes</h2>
+                                <p>You have added <strong>1</strong> hardware product.</p>
+                                <table class="ds_table dsa_allowance_table">
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">Supplier name</th>
+                                        <th scope="col">Quote reference</th>
+                                        <th scope="col">Cost<br>
+                                            <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Sight and Sound</td>
+                                        <td>GCU389743</td>
+                                        <td>&pound;549.00</td>
+                                        <td><a href="">Change</a></td>
+                                        <td><a href="">Remove</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button class="ds_button  ds_button--secondary ds_input--fixed-20">Choose another package option</button>
+                            </fieldset>
+                            <br>
                         </div>
-                    </form>
+                    </div>
 
                     <div class="ds_button-group">
-                        <a href="equipmentQuoteDetails.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="secondary_form">Cancel</a>
+                        <a href="#" class="ds_button ds_button--cancel">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="equipmentHardwareRemove.html" class="ds_button dsa_button">Confirm and
+                            continue</a><br/>
                     </div>
 
                 </div>
