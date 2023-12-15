@@ -309,6 +309,11 @@ a > svg, .ds_link > svg {
     border: 4px solid #333;
     font-weight: 400;
 }
+.ds_important-text {
+    border:0 none;
+    border-top: 4px solid #333;
+    border-bottom: 2px solid #333;
+}
 
 .close_button_fml {
     position: absolute;
