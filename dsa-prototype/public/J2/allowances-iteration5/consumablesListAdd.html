@@ -77,14 +77,24 @@
                     </div>
 
                     <div class="ds_button-group">
-                        <a href="consumablesListAdd.html" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="ds_button dsa_button">Confirm and continue</a><br/>
+                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button dsa_button" onclick="wheretogo()">Confirm and continue</a><br/>
                     </div>
 
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        // default is no
+        function wheretogo(){
+            if(document.getElementById("yes").checked)
+                window.location = "consumables.html";
+            else
+                window.location = "equipment.html";
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
