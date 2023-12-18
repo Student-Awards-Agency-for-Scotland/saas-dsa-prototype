@@ -97,7 +97,8 @@
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="consumablesAdd.html" class="ds_button dsa_button">Confirm and continue</a><br/>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
+                        <br/>
                         <a href="equipment.html" class="secondary_form">Skip consumable items</a>
                     </div>
 
@@ -112,6 +113,34 @@
             let checkBox = document.getElementById("other");
             let text = document.getElementById("description");
             checkBox.checked === true ? text.style.display = "block" : text.style.display = "none";
+        }
+
+        // Nav crap
+        function checkBeforeNav() {
+            let checkboxes = $(".ds_checkbox__input");
+            let other = document.getElementById("other");
+            let description = $("#description");
+            let noneSelected = true;
+            let location = "consumablesAdd.html";
+
+            for (let index in checkboxes) {
+                let checked = checkboxes[index].checked;
+                if (checked === true) {
+                    noneSelected = false;
+                    break;
+                }
+            }
+
+            if (noneSelected) {
+                location = "consumablesError2.html";
+            } else {
+                if (other.checked) {
+                    if (!description.val()) {
+                        location = "consumablesError1.html";
+                    }
+                }
+            }
+            window.location = location;
         }
     </script>
 
