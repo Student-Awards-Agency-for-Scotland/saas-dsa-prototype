@@ -32,8 +32,8 @@ function dynamicallyLoadScript(type, url) {
 	console.log("dynamicallyLoadScript is :" + script.src)
 }
 
-dynamicallyLoadScript('text/javascript', '/dsa/scripts/jquery-3.6.1.min.js')
-dynamicallyLoadScript('module', '/dsa/scripts/design-system/dist/scripts/design-system.js')
+dynamicallyLoadScript('text/javascript', '/saas-dsa-prototype/dsa-prototype/scripts/jquery-3.6.1.min.js')
+dynamicallyLoadScript('module', '/saas-dsa-prototype/dsa-prototype/scripts/purify.min.js')
 
 /**Check jQuery is loaded for the following scripts*/
 window.onload = function() {
