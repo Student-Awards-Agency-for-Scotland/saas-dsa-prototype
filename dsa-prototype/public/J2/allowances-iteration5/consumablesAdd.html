@@ -103,7 +103,7 @@
                 if(!valid){
                     window.location = "consumablesAddError2.html";
                     return true;
-                }else if( inputValue < minValue || inputValue > maxValue ){
+                }else if( parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue ){
                     window.location = "consumablesAddError3.html";
                     return true;
                 }
