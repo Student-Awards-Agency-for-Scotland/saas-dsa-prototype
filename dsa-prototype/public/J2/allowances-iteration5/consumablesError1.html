@@ -131,7 +131,7 @@
         function checkBeforeNav() {
             let checkboxes = $(".ds_checkbox__input");
             let other = document.getElementById("other");
-            let description = $("#description");
+            let description = $("#not_listed_description");
             let noneSelected = true;
             let location = "consumablesAdd.html";
 
@@ -147,7 +147,7 @@
                 location = "consumablesError2.html";
             } else {
                 if (other.checked) {
-                    if (!description.val()) {
+                    if (!description.val().trim()) {
                         location = "consumablesError1.html";
                     }
                 }
