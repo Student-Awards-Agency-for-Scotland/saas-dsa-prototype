@@ -49,7 +49,8 @@
                         <a href="#">&lt;ink cartridges&gt; field must contain numbers and decimal point only.</a>
                     </li>
                 </ul>
-                <p>If you no longer want to add these items, <a href="consumables.html">cancel</a> and reselect or <a href="equipment.html">skip
+                <p>If you no longer want to add these items, <a href="consumables.html">cancel</a> and reselect or <a
+                        href="equipment.html">skip
                     consumables.</a></p>
             </div>
             <nav aria-label="Breadcrumb">
@@ -74,17 +75,21 @@
                             <div class="ds_field-group">
                                 <div class="ds_question ds_question--error">
                                     <label class="ds_label" for="paper">Paper</label>
-                                    <p class="ds_question__error-message">This field must contain numbers and decimal point only.</p>
+                                    <p class="ds_question__error-message">This field must contain numbers and decimal
+                                        point only.</p>
                                     <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="-100000"
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               value="-100000"
                                                data-minimum-value="10" data-maximum-value="500" id="paper"/>
                                     </div>
                                 </div>
                                 <div class="ds_question ds_question--error">
                                     <label class="ds_label" for="ink">Ink cartridges</label>
-                                    <p class="ds_question__error-message">This field must contain numbers and decimal point only.</p>
+                                    <p class="ds_question__error-message">This field must contain numbers and decimal
+                                        point only.</p>
                                     <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="-100000"
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               value="-100000"
                                                data-minimum-value="10" data-maximum-value="500" id="ink"/>
                                     </div>
                                 </div>
@@ -119,7 +124,7 @@
                 if(!valid){
                     window.location = "consumablesAddError2.html";
                     return true;
-                }else if( inputValue < minValue || inputValue > maxValue ){
+                }else if( parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue ){
                     window.location = "consumablesAddError3.html";
                     return true;
                 }

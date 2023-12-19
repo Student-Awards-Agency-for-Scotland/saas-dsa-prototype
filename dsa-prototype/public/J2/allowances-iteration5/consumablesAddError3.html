@@ -46,7 +46,8 @@
                         <a href="#">You must enter a price between &lt;minimum&gt; and &lt;maximum&gt;.</a>
                     </li>
                 </ul>
-                <p>If you no longer want to add these items, <a href="consumables.html">cancel</a> and reselect or <a href="equipment.html">skip
+                <p>If you no longer want to add these items, <a href="consumables.html">cancel</a> and reselect or <a
+                        href="equipment.html">skip
                     consumables.</a></p>
             </div>
             <nav aria-label="Breadcrumb">
@@ -74,7 +75,8 @@
                                     <p class="ds_question__error-message">You must enter a price between &lt;minimum&gt;
                                         and &lt;maximum&gt;.</p>
                                     <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="1000000"
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               value="1000000"
                                                data-minimum-value="10" data-maximum-value="500" id="paper"/>
                                     </div>
                                 </div>
@@ -83,7 +85,8 @@
                                     <p class="ds_question__error-message">You must enter a price between &lt;minimum&gt;
                                         and &lt;maximum&gt;.</p>
                                     <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="-100000"
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               value="-100000"
                                                data-minimum-value="10" data-maximum-value="500" id="ink"/>
                                     </div>
                                 </div>
@@ -118,7 +121,7 @@
                 if(!valid){
                     window.location = "consumablesAddError2.html";
                     return true;
-                }else if( inputValue < minValue || inputValue > maxValue ){
+                }else if( parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue ){
                     window.location = "consumablesAddError3.html";
                     return true;
                 }
