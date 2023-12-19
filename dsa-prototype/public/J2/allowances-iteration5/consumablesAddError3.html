@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>DSA Allowances - Consumable Items</title>
+    <title>DSA Allowances - Consumable Items Add</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
@@ -38,17 +38,17 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
-
             <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
                 <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="#">You must select a consumable item.</a>
+                        <a href="#">You must enter a price between &lt;minimum&gt; and &lt;maximum&gt;.</a>
                     </li>
                 </ul>
-                <p>Or <a href="equipment.html">Skip equipment, software and accessories</a> to continue without making a choice</p>
+                <p>If you no longer want to add these items, <a href="consumables.html">cancel</a> and reselect or <a href="equipment.html">skip
+                    consumables.</a></p>
             </div>
-
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
                     <li class="ds_breadcrumbs__item">
@@ -64,54 +64,36 @@
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
 
-                    <div class="ds_question ds_question--error">
+                    <div class="ds_question">
                         <fieldset>
-                            <span class="small_text_grey">Part 1 of 3</span>
-                            <h1>John's consumable items</h1>
-                            <p class="ds_hint-text">General costs related to a student's course and incurred as a
-                                result of their disability.<br>For example, printing, ink and Braille paper.</p>
-                            <span class="ds_hint-text">Claimed yearly. Allowance limit per academic year:</span>
-                            <strong>&pound;1,725</strong>
-                            <h3>Select all that apply</h3>
+                            <span class="small_text_grey">Part 2 of 3</span>
+                            <h1>Enter cost for consumable items</h1>
                             <div class="ds_field-group">
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="paper" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="paper"><strong>Paper</strong></label>
+                                <div class="ds_question ds_question--error">
+                                    <label class="ds_label" for="paper">Paper</label>
+                                    <p class="ds_question__error-message">You must enter a price between &lt;minimum&gt;
+                                        and &lt;maximum&gt;.</p>
+                                    <div class="ds_currency-wrapper" data-symbol="£">
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="1000000"
+                                               data-minimum-value="10" data-maximum-value="500" id="paper"/>
+                                    </div>
                                 </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="ink" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="ink"><strong>Ink cartridges</strong></label>
-                                </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="printing" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="printing"><strong>Printing</strong></label>
-                                </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="photocopy" type="checkbox"/>
-                                    <label class="ds_checkbox__label"
-                                           for="photocopy"><strong>Photocopying</strong></label>
-                                </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="other" onclick="myFunction()"
-                                           type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="other">Other</label>
-                                </div>
-
-                                <div id="description" class="description ds_question--error" style="display:none;">
-                                    <label class="ds_label" for="not_listed_description">Description</label>
-                                    <p class="ds_question__error-message">You must describe other consumable items.</p>
-                                    <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
-                                           id="not_listed_description"/>
-                                    <br>
+                                <div class="ds_question ds_question--error">
+                                    <label class="ds_label" for="ink">Ink cartridges</label>
+                                    <p class="ds_question__error-message">You must enter a price between &lt;minimum&gt;
+                                        and &lt;maximum&gt;.</p>
+                                    <div class="ds_currency-wrapper" data-symbol="£">
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" value="-100000"
+                                               data-minimum-value="10" data-maximum-value="500" id="ink"/>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
                     </div>
 
                     <div class="ds_button-group">
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button><br/>
-                        <a href="equipment.html" class="secondary_form">Skip consumable items</a>
+                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="consumables.html" class="secondary_form">Cancel</a>
                     </div>
 
                 </div>
@@ -120,39 +102,32 @@
     </div>
 
     <script>
-        // Other option
-        function myFunction() {
-            let checkBox = document.getElementById("other");
-            let text = document.getElementById("description");
-            checkBox.checked === true ? text.style.display = "block" : text.style.display = "none";
-        }
-
         // Nav crap
         function checkBeforeNav() {
-            let checkboxes = $(".ds_checkbox__input");
-            let other = document.getElementById("other");
-            let description = $("#not_listed_description");
-            let noneSelected = true;
-            let location = "consumablesAdd.html";
-
-            for (let index in checkboxes) {
-                let checked = checkboxes[index].checked;
-                if (checked === true) {
-                    noneSelected = false;
-                    break;
+            let inputs = $(".ds_input");
+            let allEntered = true;
+            for(let index= 0; index < inputs.length; index++){
+                let input = inputs[index];
+                let inputValue = input.value.trim();
+                let minValue = parseFloat(input.dataset["minimumValue"]);
+                let maxValue = parseFloat(input.dataset["maximumValue"]);
+                if( !inputValue ){
+                    allEntered = false;
+                }
+                let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
+                if(!valid){
+                    window.location = "consumablesAddError2.html";
+                    return true;
+                }else if( inputValue < minValue || inputValue > maxValue ){
+                    window.location = "consumablesAddError3.html";
+                    return true;
                 }
             }
-
-            if (noneSelected) {
-                location = "consumablesError2.html";
-            } else {
-                if (other.checked) {
-                    if (!description.val().trim()) {
-                        location = "consumablesError1.html";
-                    }
-                }
+            if(!allEntered){
+                    window.location = "consumablesAddError1.html";
+                    return true;
             }
-            window.location = location;
+            window.location = "consumablesList.html";
         }
     </script>
 
