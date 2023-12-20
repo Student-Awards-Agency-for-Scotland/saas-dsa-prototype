@@ -131,7 +131,8 @@
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="disabilitiesErrors1.html" class="ds_button dsa_button">Confirm and continue</a><br/>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
+                        <br/>
                     </div>
 
                 </div>
@@ -161,6 +162,34 @@
                     description.classList.remove("ds_question--error");
                 }
             }
+        }
+
+        // Navigation
+        function checkBeforeNav(){
+            let checkboxes = $(".ds_checkbox__input");
+            let other = document.getElementById("not_listed");
+            let description = $("#not_listed_description");
+            let noneSelected = true;
+            let location = "disabilitiesFinal.html";
+
+            for (let index in checkboxes) {
+                let checked = checkboxes[index].checked;
+                if (checked === true) {
+                    noneSelected = false;
+                    break;
+                }
+            }
+
+            if (noneSelected) {
+                location = "disabilitiesErrors1.html";
+            } else {
+                if (other.checked) {
+                    if (!description.val().trim()) {
+                        location = "disabilitiesErrors2.html";
+                    }
+                }
+            }
+            window.location = location;
         }
     </script>
 
