@@ -55,68 +55,64 @@
 
                     <form>
                         <div class="ds_question">
-                            <fieldset aria-describedby="ds_hint">
-                                <h1 id="ds_hint">Payment for Needs Assessment Report</h1>
-                                <p>We need to know the assessment fee so that we can reimburse your college or
-                                    university.</p>
-                                <div class="ds_field-group">
-                                    <label class="ds_label" for="ass-name">Name of assessment centre</label>
-                                    <p class="ds_hint-text">This can be an approved needs assessment centre, college or
-                                        university.</p>
-                                    <input class="ds_input ds_input--fixed-20" type="text" id="ass-name"/>
-                                </div>
-                                <div class="ds_field-group">
-                                    <label class="ds_label" for="person-name">Name of assessment centre</label>
-                                    <p class="ds_hint-text">A qualified assessor who has carried out the needs
-                                        assessment.</p>
-                                    <input class="ds_input ds_input--fixed-20" type="text" id="person-name"/>
-                                </div>
-                                <div class="ds_field-group">
-                                    <label class="ds_label" for="hours">Total hours</label>
-                                    <p class="ds_hint-text">The time it took to complete the needs assessment and the
-                                        Needs Assessment Report.</p>
-                                    <input class="ds_input ds_input--fixed-20" type="text" id="hours"/>
-                                </div>
-                                <div class="ds_field-group">
-                                    <label class="ds_label" for="rate">Hourly rate</label>
-                                    <input class="ds_input ds_input--fixed-10" type="text" id="rate"/>
-                                </div>
-                            </fieldset>
+                            <h1 id="ds_hint">Payment for Needs Assessment Report</h1>
+                            <p>Total:&nbsp;&nbsp;&nbsp; <strong>&pound;450.00</strong></p>
+                            <table class="ds_table dsa_allowance_table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">
+                                        Name of Assessor
+                                    </th>
+                                    <th scope="col">
+                                        Assessment centre
+                                    </th>
+                                    <th scope="col">
+                                        Hours
+                                    </th>
+                                    <th scope="col">
+                                        Hourly rate
+                                    </th>
+                                    <th scope="col">
+                                        Cost<br>
+                                        <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tr>
+                                    <td>
+                                        Ann Samuel
+                                    </td>
+                                    <td>
+                                        Glasgow Caledonian University
+                                    </td>
+                                    <td>
+                                        8
+                                    </td>
+                                    <td>
+                                        &pound;50
+                                    </td>
+                                    <td>
+                                        &pound;450.00
+                                    </td>
+                                    <td>
+                                        <a href="paymentAssessment.html">Change</a>
+                                    </td>
+                                    <td>
+                                        <a href="#">Remove</a>
+                                    </td>
+                                </tr>
+                            </table>
                         </div>
                     </form>
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
-                        <br/>
-                        <a href="#" class="secondary_form">Skip Payment for Needs Assessment</a>
+                        <a href="adviser.html" class="ds_button dsa_button">Confirm and continue</a>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-
-    <script>
-        function checkBeforeNav(){
-            let inputs = $(".ds_input");
-            let location = "paymentAssessmentFinal.html";
-            for(let index = 0; index < inputs.length; index++){
-                let input = inputs[index];
-                let inputValue = input.value.trim();
-                if(!inputValue){
-                    location = "paymentAssessmentError.html";
-                    break;
-                }else if(input.id === "rate"){
-                    let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
-                    if(!valid){
-                        location = "paymentAssessmentError.html";
-                        break;
-                    }
-                }
-            }
-            window.location = location;
-        }
-    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
