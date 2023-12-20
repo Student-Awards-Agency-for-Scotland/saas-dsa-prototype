@@ -111,13 +111,36 @@
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="paymentAssessmentError.html" class="ds_button dsa_button">Confirm and continue</a><br/>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
+                        <br/>
                         <a href="#" class="secondary_form">Skip Payment for Needs Assessment</a>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav(){
+            let inputs = $(".ds_input");
+            let location = "paymentAssessmentFinal.html";
+            for(let index = 0; index < inputs.length; index++){
+                let input = inputs[index];
+                let inputValue = input.value.trim();
+                if(!inputValue){
+                    location = "paymentAssessmentError.html";
+                    break;
+                }else if(input.id === "rate"){
+                    let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
+                    if(!valid){
+                        location = "paymentAssessmentError.html";
+                        break;
+                    }
+                }
+            }
+            window.location = location;
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
