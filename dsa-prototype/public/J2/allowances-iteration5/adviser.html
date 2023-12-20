@@ -78,13 +78,28 @@
 
                     <div class="ds_button-group">
                         <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="adviserNext.html" class="ds_button dsa_button">I agree</a><br/>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button><br/>
                     </div>
 
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav(){
+            let checkboxes = $(".ds_checkbox__input");
+            let next = "adviserNext.html";
+            for(let index = 0; index < checkboxes.length; index++){
+                let checkbox = checkboxes[index];
+                if(!checkbox.checked){
+                    next = "adviserError.html";
+                    break;
+                }
+            }
+            window.location = next;
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
