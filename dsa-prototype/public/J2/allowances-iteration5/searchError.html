@@ -73,65 +73,76 @@
                 <p>Or <a href="#">Skip equipment, software and accessories</a> to continue without making a choice</p>
             </div>
             <main class="ds_layout  ds_layout--article">
-                <div class="ds_layout__content ds_layout--eligibility">
-                    <h2>Find a Student</h2>
-                    <p>Search for a student to start a new DSA application to see the progress of an existing
+                <div class="ds_layout__content">
+                    <br/>
+                    <h1>Find a student</h1>
+                    <p>Search for a student to start a new DSA application or to see the progress of an existing
                         application.</p>
-                    <form>
+                    <div class="ds_question">
                         <div class="ds_question">
-                            <div class="ds_question">
-                                <fieldset aria-describedby="ds_hint">
-                                    <div class="ds_field-group ds_question--error">
-                                        <label class="ds_label" for="first-name">First name</label>
-                                        <p class="ds_question__error-message">Enter a first name</p>
-                                        <input class="ds_input ds_input--fixed-20" type="text" id="first-name"/>
+                            <div class="ds_field-group ds_question--error">
+                                <label class="ds_label" for="first-name">First name</label>
+                                <p class="ds_question__error-message">Enter a first name</p>
+                                <input class="ds_input ds_input--fixed-20" type="text" id="first-name"/>
+                                <span class="small_text_grey">You can enter up to 25 characters.</span>
+                            </div>
+                            <br>
+                            <div class="ds_field-group ds_question--error">
+                                <label class="ds_label" for="last-name">Last name</label>
+                                <p class="ds_question__error-message">Enter a last name</p>
+                                <input class="ds_input ds_input--fixed-20" type="text" id="last-name"/>
+                                <span class="small_text_grey">You can enter up to 25 characters.</span>
+                            </div>
+                            <br>
+                            <div class="ds_question--error">
+                                <label class="ds_label">Date of birth (optional)</label>
+                                <p class="ds_hint-text">For example, 16 10 2000.</p>
+                                <p class="ds_question__error-message">Date of birth must include a day.</p>
+                                <p class="ds_question__error-message">Date of birth must include a month.</p>
+                                <p class="ds_question__error-message">Date of birth must include a year.</p>
+                                <p class="ds_question__error-message">Date of birth must be areal date.</p>
+                                <p class="ds_question__error-message">Date of birth cannot be more than 100
+                                    years in the past.</p>
+                                <p class="ds_question__error-message">Enter a date of birth that is in the
+                                    past.</p>
+                                <p class="ds_question__error-message">Date suggests the student is less than 15
+                                    years old. Enter a valid date.</p>
+                                <div class="ds_field-group  ds_field-group--inline">
+                                    <div>
+                                        <input id="day" class="ds_input ds_input--fixed-3" value=""/>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
-                                        <label class="ds_label" for="last-name">Last name</label>
-                                        <p class="ds_question__error-message">Enter a last name</p>
-                                        <input class="ds_input ds_input--fixed-20" type="text" id="last-name"/>
-                                    </div>
-                                    <div class="ds_question--error">
-                                        <fieldset>
-                                            <label class="ds_label">Date of birth</label>
-                                            <p class="ds_hint-text">For example, 16 10 2000.</p>
-                                            <p class="ds_question__error-message">Date of birth must include a day.</p>
-                                            <p class="ds_question__error-message">Date of birth must include a month.</p>
-                                            <p class="ds_question__error-message">Date of birth must include a year.</p>
-                                            <p class="ds_question__error-message">Date of birth must be areal date.</p>
-                                            <p class="ds_question__error-message">Date of birth cannot be more than 100 years in the past.</p>
-                                            <p class="ds_question__error-message">Enter a date of birth that is in the past.</p>
-                                            <p class="ds_question__error-message">Date suggests the student is less than 15 years old. Enter a valid date.</p>
-                                            <div class="ds_field-group  ds_field-group--inline">
-                                                <div>
-                                                    <label class="ds_label" for="day">Day</label>
-                                                    <input id="day" class="ds_input ds_input--fixed-2" value=""/>
-                                                </div>
 
-                                                <div>
-                                                    <label class="ds_label" for="month">Month</label>
-                                                    <input id="month" class="ds_input ds_input--fixed-2" value=""/>
-                                                </div>
+                                    <div>
+                                        <input id="month" class="ds_input ds_input--fixed-3" value=""/>
+                                    </div>
 
-                                                <div>
-                                                    <label class="ds_label" for="year">Year</label>
-                                                    <input id="year" class="ds_input ds_input--fixed-4" value=""/>
-                                                </div>
-                                            </div>
-                                        </fieldset>
+                                    <div>
+                                        <input id="year" class="ds_input ds_input--fixed-5" value=""/>
                                     </div>
-                                    <div class="ds_button-group">
-                                        <a href="#" class="ds_button dsa_button">Continue</a>
-                                    </div>
-                                </fieldset>
+                                </div>
+                            </div>
+                            <div class="ds_button-group">
+                                <button onclick="checkBeforeNav()" class="ds_button dsa_button">Continue</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
 
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav() {
+            let firstNameValue = $("#first-name").val().trim();
+            let lastNameValue = $("#last-name").val().trim();
+            if (!firstNameValue || !lastNameValue) {
+                window.location = "searchError.html";
+                return true;
+            }
+            window.location = "searchResult.html";
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
