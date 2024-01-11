@@ -128,6 +128,10 @@
     }
 }
 
+.eligibility-header h1 {
+    margin-bottom: 0;
+}
+
 .ds_radio__input:checked + .ds_radio__label::before {
     border-color: #333
 }
@@ -309,10 +313,11 @@ a > svg, .ds_link > svg {
     border: 4px solid #333;
     font-weight: 400;
 }
+
 .ds_important-text {
-    border:0 none;
+    border: 0 none;
     border-top: 4px solid #333;
-    border-bottom: 2px solid #333;
+    border-bottom: 1px solid #333;
 }
 
 .close_button_fml {
@@ -1209,11 +1214,12 @@ a > svg, .ds_link > svg {
     border-bottom: 4px solid #333333;
 }
 
-.ds_table--eligibility td:first-child{
-    width:65%;
+.ds_table--eligibility td:first-child {
+    width: 65%;
 }
-.ds_layout--eligibility h2{
-    margin-top:16px;
+
+.ds_layout--eligibility h2 {
+    margin-top: 16px;
 }
 
 .ds_hint-text.dsa_vat {
@@ -1223,6 +1229,10 @@ a > svg, .ds_link > svg {
 
 .ds_table.dsa_allowance_table td {
     vertical-align: middle;
+}
+
+.eligibility-header .ds_table td {
+    padding: 0.5rem 1rem 0.4375rem 0;
 }
 
 .ds_file-download {
