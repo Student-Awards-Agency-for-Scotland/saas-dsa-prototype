@@ -22,6 +22,10 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.ds_site-header::before {
+    border: 0 none;
+}
+
 .small_text {
     color: white;
     font-size: xx-small;
@@ -132,6 +136,10 @@
     margin-bottom: 0;
 }
 
+.searchInputs {
+    margin-bottom: 0;
+}
+
 .ds_radio__input:checked + .ds_radio__label::before {
     border-color: #333
 }
@@ -238,7 +246,7 @@ a > svg, .ds_link > svg {
 \*------------------------------------*/
 
 .ds_site-branding {
-    padding: 12px 0 16px 0;
+    padding: 1em 0;
 }
 
 .ds_site-branding__logo-image {
@@ -273,6 +281,10 @@ a > svg, .ds_link > svg {
 
 .ds_site-branding__title:not(:first-child) {
     margin: 0px 0px 10px 10px;
+}
+
+.ds_site-branding__logo {
+    height: 50px;
 }
 
 .ds_site-branding__logo, .ds_site-branding__title {
@@ -734,7 +746,7 @@ a > svg, .ds_link > svg {
 }
 
 .ds_breadcrumbs__item .ds_breadcrumbs__link {
-    margin-left: -2px;
+    /*margin-left: -2px;*/
     color: #29789f;
     text-decoration-line: underline;
     font-weight: 300;
@@ -957,7 +969,7 @@ a > svg, .ds_link > svg {
     line-height: 1.7142857143;
     min-height: 56px;
     min-width: 56px;
-    padding: 16px;
+    padding: 1em 1.5em;
     background: #006DA2;
     border: 0;
     border-radius: 0;
@@ -1222,6 +1234,12 @@ a > svg, .ds_link > svg {
     margin-top: 16px;
 }
 
+@media (min-width: 768px) {
+    .ds_table--search {
+        width: 65%;
+    }
+}
+
 .ds_hint-text.dsa_vat {
     font-weight: normal;
     font-size: small;
@@ -1231,8 +1249,8 @@ a > svg, .ds_link > svg {
     vertical-align: middle;
 }
 
-.eligibility-header .ds_table td {
-    padding: 0.5rem 1rem 0.4375rem 0;
+.ds_table td, .ds_table th {
+    padding: 1rem 1rem 1em 0.3em;
 }
 
 .ds_file-download {
