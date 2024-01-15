@@ -364,7 +364,7 @@ a > svg, .ds_link > svg {
 .ds_summary-list {
     margin-bottom: 1.5rem;
     list-style-type: none;
-    margin-left: 0;
+    margin-left: 0.4rem;
 }
 
 @media (min-width: 768px) {
@@ -430,7 +430,7 @@ a > svg, .ds_link > svg {
     background-color: #000000;
     color: #F4F3F3;
     text-align: center;
-    line-height: 22px;
+    line-height: 24px;
     position: absolute;
     top: -0.1em;
     left: -0.9em;
@@ -513,6 +513,7 @@ a > svg, .ds_link > svg {
         border-collapse: collapse;
         display: table;
         width: 100%;
+        margin-left: 0.4rem;
     }
 
     .ds_summary-list__item {
@@ -968,7 +969,7 @@ a > svg, .ds_link > svg {
     font-size: .875rem;
     line-height: 1.7142857143;
     min-height: 56px;
-    min-width: 56px;
+    min-width: 120px;
     padding: 1em 1.5em;
     background: #006DA2;
     border: 0;
@@ -1251,6 +1252,11 @@ a > svg, .ds_link > svg {
 
 .ds_table td, .ds_table th {
     padding: 2rem 1rem 2em 0.3em;
+}
+
+.resume-application .dsa_allowance_table tbody,
+.resume-application .dsa_allowance_table tbody > tr:last-child {
+    border-bottom: 0 none;
 }
 
 .ds_file-download {
@@ -1570,6 +1576,12 @@ a > svg, .ds_link > svg {
 
 .ds_reversed .ds_footer__site-items {
     border-color: rgba(255, 255, 255, .2)
+}
+
+@media (max-width: 768px) {
+    .ds_site-items__item {
+        width: 100%;
+    }
 }
 
 .ds_site-items__item {
