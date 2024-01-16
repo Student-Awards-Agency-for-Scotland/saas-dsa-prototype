@@ -46,8 +46,8 @@
                         <a href="#">You must select a travel expense type.</a>
                     </li>
                 </ul>
-                <p>Or <a href="summary.html">Skip travel expenses</a> to continue without select a travel expense type.</p>
             </div>
+            <br>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
                     <li class="ds_breadcrumbs__item">
@@ -65,44 +65,44 @@
 
                     <form>
                         <div class="ds_question">
-                            <fieldset aria-describedby="ds_hint">
-                                <p class="ds_hint-text" id="ds_hint">Part 1 of 3</p>
-                                <h1>John's travel expenses</h1>
-                                <p>Additional travel costs incurred as a result of a student's
-                                    disability or impairment.</p>
-                                <p>Claimed per year.</p>
-                                <br>
-                                <h3>Select all that apply</h3>
-                                <div class="ds_field-group ds_question--error">
-                                    <p class="ds_question__error-message">You must select a travel expense type.</p>
-                                    <div class="ds_checkbox">
-                                        <input class="ds_checkbox__input" id="owncar" type="checkbox"/>
-                                        <label class="ds_checkbox__label" for="owncar"><strong>Own car</strong></label>
-                                        <p class="ds_hint-text">We will reimburse the student for 1 return journey per
-                                            day when using their own car.</p>
-                                    </div>
-                                    <div class="ds_checkbox">
-                                        <input class="ds_checkbox__input" id="taxi" type="checkbox"/>
-                                        <label class="ds_checkbox__label" for="taxi"><strong>Taxi</strong></label>
-                                        <p class="ds_hint-text">Taxi cost will need to e evidenced with either 1 quote
-                                            from the university approved provider or 2 estimates from local
-                                            providers.</p>
-                                    </div>
-                                    <div class="ds_checkbox">
-                                        <input class="ds_checkbox__input" id="lift" type="checkbox"/>
-                                        <label class="ds_checkbox__label" for="lift"><strong>Lift</strong></label>
-                                        <p class="ds_hint-text">We will reimburse the student for 2 return journeys per
-                                            day to allow for drop off and collection.</p>
-                                    </div>
-
+                            <p class="ds_hint-text" id="ds_hint">Part 1 of 3</p>
+                            <h1>John's travel expenses</h1>
+                            <p>Additional travel costs incurred as a result of a student's
+                                disability or impairment.</p>
+                            <p>Claimed per year.</p>
+                            <h2>Select all that apply</h2>
+                            <div class="ds_field-group ds_question--error">
+                                <div class="ds_question__error-message">You must select a travel expense type.</div>
+                                <div class="ds_checkbox">
+                                    <input class="ds_checkbox__input" id="owncar" type="checkbox"/>
+                                    <label class="ds_checkbox__label" for="owncar"><strong>Own car</strong></label>
+                                    <p class="ds_hint-text">We will reimburse the student for 1 return journey per
+                                        day when using their own car.</p>
                                 </div>
-                            </fieldset>
+                                <div class="ds_checkbox">
+                                    <input class="ds_checkbox__input" id="taxi" type="checkbox"/>
+                                    <label class="ds_checkbox__label" for="taxi"><strong>Taxi</strong></label>
+                                    <p class="ds_hint-text">Taxi cost will need to e evidenced with either 1 quote
+                                        from the university approved provider or 2 estimates from local
+                                        providers.</p>
+                                </div>
+                                <div class="ds_checkbox">
+                                    <input class="ds_checkbox__input" id="lift" type="checkbox"/>
+                                    <label class="ds_checkbox__label" for="lift"><strong>Lift</strong></label>
+                                    <p class="ds_hint-text">We will reimburse the student for 2 return journeys per
+                                        day to allow for drop off and collection.</p>
+                                </div>
+                            </div>
+                            <br>
                         </div>
                     </form>
                     <div class="ds_button-group">
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button><br/>
-                        <a href="summary.html">Skip travel expenses</a>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and
+                            continue
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
+                        <br>
+                        <a href="paymentAssessment.html">Skip travel expenses</a>
                     </div>
                 </div>
             </main>
@@ -110,12 +110,12 @@
     </div>
 
     <script>
-        function checkBeforeNav(){
+        function checkBeforeNav() {
             let checkboxes = $(".ds_checkbox__input");
             let next = "travelCar.html";
-            for(let index = 0; index < checkboxes.length; index++){
+            for (let index = 0; index < checkboxes.length; index++) {
                 let checkbox = checkboxes[index];
-                if(!checkbox.checked){
+                if (!checkbox.checked) {
                     next = "travelError.html";
                     break;
                 }
