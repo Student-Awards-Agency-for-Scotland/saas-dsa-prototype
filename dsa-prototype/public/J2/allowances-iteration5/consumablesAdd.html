@@ -65,7 +65,7 @@
                                                data-minimum-value="10" data-maximum-value="500" id="paper"/>
                                     </div>
                                 </div>
-                                <div class="ds_question">
+                                <div id="ink-question" class="ds_question">
                                     <label class="ds_label" for="ink">Ink cartridges</label>
                                     <div class="ds_currency-wrapper" data-symbol="£">
                                         <input class="ds_input ds_input--fixed-10" type="text" value="100"
@@ -91,28 +91,33 @@
         function checkBeforeNav() {
             let inputs = $(".ds_input");
             let allEntered = true;
-            for(let index= 0; index < inputs.length; index++){
+            for (let index = 0; index < inputs.length; index++) {
                 let input = inputs[index];
                 let inputValue = input.value.trim();
                 let minValue = parseFloat(input.dataset["minimumValue"]);
                 let maxValue = parseFloat(input.dataset["maximumValue"]);
-                if( !inputValue ){
+                if (!inputValue) {
                     allEntered = false;
                 }
                 let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
-                if(!valid){
+                if (!valid) {
                     window.location = "consumablesAddError2.html";
                     return true;
-                }else if( parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue ){
+                } else if (parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue) {
                     window.location = "consumablesAddError3.html";
                     return true;
                 }
             }
-            if(!allEntered){
-                    window.location = "consumablesAddError1.html";
-                    return true;
+            if (!allEntered) {
+                window.location = "consumablesAddError1.html";
+                return true;
             }
             window.location = "consumablesList.html";
+        }
+
+        // Hide one of the elements
+        if (window.location.search.search(/hide/i) > -1) {
+            document.getElementById("ink-question").style.display = "none";
         }
     </script>
 
