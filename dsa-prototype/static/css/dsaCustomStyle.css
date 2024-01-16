@@ -1227,12 +1227,18 @@ a > svg, .ds_link > svg {
     border-bottom: 4px solid #333333;
 }
 
-.ds_table--eligibility td:first-child {
-    width: 65%;
+@media (min-width: 768px) {
+    .ds_table--eligibility {
+        width: 75%;
+    }
 }
 
 .ds_layout--eligibility h2 {
     margin-top: 16px;
+}
+
+.ds_table .ds_td--status {
+    padding-top: 0;
 }
 
 @media (min-width: 768px) {
