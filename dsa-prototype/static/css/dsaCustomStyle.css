@@ -22,6 +22,10 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.consumable h2{
+    font-weight: normal;
+}
+
 .ds_site-header::before {
     border: 0 none;
 }
@@ -1268,7 +1272,7 @@ a > svg, .ds_link > svg {
     vertical-align: middle;
 }
 
-.ds_table td, .ds_table th {
+.ds_table td {
     padding: 2rem 1rem 2em 0.3em;
 }
 
@@ -1599,6 +1603,9 @@ a > svg, .ds_link > svg {
 @media (max-width: 767px) {
     .ds_site-footer__site-items .ds_site-items__item {
         width: 100%;
+    }
+    .ds_site-items__item:not(:last-child) {
+        margin-right: 0;
     }
 }
 
