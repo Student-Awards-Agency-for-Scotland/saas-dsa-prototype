@@ -963,6 +963,18 @@ a > svg, .ds_link > svg {
     padding-right: 0;
 }
 
+/* add taxi */
+.contract-ul{
+    margin-left: 0;
+}
+.contract-ul .ds_site-items__item:not(:last-child) {
+    margin-right: 0;
+}
+
+.ds_input--fixed-30 {
+    max-width: calc(16px + 30em);
+}
+
 /* buttons */
 
 .ds_button {
@@ -1584,8 +1596,8 @@ a > svg, .ds_link > svg {
     border-color: rgba(255, 255, 255, .2)
 }
 
-@media (max-width: 768px) {
-    .ds_site-items__item {
+@media (max-width: 767px) {
+    .ds_site-footer__site-items .ds_site-items__item {
         width: 100%;
     }
 }
