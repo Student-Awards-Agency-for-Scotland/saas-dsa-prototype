@@ -66,7 +66,8 @@
                         <div class="ds_checkbox">
                             <input class="ds_checkbox__input" id="dec2" type="checkbox"/>
                             <label class="ds_checkbox__label" for="dec2">
-                                I have seen and verified medical evidence of a student's disability or learning difficulty.
+                                I have seen and verified medical evidence of a student’s disability or learning
+                                difficulty.
                             </label>
                         </div>
                         <div class="ds_checkbox">
@@ -76,10 +77,11 @@
                             </label>
                         </div>
                     </div>
-
+                    <br>
                     <div class="ds_button-group">
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button><br/>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
+                        <br/>
                     </div>
 
                 </div>
@@ -88,12 +90,12 @@
     </div>
 
     <script>
-        function checkBeforeNav(){
+        function checkBeforeNav() {
             let checkboxes = $(".ds_checkbox__input");
             let next = "adviserNext.html";
-            for(let index = 0; index < checkboxes.length; index++){
+            for (let index = 0; index < checkboxes.length; index++) {
                 let checkbox = checkboxes[index];
-                if(!checkbox.checked){
+                if (!checkbox.checked) {
                     next = "adviserError.html";
                     break;
                 }
