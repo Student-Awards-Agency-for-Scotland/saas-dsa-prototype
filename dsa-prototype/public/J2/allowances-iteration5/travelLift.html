@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>DSA Allowances - Equipment</title>
+    <title>DSA Allowances - Travel</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
@@ -53,49 +53,77 @@
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
 
-                    <div class="ds_question">
+                    <form>
                         <div class="ds_question">
-                            <fieldset aria-describedby="ds_hint">
-                                <p class="ds_hint-text" id="ds_hint">Part 5 of 5</p>
-                                <h1>John's equipment, software and accessories allowance</h1>
-                                <p class="small_text_grey">Study accessories such as a laptop carry case, laptop stand or a bundle.</p>
-                                <h2>Product quotes</h2>
-                                <p>You have added <strong>1</strong> hardware product.</p>
-                                <table class="ds_table dsa_allowance_table">
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">Supplier name</th>
-                                        <th scope="col">Quote reference</th>
-                                        <th scope="col">Cost<br>
-                                            <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Sight and Sound</td>
-                                        <td>GCU389743</td>
-                                        <td>&pound;549.00</td>
-                                        <td><a href="">Change</a></td>
-                                        <td><a href="">Remove</a></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <button class="ds_button  ds_button--secondary ds_input--fixed-20">Choose another package option</button>
-                            </fieldset>
+                            <p class="ds_hint-text" id="ds_hint">Part 2 of 3</p>
+                            <h1>Add lift</h1>
+                            <p>Please provide details of the start and end location and the number of journeys you
+                                are claiming for.</p>
                             <br>
+                            <div class="ds_field-group">
+                                <div class="ds_field-group">
+                                    <label class="ds_label" for="start">Postcode of start location</label>
+                                    <p>A journey from the student's term-time address.</p>
+                                    <input class="ds_input ds_input--fixed-20" type="text" id="start"/>
+                                </div>
+                                <div class="ds_field-group">
+                                    <label class="ds_label" for="end">Postcode of end location</label>
+                                    <p>A journey from the student's college, university or placement.</p>
+                                    <input class="ds_input ds_input--fixed-20" type="text" id="end"/>
+                                </div>
+                                <div class="ds_field-group">
+                                    <label class="ds_label" for="return">Return journeys</label>
+                                    <p>The number of return journeys the student will make per week.</p>
+                                    <p class="ds_hint-text">For example from home to university and back is one
+                                        return journey.</p>
+                                    <input class="ds_input ds_input--fixed-10" type="text" id="return"/>
+                                </div>
+                                <div class="ds_field-group">
+                                    <label class="ds_label" for="weeks">Weeks</label>
+                                    <p>The number of weeks return journeys will be made per academic year.</p>
+                                    <div class="ds_select-wrapper ds_input--fixed-10">
+                                        <select class="ds_select ds_input--fixed-10" id="weeks">
+                                            <option></option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <span class="ds_select-arrow" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
+                    </form>
+                    <br>
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="javascript:;" class="ds_button dsa_button">Confirm and
-                            continue</a><br/>
+                        <a href="travelFinal.html" class="ds_button dsa_button">Confirm and continue</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
                     </div>
-
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav() {
+            let inputs = $(".ds_input");
+            let location = "travelFinal.html";
+            let weeks = $("#weeks");
+            if (!weeks.val()) {
+                location = "travelCarError.html";
+            } else {
+                for (let index = 0; index < inputs.length; index++) {
+                    let input = inputs[index];
+                    let inputValue = input.value.trim();
+                    if (!inputValue) {
+                        location = "travelCarError.html";
+                        break;
+                    }
+                }
+            }
+            window.location = location;
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">

@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="ds_breadcrumbs__item" aria-current="page">
-                        <strong>Disabilities</strong>
+                        <strong>Allowances</strong>
                     </li>
                 </ol>
             </nav>
@@ -123,7 +123,7 @@
                                         <td>No</td>
                                         <td>&pound;30</td>
                                         <td>
-                                            <a href="#" class="secondary_form">Remove</a>
+                                            <a href="javascript:;" class="secondary_form">Remove</a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -159,8 +159,8 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <a href="#" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="#" class="secondary_form">Cancel</a>
+                                        <a href="javascript:;" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="javascript:;" class="secondary_form">Cancel</a>
                                     </div>
                                 </div>
                             </div>
@@ -169,13 +169,37 @@
 
                     <div class="ds_button-group">
                         <a href="travelTaxiError.html" class="ds_button dsa_button">Confirm and continue</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
+                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
                         <br>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav() {
+            let inputs = $(".ds_input");
+            let location = "travelTaxiAdded.html";
+            let weeks = $("#weeks");
+            let contract = $('input[name="contract"]');
+            if (!weeks.val()) {
+                location = "travelTaxiError.html";
+            } else if(contract[0].checked && contract[1].checked) {
+                location = "travelTaxiError.html";
+            } else {
+                for (let index = 0; index < inputs.length; index++) {
+                    let input = inputs[index];
+                    let inputValue = input.value.trim();
+                    if (!inputValue) {
+                        location = "travelTaxiError.html";
+                        break;
+                    }
+                }
+            }
+            window.location = location;
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">

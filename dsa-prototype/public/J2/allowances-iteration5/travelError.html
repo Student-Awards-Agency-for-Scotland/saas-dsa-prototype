@@ -43,7 +43,7 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="#">You must select a travel expense type.</a>
+                        <a href="javascript:;">You must select a travel expense type.</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li class="ds_breadcrumbs__item" aria-current="page">
-                        <strong>Disabilities</strong>
+                        <strong>Allowances</strong>
                     </li>
                 </ol>
             </nav>
@@ -100,7 +100,7 @@
                         <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and
                             continue
                         </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
+                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
                         <br>
                         <a href="paymentAssessment.html">Skip travel expenses</a>
                     </div>
@@ -111,12 +111,14 @@
 
     <script>
         function checkBeforeNav() {
-            let checkboxes = $(".ds_checkbox__input");
-            let next = "travelCar.html";
+            let checkboxes = document.getElementsByClassName("ds_checkbox__input");
+            let next = "travelError.html";
+            let nothingSelected = false;
             for (let index = 0; index < checkboxes.length; index++) {
                 let checkbox = checkboxes[index];
-                if (!checkbox.checked) {
-                    next = "travelError.html";
+                if (checkbox.checked) {
+                    nothingSelected = true;
+                    next = "travelCar.html";
                     break;
                 }
             }
