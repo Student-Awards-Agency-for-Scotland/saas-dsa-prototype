@@ -1605,7 +1605,7 @@ a > svg, .ds_link > svg {
         width: 100%;
     }
     .ds_site-items__item:not(:last-child) {
-        margin-right: 0;
+        margin-right: 0!important;
     }
 }
 
