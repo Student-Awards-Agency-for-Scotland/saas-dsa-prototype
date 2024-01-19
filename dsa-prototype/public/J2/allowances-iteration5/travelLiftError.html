@@ -38,6 +38,28 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="javascript:;">You must enter a start location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must enter an end location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must add the number of return journeys per week.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Cost can only contain numbers and a decimal point.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must select a number of weeks per academic year.</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
                     <li class="ds_breadcrumbs__item">
@@ -55,44 +77,59 @@
 
                     <form>
                         <div class="ds_question">
-                            <p class="ds_hint-text" id="ds_hint">Part 1 of 3</p>
-                            <h1>John's travel expenses</h1>
-                            <p>Additional travel costs incurred as a result of a student's
-                                disability or impairment.</p>
-                            <p>Claimed per year.</p>
+                            <p class="ds_hint-text" id="ds_hint">Part 2 of 3</p>
+                            <h1>Add lift</h1>
+                            <p>Please provide details of the start and end location and the number of journeys you
+                                are claiming for.</p>
+                            <br>
                             <div class="ds_field-group">
-                                <h2>Select all that apply</h2>
-                                <br>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="owncar" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="owncar"><strong>Own car</strong></label>
-                                    <p class="ds_hint-text">We will reimburse the student for 1 return journey per
-                                        day when using their own vehicle.</p>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="start">Postcode of start location</label>
+                                    <p>A journey from the student's term-time address.</p>
+                                    <p class="ds_question__error-message">You must enter a start location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="start"/>
                                 </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="taxi" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="taxi"><strong>Taxi</strong></label>
-                                    <p class="ds_hint-text">Taxi costs will need to be evidenced with either 1 quote
-                                        from the university approved provider or 2 estimates from local
-                                        providers.</p>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="end">Postcode of end location</label>
+                                    <p>A journey from the student's college, university or placement.</p>
+                                    <p class="ds_question__error-message">You must enter an end location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="end"/>
                                 </div>
-                                <div class="ds_checkbox">
-                                    <input class="ds_checkbox__input" id="lift" type="checkbox"/>
-                                    <label class="ds_checkbox__label" for="lift"><strong>Lift</strong></label>
-                                    <p class="ds_hint-text">We will reimburse the student for 2 return journeys per
-                                        day to allow for drop off and collection.</p>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="return">Return journeys</label>
+                                    <p>The number of return journeys the student will make per week.</p>
+                                    <p class="ds_hint-text">For example from home to university and back is one
+                                        return journey.</p>
+                                    <p class="ds_question__error-message">You must add the number of return journeys
+                                        per week.</p>
+                                    <p class="ds_question__error-message">Cost can only contain numbers and a
+                                        decimal point.</p>
+                                    <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="return"/>
+                                </div>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="weeks">Weeks</label>
+                                    <p>The number of weeks return journeys will be made per academic year.</p>
+                                    <p class="ds_question__error-message">You must select a number of weeks per academic
+                                        year.</p>
+                                    <div class="ds_select-wrapper ds_input--fixed-10">
+                                        <select class="ds_select ds_input--fixed-10 ds_input--error" id="weeks">
+                                            <option></option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                        <span class="ds_select-arrow" aria-hidden="true"></span>
+                                    </div>
                                 </div>
                             </div>
-                            <br>
                         </div>
                     </form>
+                    <br>
                     <div class="ds_button-group">
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and
-                            continue
-                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onclick="checkBeforeNav()" class="ds_button dsa_button">Confirm and continue</button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
-                        <br>
-                        <a href="paymentAssessment.html">Skip travel expenses</a>
                     </div>
                 </div>
             </main>
@@ -101,18 +138,19 @@
 
     <script>
         function checkBeforeNav() {
-            let checkboxes = $(".ds_checkbox__input");
-            let next = "travelCar.html";
-
-            for (let index = 0; index < checkboxes.length; index++) {
-                let checkbox = checkboxes[index];
-                if (!checkbox.checked) {
-                    next = "travelError.html";
-
+            let inputs = $(".ds_input");
+            let location = "travelFinal.html";
+            let weeks = $("#weeks");
+            for (let index = 0; index < inputs.length; index++) {
+                let input = inputs[index];
+                let inputValue = input.value.trim();
+                if (!inputValue) {
+                    location = "travelLiftError.html";
                     break;
                 }
             }
-            window.location = next;
+            if (!weeks.val()) location = "travelLiftError.html";
+            window.location = location;
         }
     </script>
 

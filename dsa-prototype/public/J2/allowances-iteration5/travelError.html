@@ -111,14 +111,14 @@
 
     <script>
         function checkBeforeNav() {
-            let checkboxes = document.getElementsByClassName("ds_checkbox__input");
-            let next = "travelError.html";
-            let nothingSelected = false;
+            let checkboxes = $(".ds_checkbox__input");
+            let next = "travelCar.html";
+
             for (let index = 0; index < checkboxes.length; index++) {
                 let checkbox = checkboxes[index];
-                if (checkbox.checked) {
-                    nothingSelected = true;
-                    next = "travelCar.html";
+                if (!checkbox.checked) {
+                    next = "travelError.html";
+
                     break;
                 }
             }

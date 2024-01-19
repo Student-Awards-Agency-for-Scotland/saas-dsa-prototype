@@ -96,7 +96,7 @@
                     </form>
                     <br>
                     <div class="ds_button-group">
-                        <a href="travelFinal.html" class="ds_button dsa_button">Confirm and continue</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onclick="checkBeforeNav()" class="ds_button dsa_button">Confirm and continue</button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
                     </div>
                 </div>
@@ -109,18 +109,15 @@
             let inputs = $(".ds_input");
             let location = "travelFinal.html";
             let weeks = $("#weeks");
-            if (!weeks.val()) {
-                location = "travelCarError.html";
-            } else {
-                for (let index = 0; index < inputs.length; index++) {
-                    let input = inputs[index];
-                    let inputValue = input.value.trim();
-                    if (!inputValue) {
-                        location = "travelCarError.html";
-                        break;
-                    }
+            for (let index = 0; index < inputs.length; index++) {
+                let input = inputs[index];
+                let inputValue = input.value.trim();
+                if (!inputValue) {
+                    location = "travelLiftError.html";
+                    break;
                 }
             }
+            if (!weeks.val()) location = "travelLiftError.html";
             window.location = location;
         }
     </script>
