@@ -102,33 +102,6 @@
                                     </div>
                                 </div>
                                 <br>
-                                <span>You have added <strong>1</strong> recommended provider.</span>
-                                <table class="ds_table dsa_allowance_table" style="width:70%">
-                                    <thead>
-                                    <tr>
-                                        <th>
-                                            <strong>Recommended provider</strong>
-                                        </th>
-                                        <th>
-                                            <strong>Contract</strong>
-                                        </th>
-                                        <th>
-                                            <strong>Cost of return journey</strong>
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>City Cabs</td>
-                                        <td>No</td>
-                                        <td>&pound;30</td>
-                                        <td>
-                                            <a href="javascript:;" class="secondary_form">Remove</a>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
                                 <div class="ds_field-group">
                                     <div class="ds_field-group">
                                         <label class="ds_label" for="provider">Recommended provider</label>
@@ -168,7 +141,7 @@
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="travelTaxiError.html" class="ds_button dsa_button">Confirm and continue</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="travelTaxiOneAdded.html" class="ds_button dsa_button">Confirm and continue</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>
                         <br>
                     </div>
@@ -180,7 +153,7 @@
     <script>
         function checkBeforeNav() {
             let inputs = $(".ds_input");
-            let location = "travelTaxiAdded.html";
+            let location = "travelTaxiOneAdded.html";
             let weeks = $("#weeks");
             let contract = $('input[name="contract"]');
             if (!weeks.val()) {
