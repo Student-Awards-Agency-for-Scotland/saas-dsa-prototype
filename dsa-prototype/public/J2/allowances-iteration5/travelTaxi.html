@@ -130,7 +130,7 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add
+                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">Add
                                         </button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="javascript:" class="secondary_form">Cancel</a>
                                     </div>
@@ -150,7 +150,8 @@
     </div>
 
     <script>
-        function checkBeforeNav() {
+        function checkBeforeNav(event) {
+            if(event) event.preventDefault();
             let yes = document.getElementById("yes");
             let uniApproved = !!yes.checked;
             let providers = document.getElementById("providers");
@@ -167,6 +168,7 @@
                 location = "travelTaxiError.html";
             }
             window.location = location;
+            return true;
         }
 
         function checkErrors() {

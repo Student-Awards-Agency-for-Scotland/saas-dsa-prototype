@@ -157,7 +157,7 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add
+                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">Add
                                         </button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="javascript:" class="secondary_form">Cancel</a>
                                     </div>
@@ -168,7 +168,7 @@
 
                     <div class="ds_button-group">
                         <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="travelTaxiAdded.html" class="ds_button dsa_button">Confirm and continue</a>
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
                         <br>
                     </div>
                 </div>
@@ -177,7 +177,8 @@
     </div>
 
     <script>
-        function checkBeforeNav() {
+        function checkBeforeNav(event) {
+            if(event) event.preventDefault();
             let yes = document.getElementById("yes");
             let uniApproved = !!yes.checked;
             let providers = document.getElementById("providers");
