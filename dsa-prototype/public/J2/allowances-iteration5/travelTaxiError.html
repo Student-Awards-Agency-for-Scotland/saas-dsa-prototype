@@ -140,8 +140,9 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <a href="javascript:;" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:;" class="secondary_form">Cancel</a>
+                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add
+                                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="javascript:" class="secondary_form">Cancel</a>
                                     </div>
                                 </div>
                             </div>
@@ -159,6 +160,34 @@
     </div>
 
     <script>
+        function checkBeforeNav() {
+            let yes = document.getElementById("yes");
+            let uniApproved = !!yes.checked;
+            let providers = document.getElementById("providers");
+            let location = "travelTaxiOneAdded.html";
+
+            if (uniApproved) {
+                if (providers)
+                    location = "travelTaxiOneAdded.html";
+            } else {
+                if (providers && parseInt(providers.innerHTML) >= 2)
+                    location = "travelTaxiAdded.html";
+            }
+            if (checkErrors()) {
+                location = "travelTaxiError.html";
+            }
+            window.location = location;
+        }
+
+        function checkErrors() {
+            let start = document.getElementById("start");
+            let end = document.getElementById("end");
+            let rtn = document.getElementById("return");
+            let weeks = document.getElementById("weeks");
+            return !start.value || !end.value || !rtn.value || !weeks.value;
+        }
+
+
         window.addEventListener("load", (event) => {
             // Dropdown week for 32 weeks
             let dropdown = document.getElementById("weeks");

@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
                                 <br>
-                                <span>You have added <strong>1</strong> recommended provider.</span>
+                                <span>You have added <strong id="providers">1</strong> recommended provider.</span>
                                 <table class="ds_table dsa_allowance_table" style="width:70%">
                                     <thead>
                                     <tr>
@@ -120,7 +120,7 @@
                                         <td>No</td>
                                         <td>&pound;30</td>
                                         <td>
-                                            <a href="javascript:;" class="secondary_form">Remove</a>
+                                            <a href="travelTaxi.html">Remove</a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -157,8 +157,9 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <a href="travelTaxiAdded.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:;" class="secondary_form">Cancel</a>
+                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add
+                                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="javascript:" class="secondary_form">Cancel</a>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +167,7 @@
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="travelTaxiAdded.html" class="ds_button dsa_button">Confirm and continue</a>
                         <br>
                     </div>
@@ -177,26 +178,32 @@
 
     <script>
         function checkBeforeNav() {
-            let inputs = $(".ds_input");
-            let location = "travelTaxiAdded.html";
-            let weeks = $("#weeks");
-            let contract = $('input[name="contract"]');
-            if (!weeks.val()) {
-                location = "travelTaxiError.html";
-            } else if (contract[0].checked && contract[1].checked) {
-                location = "travelTaxiError.html";
+            let yes = document.getElementById("yes");
+            let uniApproved = !!yes.checked;
+            let providers = document.getElementById("providers");
+            let location = "travelTaxiOneAdded.html";
+
+            if (uniApproved) {
+                if (providers)
+                    location = "travelTaxiOneAdded.html";
             } else {
-                for (let index = 0; index < inputs.length; index++) {
-                    let input = inputs[index];
-                    let inputValue = input.value.trim();
-                    if (!inputValue) {
-                        location = "travelTaxiError.html";
-                        break;
-                    }
-                }
+                if (providers && parseInt(providers.innerHTML) >= 2)
+                    location = "travelTaxiAdded.html";
+            }
+            if (checkErrors()) {
+                location = "travelTaxiError.html";
             }
             window.location = location;
         }
+
+        function checkErrors() {
+            let start = document.getElementById("start");
+            let end = document.getElementById("end");
+            let rtn = document.getElementById("return");
+            let weeks = document.getElementById("weeks");
+            return !start.value || !end.value || !rtn.value || !weeks.value;
+        }
+
 
         window.addEventListener("load", (event) => {
             // Dropdown week for 32 weeks
