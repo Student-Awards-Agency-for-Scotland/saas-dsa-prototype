@@ -43,7 +43,19 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
+                        <a href="javascript:">You must add a cost for paper.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:">You must add a cost for ink cartridges.</a>
+                    </li>
+                    <li>
                         <a href="javascript:;">You must enter a price between minimum and maximum.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Paper field must contain numbers and decimal point only.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Ink cartridges field must contain numbers and decimal point only.</a>
                     </li>
                 </ul>
             </div>
@@ -63,32 +75,36 @@
                 <div class="ds_layout__content">
 
                     <div class="ds_question">
-                        <fieldset>
-                            <span class="small_text_grey">Part 2 of 3</span>
-                            <h1>Enter cost for consumable items</h1>
-                            <div class="ds_field-group">
-                                <div class="ds_question ds_question--error">
-                                    <label class="ds_label" for="paper">Paper</label>
-                                    <p class="ds_question__error-message">You must enter a price between minimum
-                                        and maximum.</p>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                               value="1000000"
-                                               data-minimum-value="10" data-maximum-value="500" id="paper"/>
-                                    </div>
-                                </div>
-                                <div class="ds_question ds_question--error">
-                                    <label class="ds_label" for="ink">Ink cartridges</label>
-                                    <p class="ds_question__error-message">You must enter a price between minimum
-                                        and maximum.</p>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                               value="-100000"
-                                               data-minimum-value="10" data-maximum-value="500" id="ink"/>
-                                    </div>
+                        <span class="small_text_grey">Part 2 of 3</span>
+                        <h1>Enter cost for consumable items</h1>
+                        <div class="ds_field-group">
+                            <div class="ds_question ds_question--error">
+                                <label class="ds_label" for="paper">Paper</label>
+                                <p class="ds_question__error-message">You must add a cost.</p>
+                                <p class="ds_question__error-message">This field must contain numbers and decimal
+                                    point only.</p>
+                                <p class="ds_question__error-message">You must enter a price between minimum
+                                    and maximum.</p>
+                                <div class="ds_currency-wrapper" data-symbol="£">
+                                    <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                           value="-100000"
+                                           data-minimum-value="10" data-maximum-value="500" id="paper"/>
                                 </div>
                             </div>
-                        </fieldset>
+                            <div class="ds_question ds_question--error">
+                                <label class="ds_label" for="ink">Ink cartridges</label>
+                                <p class="ds_question__error-message">You must add a cost.</p>
+                                <p class="ds_question__error-message">This field must contain numbers and decimal
+                                    point only.</p>
+                                <p class="ds_question__error-message">You must enter a price between minimum
+                                    and maximum.</p>
+                                <div class="ds_currency-wrapper" data-symbol="£">
+                                    <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                           value="-100000"
+                                           data-minimum-value="10" data-maximum-value="500" id="ink"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="ds_button-group">
@@ -106,26 +122,26 @@
         function checkBeforeNav() {
             let inputs = $(".ds_input");
             let allEntered = true;
-            for(let index= 0; index < inputs.length; index++){
+            for (let index = 0; index < inputs.length; index++) {
                 let input = inputs[index];
                 let inputValue = input.value.trim();
                 let minValue = parseFloat(input.dataset["minimumValue"]);
                 let maxValue = parseFloat(input.dataset["maximumValue"]);
-                if( !inputValue ){
+                if (!inputValue) {
                     allEntered = false;
                 }
                 let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
-                if(!valid){
-                    window.location = "consumablesAddError2.html";
+                if (!valid) {
+                    window.location = "consumablesAddError.html";
                     return true;
-                }else if( parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue ){
-                    window.location = "consumablesAddError3.html";
+                } else if (parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue) {
+                    window.location = "consumablesAddError.html";
                     return true;
                 }
             }
-            if(!allEntered){
-                    window.location = "consumablesAddError1.html";
-                    return true;
+            if (!allEntered) {
+                window.location = "consumablesAddError.html";
+                return true;
             }
             window.location = "consumablesList.html";
         }

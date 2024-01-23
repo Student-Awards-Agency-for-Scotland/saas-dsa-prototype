@@ -22,7 +22,7 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.consumable h2{
+.consumable h2 {
     font-weight: normal;
 }
 
@@ -230,10 +230,18 @@ a > svg, .ds_link > svg {
     background-color: #333;
     bottom: 0;
     content: "";
-    left: -22px;
+    left: -5px;
     position: absolute;
     top: 0;
     width: 6px
+}
+
+.description.ds_question--error {
+    margin-left: 58px;
+}
+
+.description.ds_question--error::before {
+    left: -45px;
 }
 
 .dsa_section_button__Completed {
@@ -968,9 +976,10 @@ a > svg, .ds_link > svg {
 }
 
 /* add taxi */
-.contract-ul{
+.contract-ul {
     margin-left: 0;
 }
+
 .contract-ul .ds_site-items__item:not(:last-child) {
     margin-right: 0;
 }
@@ -1604,8 +1613,9 @@ a > svg, .ds_link > svg {
     .ds_site-footer__site-items .ds_site-items__item {
         width: 100%;
     }
+
     .ds_site-items__item:not(:last-child) {
-        margin-right: 0!important;
+        margin-right: 0 !important;
     }
 }
 

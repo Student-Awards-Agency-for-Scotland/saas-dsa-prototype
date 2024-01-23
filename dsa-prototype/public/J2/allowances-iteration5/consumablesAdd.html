@@ -54,28 +54,36 @@
                 <div class="ds_layout__content">
 
                     <div class="ds_question">
-                        <fieldset>
-                            <span class="small_text_grey">Part 2 of 3</span>
-                            <h1>Enter cost for consumable items</h1>
-                            <div class="ds_field-group">
-                                <div class="ds_question">
-                                    <label class="ds_label" for="paper">Paper</label>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10" type="text" value="100"
-                                               data-minimum-value="10" data-maximum-value="500" id="paper"/>
-                                    </div>
-                                </div>
-                                <div id="ink-question" class="ds_question">
-                                    <label class="ds_label" for="ink">Ink cartridges</label>
-                                    <div class="ds_currency-wrapper" data-symbol="£">
-                                        <input class="ds_input ds_input--fixed-10" type="text" value="100"
-                                               data-minimum-value="10" data-maximum-value="500" id="ink"/>
-                                    </div>
+                        <span class="small_text_grey">Part 2 of 3</span>
+                        <h1>Enter cost for consumable items</h1>
+                        <div class="ds_field-group">
+                            <div class="ds_question">
+                                <label class="ds_label" for="paper">Paper</label>
+                                <span class="small_text_grey">Including VAT.</span>
+                                <div class="ds_currency-wrapper" data-symbol="£">
+                                    <input class="ds_input ds_input--fixed-10" type="text" value="100"
+                                           data-minimum-value="10" data-maximum-value="500" id="paper"/>
                                 </div>
                             </div>
-                        </fieldset>
+                            <div id="ink-question" class="ds_question">
+                                <label class="ds_label" for="ink">Ink cartridges</label>
+                                <span class="small_text_grey">Including VAT.</span>
+                                <div class="ds_currency-wrapper" data-symbol="£">
+                                    <input class="ds_input ds_input--fixed-10" type="text" value="100"
+                                           data-minimum-value="10" data-maximum-value="500" id="ink"/>
+                                </div>
+                            </div>
+                            <div class="ds_question">
+                                <label class="ds_label" for="other">Other</label>
+                                <span class="small_text_grey">Other description</span>
+                                <div class="ds_currency-wrapper" data-symbol="£">
+                                    <input class="ds_input ds_input--fixed-10" type="text" value="100"
+                                           data-minimum-value="10" data-maximum-value="500" id="other"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
+                    <br>
                     <div class="ds_button-group">
                         <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="consumables.html" class="secondary_form">Cancel</a>
@@ -101,15 +109,15 @@
                 }
                 let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
                 if (!valid) {
-                    window.location = "consumablesAddError2.html";
+                    window.location = "consumablesAddError.html";
                     return true;
                 } else if (parseFloat(inputValue) < minValue || parseFloat(inputValue) > maxValue) {
-                    window.location = "consumablesAddError3.html";
+                    window.location = "consumablesAddError.html";
                     return true;
                 }
             }
             if (!allEntered) {
-                window.location = "consumablesAddError1.html";
+                window.location = "consumablesAddError.html";
                 return true;
             }
             window.location = "consumablesList.html";
