@@ -168,6 +168,8 @@
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             }
+            if(window.location.search.search(/previous/i) > -1)
+                location = "travelTaxiAdded.html#providers";
 
             window.location = location;
         }
