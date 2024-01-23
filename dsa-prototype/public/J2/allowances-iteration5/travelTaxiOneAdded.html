@@ -157,7 +157,8 @@
                                         </div>
                                     </div>
                                     <div class="ds_button-group">
-                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">Add
+                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">
+                                            Add
                                         </button>&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="javascript:" class="secondary_form">Cancel</a>
                                     </div>
@@ -178,22 +179,13 @@
 
     <script>
         function checkBeforeNav(event) {
-            if(event) event.preventDefault();
-            let yes = document.getElementById("yes");
-            let uniApproved = !!yes.checked;
-            let providers = document.getElementById("providers");
-            let location = "travelTaxiOneAdded.html";
+            if (event) event.preventDefault();
+            let location = "travelTaxiAdded.html#providers";
 
-            if (uniApproved) {
-                if (providers)
-                    location = "travelTaxiOneAdded.html";
-            } else {
-                if (providers && parseInt(providers.innerHTML) >= 2)
-                    location = "travelTaxiAdded.html";
-            }
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             }
+
             window.location = location;
         }
 
