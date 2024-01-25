@@ -224,15 +224,6 @@ a > svg, .ds_link > svg {
     #DESCRIPTION REVEAL
 \*------------------------------------*/
 
-.description {
-    margin-top: 16px;
-    padding-left: 16px;
-}
-
-.description.ds_question--error::before {
-    left: -45px;
-}
-
 .dsa_section_button__Completed {
     background-color: #428542;
     color: white;
