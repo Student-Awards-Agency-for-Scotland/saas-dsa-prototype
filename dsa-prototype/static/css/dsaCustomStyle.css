@@ -22,6 +22,10 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+.ds_reveal-content::before {
+    background-color: #333333;
+}
+
 .consumable h2 {
     font-weight: normal;
 }
@@ -221,24 +225,8 @@ a > svg, .ds_link > svg {
 \*------------------------------------*/
 
 .description {
-    margin-left: 18px;
     margin-top: 16px;
     padding-left: 16px;
-    position: relative
-}
-
-.description::before {
-    background-color: #333;
-    bottom: 0;
-    content: "";
-    left: -5px;
-    position: absolute;
-    top: 0;
-    width: 6px
-}
-
-.description.ds_question--error {
-    margin-left: 58px;
 }
 
 .description.ds_question--error::before {
@@ -951,7 +939,7 @@ a > svg, .ds_link > svg {
 }
 
 .ds_checkbox .ds_question__error-message {
-    margin-left: 16px
+    margin-left: 0;
 }
 
 .ds_checkboxes > .ds_checkbox:last-child {

@@ -121,21 +121,24 @@
                                     <input class="ds_checkbox__input" id="not_listed" onclick="myFunction()"
                                            type="checkbox" checked="checked"/>
                                     <label class="ds_checkbox__label" for="not_listed">Disability not listed</label>
-                                </div>
 
-                                <div id="description" class="description ds_question--error"
-                                     data-module="ds-character-count"
-                                     data-maxlength="300">
-                                    <label class="ds_label" for="not_listed_description">Description</label>
-                                    <p class="ds_hint-text">Please describe the disability or specific
-                                        learning difficulty.</p>
-                                    <p class="ds_question__error-message">You must enter a description if the disability
-                                        is not listed.</p>
-                                    <p id="tooMany" class="ds_question__error-message" style="display: none;">
-                                        Description must be
-                                        no more than 300 characters.</p>
-                                    <textarea class="ds_input" rows="3" id="not_listed_description"
-                                              maxlength="300"></textarea>
+                                    <div class="ds_reveal-content description-container">
+                                        <div id="description" class="description ds_question--error"
+                                             data-module="ds-character-count"
+                                             data-maxlength="300">
+                                            <label class="ds_label" for="not_listed_description">Description</label>
+                                            <p class="ds_hint-text">Please describe the disability or specific
+                                                learning difficulty.</p>
+                                            <p class="ds_question__error-message">You must enter a description if the
+                                                disability
+                                                is not listed.</p>
+                                            <p id="tooMany" class="ds_question__error-message" style="display: none;">
+                                                Description must be
+                                                no more than 300 characters.</p>
+                                            <textarea class="ds_input" rows="3" id="not_listed_description"
+                                                      maxlength="300"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -176,7 +179,7 @@
         }
 
         // Navigation
-        function checkBeforeNav(){
+        function checkBeforeNav() {
             let checkboxes = $(".ds_checkbox__input");
             let other = document.getElementById("not_listed");
             let description = $("#not_listed_description");
