@@ -43,28 +43,31 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="javascript:;">You must enter a type of support.</a>
+                        <a href="javascript:">You must add a type of support.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must add a recommended provider.</a>
+                        <a href="javascript:">You must add a recommended provider.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must add an hourly rate.</a>
+                        <a href="javascript:">You must add an hourly rate.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Hourly rate can only contain numbers and a decimal point.</a>
+                        <a href="javascript:">Hourly rate can only contain numbers and a decimal point.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must add hours per week.</a>
+                        <a href="javascript:">You must select a number of weeks per year.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must select a number of weeks per academic year.</a>
+                        <a href="javascript:">You must add a cost.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Cost can only contain numbers and a decimal point.</a>
+                        <a href="javascript:">You must select a number of weeks per academic year.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:">Cost can only contain numbers and a decimal point.</a>
                     </li>
                 </ul>
-                <p>If you no longer want to add these items, <a href="javascript:;">cancel.</a></p>
+                <p>If you no longer want to add these items, <a href="javascript:">cancel.</a></p>
             </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
@@ -84,75 +87,73 @@
                     <form>
                         <div class="ds_question">
                             <div class="ds_question">
-                                <fieldset aria-describedby="ds_hint">
-                                    <p class="ds_hint-text" id="ds_hint">Part 1 of 2</p>
-                                    <h1>John’s Non-Medical Personal Help (NMPH)</h1>
-                                    <p>Personal helpers including note takers, mental health mentors, sign language
-                                        interpreters and study skills support. It does not cover disability related
-                                        expenditure needed outside of the student's studies.</p>
-                                    <p>Claimed yearly. Allowance limit per academic year: <strong>&pound;20,520</strong>
-                                    </p>
-                                    <br>
-                                    <div class="ds_question">
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="type">Type of support</label>
-                                            <p class="ds_question__error-message">You must enter a type of support.</p>
-                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
-                                                   id="type"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="provider">Recommended provider</label>
-                                            <p class="ds_question__error-message">You must add a recommended
-                                                provider.</p>
-                                            <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
-                                                   id="provider"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="rate">Hourly rate</label>
-                                            <p class="ds_question__error-message">You must add an hourly rate.</p>
-                                            <p class="ds_question__error-message">Hourly rate can only contain numbers
-                                                and a decimal point.</p>
-                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                                   id="rate"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="hour">Hours</label>
-                                            <p class="ds_hint-text">Per week.</p>
-                                            <p class="ds_question__error-message">You must add hours per week.</p>
-                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                                   id="hour"/>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="weeks">Weeks</label>
-                                            <p class="ds_hint-text">Per academic year.</p>
-                                            <p class="ds_question__error-message">You must select a number of weeks per
-                                                academic year.</p>
-                                            <div class="ds_select-wrapper ds_input--fixed-10">
-                                                <select class="ds_select ds_input--fixed-10" id="weeks">
-                                                    <option></option>
-                                                </select>
-                                                <span class="ds_select-arrow" aria-hidden="true"></span>
-                                            </div>
-                                        </div>
-                                        <div class="ds_field-group ds_question--error">
-                                            <label class="ds_label" for="total">Cost</label>
-                                            <span class="small_text_grey">Including VAT.</span>
-                                            <p class="ds_question__error-message">You must add a cost.</p>
-                                            <p class="ds_question__error-message">Cost can only contain numbers and a
-                                                decimal point.</p>
-                                            <div class="ds_currency-wrapper" data-symbol="£">
-                                                <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                                       id="total"/>
-                                            </div>
+                                <p class="ds_hint-text">Part 1 of 2</p>
+                                <h1>John’s Non-Medical Personal Help (NMPH)</h1>
+                                <p>Personal helpers including note takers, mental health mentors, sign language
+                                    interpreters and study skills support. It does not cover disability related
+                                    expenditure needed outside of the student's studies.</p>
+                                <p>Claimed yearly. Allowance limit per academic year: <strong>&pound;20,520</strong>
+                                </p>
+                                <br>
+                                <div class="ds_question">
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="type">Type of support</label>
+                                        <div class="ds_question__error-message">You must add a type of support.</div>
+                                        <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
+                                               id="type"/>
+                                    </div>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="provider">Recommended provider</label>
+                                        <p class="ds_question__error-message">You must add a recommended
+                                            provider.</p>
+                                        <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
+                                               id="provider"/>
+                                    </div>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="rate">Hourly rate</label>
+                                        <div class="ds_question__error-message">You must add an hourly rate.</div>
+                                        <p class="ds_question__error-message">Hourly rate can only contain numbers
+                                            and a decimal point.</p>
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               id="rate"/>
+                                    </div>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="hour">Hours</label>
+                                        <p class="ds_hint-text">Per week.</p>
+                                        <div class="ds_question__error-message">You must add hours per week.</div>
+                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                               id="hour"/>
+                                    </div>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="weeks">Weeks</label>
+                                        <p class="ds_hint-text">Per academic year.</p>
+                                        <p class="ds_question__error-message">You must select a number of weeks per
+                                            year.</p>
+                                        <div class="ds_select-wrapper ds_input--fixed-10">
+                                            <select class="ds_select ds_input--fixed-10" id="weeks">
+                                                <option></option>
+                                            </select>
+                                            <span class="ds_select-arrow" aria-hidden="true"></span>
                                         </div>
                                     </div>
-                                </fieldset>
+                                    <div class="ds_field-group ds_question--error">
+                                        <label class="ds_label" for="total">Cost</label>
+                                        <span class="small_text_grey">Including VAT.</span>
+                                        <div class="ds_question__error-message">You must add a cost.</div>
+                                        <p class="ds_question__error-message">Cost can only contain numbers and a
+                                            decimal point.</p>
+                                        <div class="ds_currency-wrapper" data-symbol="£">
+                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                                   id="total"/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
                         <br/>
                         <a href="travel.html" class="secondary_form">Skip NMPH</a>
@@ -164,22 +165,22 @@
     </div>
 
     <script>
-        function checkBeforeNav(){
+        function checkBeforeNav() {
             let inputs = $(".ds_input");
             let location = "nmphFinal.html";
             let weeks = $("#weeks");
-            if(!weeks.val()){
+            if (!weeks.val()) {
                 location = "nmphError.html";
-            }else{
-                for(let index = 0; index < inputs.length; index++){
+            } else {
+                for (let index = 0; index < inputs.length; index++) {
                     let input = inputs[index];
                     let inputValue = input.value.trim();
-                    if(!inputValue){
+                    if (!inputValue) {
                         location = "nmphError.html";
                         break;
-                    }else if(input.id === "total" || input.id === "rate" || input.id === "hour"){
+                    } else if (input.id === "total" || input.id === "rate" || input.id === "hour") {
                         let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
-                        if(!valid){
+                        if (!valid) {
                             location = "nmphError.html";
                             break;
                         }
