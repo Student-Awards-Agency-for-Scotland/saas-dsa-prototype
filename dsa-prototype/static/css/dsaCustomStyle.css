@@ -954,6 +954,11 @@ a > svg, .ds_link > svg {
     }
 }
 
+.advisor-label {
+    font-weight: normal;
+    padding: 0 32px 4px 16px
+}
+
 .ds_input--fixed-40 {
     max-width: calc(32px + 40em)
 }
