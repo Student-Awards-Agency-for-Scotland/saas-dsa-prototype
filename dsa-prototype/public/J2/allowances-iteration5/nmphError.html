@@ -43,31 +43,30 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="javascript:">You must add a type of support.</a>
+                        <a href="#type-error">You must add a type of support.</a>
                     </li>
                     <li>
-                        <a href="javascript:">You must add a recommended provider.</a>
+                        <a href="#provider-error">You must add a recommended provider.</a>
                     </li>
                     <li>
-                        <a href="javascript:">You must add an hourly rate.</a>
+                        <a href="#rate-error">You must add an hourly rate.</a>
                     </li>
                     <li>
-                        <a href="javascript:">Hourly rate can only contain numbers and a decimal point.</a>
+                        <a href="#rate-error">Hourly rate can only contain numbers and a decimal point.</a>
                     </li>
                     <li>
-                        <a href="javascript:">You must select a number of weeks per year.</a>
+                        <a href="#hour-error">You must add hours per week.</a>
                     </li>
                     <li>
-                        <a href="javascript:">You must add a cost.</a>
+                        <a href="#weeks-error">You must select a number of weeks per academic year.</a>
                     </li>
                     <li>
-                        <a href="javascript:">You must select a number of weeks per academic year.</a>
+                        <a href="#total-error">You must add a cost.</a>
                     </li>
                     <li>
-                        <a href="javascript:">Cost can only contain numbers and a decimal point.</a>
+                        <a href="#total-error">Cost can only contain numbers and a decimal point.</a>
                     </li>
                 </ul>
-                <p>If you no longer want to add these items, <a href="javascript:">cancel.</a></p>
             </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
@@ -96,20 +95,20 @@
                                 </p>
                                 <br>
                                 <div class="ds_question">
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="type-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="type">Type of support</label>
                                         <div class="ds_question__error-message">You must add a type of support.</div>
                                         <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
                                                id="type"/>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="provider-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="provider">Recommended provider</label>
                                         <p class="ds_question__error-message">You must add a recommended
                                             provider.</p>
                                         <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
                                                id="provider"/>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="rate-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="rate">Hourly rate</label>
                                         <div class="ds_question__error-message">You must add an hourly rate.</div>
                                         <p class="ds_question__error-message">Hourly rate can only contain numbers
@@ -117,18 +116,18 @@
                                         <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
                                                id="rate"/>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="hour-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="hour">Hours</label>
                                         <p class="ds_hint-text">Per week.</p>
                                         <div class="ds_question__error-message">You must add hours per week.</div>
                                         <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
                                                id="hour"/>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="weeks-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="weeks">Weeks</label>
                                         <p class="ds_hint-text">Per academic year.</p>
                                         <p class="ds_question__error-message">You must select a number of weeks per
-                                            year.</p>
+                                            academic year.</p>
                                         <div class="ds_select-wrapper ds_input--fixed-10">
                                             <select class="ds_select ds_input--fixed-10" id="weeks">
                                                 <option></option>
@@ -136,7 +135,7 @@
                                             <span class="ds_select-arrow" aria-hidden="true"></span>
                                         </div>
                                     </div>
-                                    <div class="ds_field-group ds_question--error">
+                                    <div id="total-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="total">Cost</label>
                                         <span class="small_text_grey">Including VAT.</span>
                                         <div class="ds_question__error-message">You must add a cost.</div>
@@ -151,7 +150,7 @@
                             </div>
                         </div>
                     </form>
-
+                    <br>
                     <div class="ds_button-group">
                         <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
@@ -190,13 +189,13 @@
             window.location = location;
         }
 
-        window.addEventListener("load", (event) => {
-            // Dropdown week for 32 weeks
+        window.addEventListener("load", () => {
+            // Dropdown week for 52 weeks
             let dropdown = document.getElementById("weeks");
             for (let i = 1; i <= 52; i++) {
                 let option = document.createElement("option");
-                option.value = i;
-                option.text = i;
+                option.value = i.toString();
+                option.text = i.toString();
                 dropdown.add(option);
             }
         });

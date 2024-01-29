@@ -103,9 +103,9 @@
                             </div>
                         </div>
                     </form>
-
+                    <br>
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
                         <br/>
                         <a href="travel.html" class="secondary_form">Skip NMPH</a>
@@ -117,22 +117,22 @@
     </div>
 
     <script>
-        function checkBeforeNav(){
+        function checkBeforeNav() {
             let inputs = $(".ds_input");
             let location = "nmphFinal.html";
             let weeks = $("#weeks");
-            if(!weeks.val()){
+            if (!weeks.val()) {
                 location = "nmphError.html";
-            }else{
-                for(let index = 0; index < inputs.length; index++){
+            } else {
+                for (let index = 0; index < inputs.length; index++) {
                     let input = inputs[index];
                     let inputValue = input.value.trim();
-                    if(!inputValue){
+                    if (!inputValue) {
                         location = "nmphError.html";
                         break;
-                    }else if(input.id === "total" || input.id === "rate" || input.id === "hour"){
+                    } else if (input.id === "total" || input.id === "rate" || input.id === "hour") {
                         let valid = /^\d{0,4}(\.\d{0,2})?$/.test(inputValue);
-                        if(!valid){
+                        if (!valid) {
                             location = "nmphError.html";
                             break;
                         }
@@ -142,13 +142,13 @@
             window.location = location;
         }
 
-        window.addEventListener("load", (event) => {
-            // Dropdown week for 32 weeks
+        window.addEventListener("load", () => {
+            // Dropdown week for 52 weeks
             let dropdown = document.getElementById("weeks");
             for (let i = 1; i <= 52; i++) {
                 let option = document.createElement("option");
-                option.value = i;
-                option.text = i;
+                option.value = i.toString();
+                option.text = i.toString();
                 dropdown.add(option);
             }
         });
