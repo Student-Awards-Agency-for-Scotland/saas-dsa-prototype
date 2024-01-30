@@ -96,7 +96,7 @@
                                     <td>20</td>
                                     <td>&pound;23,189.60</td>
                                     <td><a href="nmph.html">Change</a></td>
-                                    <td><a href="javascript:">Remove</a></td>
+                                    <td><a href="javascript:" onclick="remove(event)">Remove</a></td>
                                 </tr>
                                 <tr>
                                     <td>Note taker</td>
@@ -106,7 +106,7 @@
                                     <td>20</td>
                                     <td>&pound;1,200.00</td>
                                     <td><a href="nmph.html">Change</a></td>
-                                    <td><a href="javascript:">Remove</a></td>
+                                    <td><a href="javascript:" onclick="remove(event)">Remove</a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -124,6 +124,16 @@
             </main>
         </div>
     </div>
+
+    <script>
+        function remove(event) {
+            let answer = window.confirm("Do you want to remove this element?");
+            if (!answer) return true;
+            let tr = event.target.parentElement.parentElement;
+            let parent = tr.parentElement;
+            parent.removeChild(tr);
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
