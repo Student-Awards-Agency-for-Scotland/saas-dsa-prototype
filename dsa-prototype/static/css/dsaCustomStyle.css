@@ -767,7 +767,7 @@ a > svg, .ds_link > svg {
     #FORM INPUTS
 \*------------------------------------*/
 
-.ds_checkbox__input:checked + .ds_checkbox__label::before,
+.ds_checkbox__input:checked + .ds_checkbox__label::before
 .ds_checkbox {
     margin-bottom: 24px;
     padding-left: 40px;
@@ -1777,4 +1777,3 @@ a > svg, .ds_link > svg {
     color: #d32205;
     font-weight: 700;
 }
-
