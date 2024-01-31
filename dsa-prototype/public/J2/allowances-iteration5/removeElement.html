@@ -52,17 +52,19 @@
             </nav>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-                    <span class="small_text_grey">Part 3 of 3</span>
                     <form>
                         <fieldset>
-                            <h2>Are you sure you want to remove <br>paper?</h2>
+                            <h1>
+                                <legend>Are you sure you want to remove<br><span id="element">paper</span>?</legend>
+                            </h1>
                             <div class="ds_field-group">
                                 <div class="ds_radio">
                                     <input class="ds_radio__input" id="yes" type="radio" name="radios"/>
                                     <label class="ds_radio__label" for="yes">Yes</label>
                                 </div>
                                 <div class="ds_radio">
-                                    <input class="ds_radio__input" id="no" type="radio" name="radios" checked="checked"/>
+                                    <input class="ds_radio__input" id="no" type="radio" name="radios"
+                                           checked="checked"/>
                                     <label class="ds_radio__label" for="no">No</label>
                                 </div>
                             </div>
@@ -70,14 +72,24 @@
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="consumablesList.html" class="ds_button dsa_button">Confirm and continue</a><br/>
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="redirect()">Confirm and continue</button>
+                        <br/>
                     </div>
 
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function redirect() {
+            let origin = new URL(location.href).searchParams.get('origin');
+            if (origin) {
+                window.location.href = origin + ".html";
+            }
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">

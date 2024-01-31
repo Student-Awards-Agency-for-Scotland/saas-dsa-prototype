@@ -137,6 +137,10 @@
     }
 }
 
+h1 legend{
+    font-size: inherit;
+}
+
 .eligibility-header h1 {
     margin-bottom: 0;
 }
