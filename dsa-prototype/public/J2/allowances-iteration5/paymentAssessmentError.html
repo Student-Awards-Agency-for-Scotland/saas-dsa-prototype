@@ -44,19 +44,19 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="javascript:;">You must enter an assessment centre.</a>
+                        <a href="#ass-name-error">You must enter an assessment centre.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must enter the name of an assessor.</a>
+                        <a href="#person-name-error">You must enter the name of an assessor.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must enter the total number of hours.</a>
+                        <a href="#hours-error">You must enter the total number of hours.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">You must enter an hourly rate.</a>
+                        <a href="#rate-error">You must enter an hourly rate.</a>
                     </li>
                     <li>
-                        <a href="javascript:;">Hourly rate can only contain numbers and a decimal point.</a>
+                        <a href="#rate-error">Hourly rate can only contain numbers and a decimal point.</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +80,8 @@
                             <h1 id="ds_hint">Payment for Needs Assessment Report</h1>
                             <p>We need to know the assessment fee so that we can reimburse your college or
                                 university.</p>
-                            <div class="ds_field-group ds_question--error">
+                            <br>
+                            <div class="ds_field-group ds_question--error" id="ass-name-error">
                                 <label class="ds_label" for="ass-name">Name of assessment centre</label>
                                 <p class="ds_hint-text">This can be an approved needs assessment centre, college or
                                     university.</p>
@@ -88,7 +89,7 @@
                                 <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
                                        id="ass-name"/>
                             </div>
-                            <div class="ds_field-group ds_question--error">
+                            <div class="ds_field-group ds_question--error" id="person-name-error">
                                 <label class="ds_label" for="person-name">Name of assessor</label>
                                 <p class="ds_hint-text">A qualified assessor who has carried out the needs
                                     assessment.</p>
@@ -96,28 +97,30 @@
                                 <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
                                        id="person-name"/>
                             </div>
-                            <div class="ds_field-group ds_question--error">
+                            <div class="ds_field-group ds_question--error" id="hours-error">
                                 <label class="ds_label" for="hours">Total hours</label>
                                 <p class="ds_hint-text">The time it took to complete the needs assessment and the
                                     Needs Assessment Report.</p>
                                 <div class="ds_question__error-message">You must enter the total number of hours.</div>
                                 <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="hours"/>
                             </div>
-                            <div class="ds_field-group ds_question--error">
+                            <div class="ds_field-group ds_question--error" id="rate-error">
                                 <label class="ds_label" for="rate">Hourly rate</label>
+                                <p class="ds_hint-text">Including VAT.</p>
                                 <div class="ds_question__error-message">You must enter an hourly rate.</div>
                                 <div class="ds_question__error-message">Hourly rate can only contain numbers and a
-                                    decimal point.</div>
+                                    decimal point.
+                                </div>
                                 <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="rate"/>
                             </div>
                         </div>
                     </form>
-
+                    <br>
                     <div class="ds_button-group">
                         <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <button class="ds_button dsa_button" onclick="checkBeforeNav()">Confirm and continue</button>
                         <br>
-                        <a href="javascript:;" class="secondary_form">Skip Payment for Needs Assessment</a>
+                        <a href="adviser.html" class="secondary_form">Skip Payment for Needs Assessment</a>
                     </div>
                 </div>
             </main>
