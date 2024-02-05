@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Student Confirmation</title>
+    <title>Check Your Details</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
@@ -35,103 +35,93 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
-            <nav aria-label="Breadcrumb">
-                <ol class="ds_breadcrumbs">
-                    <li class="ds_breadcrumbs__item">
-                        <a class="ds_breadcrumbs__link" href="">
-                            Student Information
-                        </a>
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="#about-you">Information unavailable.</a>
                     </li>
-                    <li class="ds_breadcrumbs__item" aria-current="page">
-                        <strong>About John</strong>
-                    </li>
-                </ol>
-            </nav>
+                </ul>
+            </div>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-
                     <div class="ds_question">
-                        <h1>About John</h1>
-
-                        <ol class="ds_summary-list search-result">
+                        <br>
+                        <h1>Check your details</h1>
+                        <p>Please review your account and institution information.</p>
+                        <h2>About you</h2>
+                        <ol class="ds_summary-list search-result" id="about-you">
                             <li class="ds_summary-list__item">
                                 <div class="ds_summary-list__key">
-                                    <strong>SAAS reference</strong>
+                                    <strong>First name</strong>
                                 </div>
                                 <div class="ds_summary-list__value">
-                                    1234567
-                                </div>
-                            </li>
-                            <li class="ds_summary-list__item">
-                                <div class="ds_summary-list__key">
-                                    <strong>Name</strong>
-                                </div>
-                                <div class="ds_summary-list__value">John Gray</div>
-                            </li>
-                            <li class="ds_summary-list__item">
-                                <div class="ds_summary-list__key">
-                                    <strong>Date of birth</strong>
-                                </div>
-                                <div class="ds_summary-list__value">16 October 2000</div>
-                            </li>
-                            <li class="ds_summary-list__item">
-                                <div class="ds_summary-list__key">
-                                    <strong>Funding eligibility status</strong>
-                                    <p class="small_text_grey">For Private Beta the student can only apply for DSA
-                                        using this service if they have secured SAAS funding for this academic
-                                        year.</p>
-                                    <p class="small_text_grey">The student has SAAS funding in place and is eligible
-                                        to apply for DSA using this service.</p>
-                                </div>
-                                <div class="ds_summary-list__value">
-                                    <div class="govuk-tag govuk-tag--green">
-                                        CONFIRMED
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
                                     </div>
                                 </div>
                             </li>
                             <li class="ds_summary-list__item">
                                 <div class="ds_summary-list__key">
-                                    <strong>Funding eligibility status</strong>
-                                    <p class="small_text_grey">For Private Beta the student can only apply for DSA
-                                        using this service if they have secured SAAS funding for this academic
-                                        year.</p>
-                                    <p class="small_text_grey">We are still assessing the student’s eligibility or
-                                        application for SAAS funding.</p>
+                                    <strong>Last name</strong>
                                 </div>
                                 <div class="ds_summary-list__value">
-                                    <div class="govuk-tag govuk-tag--yellow">
-                                        PENDING
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
                                     </div>
                                 </div>
                             </li>
                             <li class="ds_summary-list__item">
                                 <div class="ds_summary-list__key">
-                                    <strong>Funding eligibility status</strong>
-                                    <p class="small_text_grey">For Private Beta the student can only apply for DSA
-                                        using this service if they have secured SAAS funding for this academic
-                                        year.</p>
-                                    <p class="small_text_grey">The student is not eligible to apply for DSA using this
-                                        service. This could be for several reasons, so please contact us if you require
-                                        more information.</p>
+                                    <strong>Role</strong>
                                 </div>
                                 <div class="ds_summary-list__value">
-                                    <div class="govuk-tag govuk-tag--pink">
-                                        REJECTED
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ds_summary-list__item">
+                                <div class="ds_summary-list__key">
+                                    <strong>Email</strong>
+                                </div>
+                                <div class="ds_summary-list__value">
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
                                     </div>
                                 </div>
                             </li>
                         </ol>
-
+                        <br>
+                        <h2>About your team</h2>
+                        <ol class="ds_summary-list search-result">
+                            <li class="ds_summary-list__item">
+                                <div class="ds_summary-list__key">
+                                    <strong>Institution</strong>
+                                </div>
+                                <div class="ds_summary-list__value">
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ds_summary-list__item">
+                                <div class="ds_summary-list__key">
+                                    <strong>Team email</strong>
+                                </div>
+                                <div class="ds_summary-list__value">
+                                    <div class="govuk-tag govuk-tag--grey">
+                                        NOT AVAILABLE
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
                         <p>
                             If this information is incorrect, please <a href="https://www.saas.gov.uk/contact-us">contact
                             us.</a>
                         </p>
                     </div>
-                    <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="courseDetails.html" class="ds_button dsa_button">Continue</a><br/>
-                    </div>
-
                 </div>
             </main>
         </div>
