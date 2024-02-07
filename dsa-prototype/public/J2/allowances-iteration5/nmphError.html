@@ -110,11 +110,14 @@
                                     </div>
                                     <div id="rate-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="rate">Hourly rate</label>
+                                        <span class="small_text_grey">Including VAT.</span>
                                         <div class="ds_question__error-message">You must add an hourly rate.</div>
                                         <p class="ds_question__error-message">Hourly rate can only contain numbers
                                             and a decimal point.</p>
-                                        <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
-                                               id="rate"/>
+                                        <div class="ds_currency-wrapper" data-symbol="£">
+                                            <input class="ds_input ds_input--fixed-10 ds_input--error" type="text"
+                                                   id="rate"/>
+                                        </div>
                                     </div>
                                     <div id="hour-error" class="ds_field-group ds_question--error">
                                         <label class="ds_label" for="hour">Hours</label>
