@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="ds_breadcrumbs__item" aria-current="page">
-                        <strong>Summary</strong>
+                        <strong>Allowances</strong>
                     </li>
                 </ol>
             </nav>
@@ -57,7 +57,7 @@
                         <div class="ds_question">
                             <h1>Allowances</h1>
 
-                            <table style="width: 100%" role="presentation">
+                            <table style="width: 80%" role="presentation">
                                 <tr>
                                     <td><h2>Consumable items</h2></td>
                                     <td class="consumable">
@@ -65,8 +65,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <br>
-                            <table class="ds_table dsa_allowance_table">
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
                                 <thead>
                                 <tr>
                                     <th scope="col">Consumable items</th>
@@ -81,7 +80,7 @@
                                     <td>Paper</td>
                                     <td>&pound;100</td>
                                     <td style="text-align: right;">
-                                        <a href="javascript:;">Change</a>
+                                        <a href="consumablesListAdd.html">Change</a>
                                     </td>
                                     <td style="width: 10%;">
                                         <a href="removeElement.html?origin=summary&element=Paper">Remove</a>
@@ -91,7 +90,7 @@
                                     <td>Ink</td>
                                     <td>&pound;100</td>
                                     <td style="text-align: right;">
-                                        <a href="javascript:;">Change</a>
+                                        <a href="consumablesListAdd.html">Change</a>
                                     </td>
                                     <td style="width: 10%;">
                                         <a href="removeElement.html?origin=summary&element=Ink">Remove</a>
@@ -99,11 +98,11 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;">Add another consumable</a>
+                            <a href="consumablesAdd.html">Add another consumable</a>
                             <br><br>
                             <hr>
                             <br>
-                            <table style="width: 100%" role="presentation">
+                            <table style="width: 80%" role="presentation">
                                 <tr>
                                     <td>
                                         <h2>Equipment, software and accessories</h2>
@@ -113,8 +112,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <br>
-                            <table class="ds_table dsa_allowance_table">
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
                                 <thead>
                                 <tr>
                                     <th scope="col">Supplier name</th>
@@ -131,7 +129,7 @@
                                     <td>GCU45678</td>
                                     <td>&pound;3,189.60</td>
                                     <td>
-                                        <a href="javascript:;">View</a>
+                                        <a href="equipment.html">View</a>
                                     </td>
                                     <td>
                                         <a href="removeElement.html?origin=summary&element=Sight and sound">Remove</a>
@@ -139,11 +137,11 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;">Add another quote</a>
+                            <a href="javascript:">Add another quote</a>
                             <br><br>
                             <hr>
                             <br>
-                            <table style="width: 100%" role="presentation">
+                            <table style="width: 80%" role="presentation">
                                 <tr>
                                     <td>
                                         <h2>Non medical personal help (NMPH)</h2>
@@ -154,12 +152,13 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="ds_table dsa_allowance_table">
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
                                 <thead>
                                 <tr>
                                     <th scope="col">Type of support</th>
                                     <th scope="col">Recommended provider</th>
-                                    <th scope="col">Hourly rate</th>
+                                    <th scope="col">Hourly rate<br>
+                                        <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
                                     <th>
                                         Hours<br>
                                         <p class="ds_hint-text dsa_vat">Per week.</p>
@@ -183,7 +182,7 @@
                                     <td>20</td>
                                     <td>&pound;3,189.60</td>
                                     <td>
-                                        <a href="javascript:;">Change</a>
+                                        <a href="nmph.html">Change</a>
                                     </td>
                                     <td>
                                         <a href="removeElement.html?origin=summary&element=Study support">Remove</a>
@@ -197,7 +196,7 @@
                                     <td>20</td>
                                     <td>&pound;1,200.00</td>
                                     <td>
-                                        <a href="javascript:;">Change</a>
+                                        <a href="javascript:">Change</a>
                                     </td>
                                     <td>
                                         <a href="removeElement.html?origin=summary&element=Note taker">Remove</a>
@@ -205,11 +204,11 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <a href="javascript:;">Add another NMPH allowance</a>
+                            <a href="javascript:">Add another NMPH allowance</a>
                             <br><br>
                             <hr>
                             <br>
-                            <table style="width: 100%" role="presentation">
+                            <table style="width: 80%" role="presentation" data-smallscreen="scrolling">
                                 <tr>
                                     <td>
                                         <h2>Travel expenses</h2>
@@ -223,8 +222,8 @@
                     </div>
 
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="javascript:;" class="ds_button dsa_button">Confirm and
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button dsa_button">Confirm and
                             continue</a>
                     </div>
 
