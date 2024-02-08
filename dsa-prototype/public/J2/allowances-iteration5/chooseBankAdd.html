@@ -5,10 +5,13 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Index</title>
+    <title>Student Declaration</title>
 
     <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
     <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
 </head>
 <body>
 <div class="ds_page">
@@ -25,40 +28,55 @@
                     </div>
                 </div>
             </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
         </header>
     </div>
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Declarations
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Student</strong>
+                    </li>
+                </ol>
+            </nav>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-                    <p></p>
-                    <h2>Figma Updates</h2>
-                    <h3><a href="createPassword.html">DSAO-880 Create Password</a></h3>
-                    <h3><a href="checkDetails.html">DSAO-885 Check your Details</a></h3>
-                    <h3><a href="accountCreated.html">DSAO-886 Account Created</a></h3>
-                    <h3><a href="search.html">DSAO-892 Search</a></h3>
-                    <h3><a href="searchResultOne.html">DSAO-893 One Result</a></h3>
-                    <h3><a href="searchResultMultiple.html">DSAO-893 Multiple Results</a></h3>
-                    <h3><a href="studentNotFound.html">DSAO-894 Student Not Found</a></h3>
-                    <h3><a href="permissionDenied.html">DSAO-895 Permission denied</a></h3>
-                    <h3><a href="applyForDSA.html">DSAO-975 Apply for DSA</a></h3>
-                    <h3><a href="resumeApplication.html">DSAO-975 Resume application</a></h3>
-                    <h3><a href="studentNotEligible.html">DSAO-976 Not Eligible</a></h3>
-                    <h3><a href="statusConfirmedPending.html">DSAO-976 Application Status</a></h3>
-                    <h3><a href="studentStatus.html">DSAO-977 Student Status</a></h3>
-                    <h3><a href="disabilities.html">DSAO-978 Disabilities</a></h3>
-                    <h3><a href="consumables.html">DSAO-979 Consumables</a></h3>
-                    <h3><a href="equipment.html">DSAO-980 Equipment</a></h3>
-                    <h3><a href="nmph.html">DSAO-981 Non-Medical Personal Help</a></h3>
-                    <h3><a href="travel.html">DSAO-982 Travel</a></h3>
-                    <h3><a href="paymentAssessment.html">DSAO-983 Payment Assessment</a></h3>
-                    <h3><a href="summary.html">DSAO-984 Summary</a></h3>
-                    <h3><a href="adviser.html">DSAO-985 Adviser</a></h3>
-                    <h3><a href="status.html">DSAO-987 Status</a></h3>
-                    <h3><a href="studentDeclaration.html">DSAO-988 Student Declaration</a></h3>
-                    <h3><a href="chooseBank.html">DSAO-989 Choose Bank</a></h3>
-                    <h3><a href="midPostSubmission.html">DSAO-1096 Mid Post Submission</a></h3>
+                    <div class="ds_question">
+                        <h1>Add a new bank account</h1>
+                        <span class="dsa_hint-text">Check your DSA award notice for payments to this account</span>
+                        <div class="ds_field-group">
+                            <div class="ds_question">
+                                <label class="ds_label" for="name">Name on Account</label>
+                                <input class="ds_input ds_input--fixed-20" type="text" value="John Gray" id="name"/>
+                            </div>
+                            <div class="ds_question">
+                                <label class="ds_label" for="sort">Sort code</label>
+                                <span class="small_text_grey">Must be 6 digits long.</span>
+                                <input class="ds_input ds_input--fixed-10" type="text" value="06-02-33" id="sort"/>
+                            </div>
+                            <div class="ds_question">
+                                <label class="ds_label" for="account">Account number</label>
+                                <span class="small_text_grey">Must be between 6 and 8 digits long.</span>
+                                <input class="ds_input ds_input--fixed-20" type="text" value="****7456" id="account"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ds_button-group">
+                        <a href="chooseBankConfirmed.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="chooseBank.html" class="secondary_form">Cancel</a>
+                    </div>
                 </div>
             </main>
         </div>

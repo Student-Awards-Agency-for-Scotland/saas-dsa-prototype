@@ -52,59 +52,68 @@
             </nav>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-                    <h1>Student declaration</h1>
-                    <p>You need to confirm that you understand and agree to the following statements before we can
-                        process your application for DSA. Please check the tick box and click on ‘I agree’.</p>
-                    <br>
-                    <p><strong>Please confirm that you understand the following:</strong></p>
-                    <ul>
-                        <li>I will give SAAS any additional information or documents they need to process my DSA
-                            application.
-                        </li>
-                        <li>I understand that if I am paid too much because of a change in my circumstances, money may
-                            be taken back from me, stopped or reduced in the future. A change in circumstances could
-                            include not starting my course, leaving my course or receiving money from another fund.
-                        </li>
-                        <li>I understand that if I give my Disability Advisor or SAAS false, incorrect, or incomplete
-                            information I may be prosecuted and may have to pay back any money I have been given.
-                        </li>
-                        <li>I understand that if I am paid too much money or a payment is made on my behalf; I may have
-                            to pay it back.
-                        </li>
-                        <li>I will give SAAS receipts for all items purchased using my DSA.</li>
-                        <li>I understand that the information I have provided will be used to prevent, detect,
-                            investigate, and report crime. I understand that SAAS may share this information with other
-                            organisations.
-                        </li>
-                        <li>My Disabled Students’ Allowance payment is made under the Students’ Allowances (Scotland)
-                            Regulation 2022.
-                        </li>
-                    </ul>
-                    <div class="ds_field-group">
-                        <div class="ds_checkbox">
-                            <input class="ds_checkbox__input" id="confirm" type="checkbox"/>
-                            <label class="ds_checkbox__label" for="confirm">
-                                I have read and agree with the statements above.
-                            </label>
-                        </div>
+                    <div class="ds_question">
+                        <h1>Choose bank account for DSA payments</h1>
+                        <p>Please let us know if you would like us to pay your DSA into the bank account on file, or if
+                            you
+                            would like to provide us with a different bank account so that you can keep your DSA fund
+                            separate.</p>
+                        <h2>Bank account details we already have</h2>
+                        <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                            <thead>
+                            <tr>
+                                <th scope="col">Name on bank account</th>
+                                <th scope="col">Sort code</th>
+                                <th scope="col">Account number</th>
+                                <th scope="col">Payment for<p></p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>John Gray</td>
+                                <td>06-02-33</td>
+                                <td>****9891</td>
+                                <td>Main funding</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br><br>
+                        <form>
+                            <div class="ds_field-group">
+                                <fieldset>
+                                    <legend><h2>Do you want to use this bank account for your DSA payments</h2></legend>
+                                    <div class="ds_radio">
+                                        <input class="ds_radio__input" id="yes" type="radio" name="radios"/>
+                                        <label class="ds_radio__label" for="yes">Yes, I want to use this bank
+                                            account</label>
+                                    </div>
+                                    <div class="ds_radio">
+                                        <input class="ds_radio__input" id="no" type="radio" name="radios"/>
+                                        <label class="ds_radio__label" for="no">No, I want to add a new bank account for
+                                            DSA
+                                            payments</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>
                     </div>
+                    <br>
                     <div class="ds_button-group">
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">I do not agree</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button>
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="wheretogo()">Confirm and continue</button>
                         <br/>
                     </div>
-
                 </div>
             </main>
         </div>
     </div>
 
     <script>
-        function checkBeforeNav() {
-            if (!document.getElementById("confirm").checked) {
-                window.location = "studentDeclarationError.html";
+        function wheretogo() {
+            if (document.getElementById("no").checked) {
+                window.location = "chooseBankAdd.html";
             } else {
-                window.location = "chooseBank.html";
+                window.location = "chooseBankConfirmed.html";
             }
         }
     </script>

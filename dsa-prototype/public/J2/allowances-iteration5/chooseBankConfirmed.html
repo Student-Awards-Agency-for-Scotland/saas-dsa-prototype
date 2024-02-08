@@ -38,6 +38,17 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
+            <span></span>
+            <div class="ds_warning-text ds_warning-text-new">
+                <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+                <strong class="visually-hidden">Warning</strong>
+                <div class="ds_warning-text__text">
+                    Your DSA payments have been added.
+                </div>
+                <a href="javascript:" class="close_button_fml">
+                    <img src="../../../static/images/icon-cross.svg" alt="close"/>
+                </a>
+            </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
                     <li class="ds_breadcrumbs__item">
@@ -52,62 +63,50 @@
             </nav>
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
-                    <h1>Student declaration</h1>
-                    <p>You need to confirm that you understand and agree to the following statements before we can
-                        process your application for DSA. Please check the tick box and click on ‘I agree’.</p>
-                    <br>
-                    <p><strong>Please confirm that you understand the following:</strong></p>
-                    <ul>
-                        <li>I will give SAAS any additional information or documents they need to process my DSA
-                            application.
-                        </li>
-                        <li>I understand that if I am paid too much because of a change in my circumstances, money may
-                            be taken back from me, stopped or reduced in the future. A change in circumstances could
-                            include not starting my course, leaving my course or receiving money from another fund.
-                        </li>
-                        <li>I understand that if I give my Disability Advisor or SAAS false, incorrect, or incomplete
-                            information I may be prosecuted and may have to pay back any money I have been given.
-                        </li>
-                        <li>I understand that if I am paid too much money or a payment is made on my behalf; I may have
-                            to pay it back.
-                        </li>
-                        <li>I will give SAAS receipts for all items purchased using my DSA.</li>
-                        <li>I understand that the information I have provided will be used to prevent, detect,
-                            investigate, and report crime. I understand that SAAS may share this information with other
-                            organisations.
-                        </li>
-                        <li>My Disabled Students’ Allowance payment is made under the Students’ Allowances (Scotland)
-                            Regulation 2022.
-                        </li>
-                    </ul>
-                    <div class="ds_field-group">
-                        <div class="ds_checkbox">
-                            <input class="ds_checkbox__input" id="confirm" type="checkbox"/>
-                            <label class="ds_checkbox__label" for="confirm">
-                                I have read and agree with the statements above.
-                            </label>
-                        </div>
+                    <div class="ds_question">
+                        <h1>Bank account for DSA payments confirmed</h1>
+                        <p>Please let us know if you would like us to pay your DSA into the bank account on file, or if
+                            you
+                            would like to provide us with a different bank account so that you can keep your DSA fund
+                            separate.</p>
+                        <p>Remember, we will need to see receipts for any equipment you purchase with this allowance.
+                            Find out how to upload these in our <a href="">knowledge base</a>.</p>
+                        <h2>We will pay your DSA into the following bank account</h2>
+                        <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                            <thead>
+                            <tr>
+                                <th scope="col">Name on bank account</th>
+                                <th scope="col">Sort code</th>
+                                <th scope="col">Account number</th>
+                                <th scope="col">Payment for<p></p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>John Gray</td>
+                                <td>06-02-33</td>
+                                <td>****9891</td>
+                                <td>Main funding, Disabled Students’ Allowance
+                                <td>
+                                <td><a href="chooseBankAdd.html">Change</a>
+                                <td>
+                                <td>
+                                    <a href="removeElement.html?origin=chooseBankConfirmed&element=bank account ****9891">Remove</a>
+                                <td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <br>
                     <div class="ds_button-group">
-                        <a href="#" class="ds_button ds_button--cancel" onclick="history.back()">I do not agree</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button>
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="wheretogo()">Confirm and continue</button>
                         <br/>
                     </div>
-
                 </div>
             </main>
         </div>
     </div>
-
-    <script>
-        function checkBeforeNav() {
-            if (!document.getElementById("confirm").checked) {
-                window.location = "studentDeclarationError.html";
-            } else {
-                window.location = "chooseBank.html";
-            }
-        }
-    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
