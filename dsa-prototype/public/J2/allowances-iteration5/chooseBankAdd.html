@@ -74,13 +74,26 @@
                     </div>
                     <br>
                     <div class="ds_button-group">
-                        <a href="chooseBankConfirmed.html" class="ds_button ds_button--secondary">Add</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button ds_button--secondary" onclick="wheretogo()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="chooseBank.html" class="secondary_form">Cancel</a>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function wheretogo() {
+            let inputs = $(".ds_input");
+            for (let i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    window.location = "chooseBankAddError.html";
+                    return true;
+                }
+            }
+            window.location = "chooseBankConfirmedChange.html";
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">

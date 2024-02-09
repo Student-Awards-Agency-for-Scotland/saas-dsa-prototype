@@ -38,21 +38,16 @@
 
     <div class="ds_page__middle">
         <div class="ds_wrapper">
-            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
-                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
-
-                <ul class="ds_error-summary__list">
-                    <li>
-                        <a href="#name-error">You must enter a name.</a>
-                    </li>
-                    <li>
-                        <a href="#sort-error">You must enter a sort code.</a>
-                    </li>
-                    <li>
-                        <a href="#account-error">You must enter an account number.</a>
-                    </li>
-                </ul>
-                <span>If you no longer want to add a new bank account, <a href="chooseBank.html">cancel</a>.</span>
+            <span></span>
+            <div class="ds_warning-text ds_warning-text-new">
+                <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+                <strong class="visually-hidden">Warning</strong>
+                <div class="ds_warning-text__text">
+                    You have removed your confirmed bank account for DSA payments. Please choose again.
+                </div>
+                <a href="javascript:" class="close_button_fml">
+                    <img src="../../../static/images/icon-cross.svg" alt="close"/>
+                </a>
             </div>
             <nav aria-label="Breadcrumb">
                 <ol class="ds_breadcrumbs">
@@ -69,32 +64,55 @@
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
                     <div class="ds_question">
-                        <h1>Add a new bank account</h1>
-                        <span class="dsa_hint-text">Check your DSA award notice for payments to this account</span>
-                        <div class="ds_field-group">
-                            <div class="ds_question ds_question--error" id="name-error">
-                                <label class="ds_label" for="name">Name on Account</label>
-                                <div class="ds_question__error-message">You must enter a name.</div>
-                                <input class="ds_input ds_input--fixed-20" type="text" value="Jane Gray" id="name"/>
+                        <h1>Choose bank account for DSA payments</h1>
+                        <p>Please let us know if you would like us to pay your DSA into the bank account on file, or if
+                            you would like to provide us with a different bank account.</p>
+                        <h2>Bank account details we already have</h2>
+                        <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                            <thead>
+                            <tr>
+                                <th scope="col">Name on bank account</th>
+                                <th scope="col">Sort code</th>
+                                <th scope="col">Account number</th>
+                                <th scope="col">Payment for<p></p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Jane Gray</td>
+                                <td>06-02-33</td>
+                                <td>****9891</td>
+                                <td>Main funding</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br><br>
+                        <form>
+                            <div class="ds_field-group">
+                                <fieldset>
+                                    <legend><h2>Do you want to use this bank account for your DSA payments</h2></legend>
+                                    <p>You should receive your payments 2 weeks before the start of your course.</p>
+                                    <br>
+                                    <div class="ds_radio">
+                                        <input class="ds_radio__input" id="yes" type="radio" name="radios"/>
+                                        <label class="ds_radio__label" for="yes">Yes, I want to use this bank
+                                            account</label>
+                                    </div>
+                                    <div class="ds_radio">
+                                        <input class="ds_radio__input" id="no" type="radio" name="radios"/>
+                                        <label class="ds_radio__label" for="no">No, I want to add a new bank account for
+                                            DSA
+                                            payments</label>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="ds_question ds_question--error" id="sort-error">
-                                <label class="ds_label" for="sort">Sort code</label>
-                                <span class="small_text_grey">Must be 6 digits long.</span>
-                                <div class="ds_question__error-message">You must enter a sort code.</div>
-                                <input class="ds_input ds_input--fixed-10" type="text" value="06-02-33" id="sort"/>
-                            </div>
-                            <div class="ds_question ds_question--error" id="account-error">
-                                <label class="ds_label" for="account">Account number</label>
-                                <span class="small_text_grey">Must be between 6 and 8 digits long.</span>
-                                <div class="ds_question__error-message">You must enter an account number.</div>
-                                <input class="ds_input ds_input--fixed-20" type="text" value="****7456" id="account"/>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <br>
                     <div class="ds_button-group">
-                        <button class="ds_button ds_button--secondary" onclick="wheretogo()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="chooseBank.html" class="secondary_form">Cancel</a>
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="wheretogo()">Confirm and continue</button>
+                        <br/>
                     </div>
                 </div>
             </main>
@@ -103,14 +121,11 @@
 
     <script>
         function wheretogo() {
-            let inputs = $(".ds_input");
-            for (let i = 0; i < inputs.length; i++) {
-                if (!inputs[i].value) {
-                    window.location = "chooseBankAddError.html";
-                    return true;
-                }
+            if (document.getElementById("no").checked) {
+                window.location = "chooseBankAdd.html";
+            } else {
+                window.location = "chooseBankConfirmed.html";
             }
-            window.location = "chooseBankConfirmedChange.html";
         }
     </script>
 
