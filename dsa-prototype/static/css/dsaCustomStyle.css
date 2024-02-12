@@ -153,6 +153,10 @@ h1 legend{
     border-color: #333
 }
 
+.ds_radio .small_text_grey{
+    padding-left: 16px;
+}
+
 .ds_file-download__thumbnail-image {
     box-shadow: inset 0 0 0 4px rgba(0, 0, 0, .0);
     border: none;
