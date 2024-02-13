@@ -137,7 +137,7 @@
     }
 }
 
-h1 legend{
+h1 legend {
     font-size: inherit;
 }
 
@@ -153,7 +153,7 @@ h1 legend{
     border-color: #333
 }
 
-.ds_radio .small_text_grey{
+.ds_radio .small_text_grey {
     padding-left: 16px;
 }
 
@@ -422,9 +422,9 @@ a > svg, .ds_link > svg {
     height: 25px;
     border-radius: 50%;
     border: 1px solid #000000;
-    text-align: center;
     background-color: #000000;
     color: #F4F3F3;
+    text-align: center;
     line-height: 24px;
     position: absolute;
     top: -0.1em;
@@ -1694,6 +1694,14 @@ a > svg, .ds_link > svg {
     }
 }
 
+.summaryHeading {
+    color: #006DA2;
+}
+
+.ds_table.dsa_allowance_table thead {
+    border: 0 solid #b3b3b3;
+}
+
 /*------------------------------------*\
     #GOV TAGS
 \*------------------------------------*/
@@ -1784,4 +1792,14 @@ a > svg, .ds_link > svg {
 .notListedTextError {
     color: #d32205;
     font-weight: 700;
+}
+
+.ds_notification__close {
+    display: block;
+    right: 6px;
+}
+
+.buttonInline {
+    display: inline;
+
 }
