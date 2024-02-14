@@ -117,17 +117,20 @@
 
     <script>
         function checkBeforeNav(event) {
-            if (!document.getElementById("confirm").checked) {
-                window.location = "studentDeclarationError.html";
-                return true;
+            let target = event.target;
+            let location = "";
+
+            if (target.id === "agree") {
+                if (!document.getElementById("confirm").checked) {
+                    location = "studentDeclarationError.html";
+                } else {
+                    location = "chooseBank.html";
+                }
+            } else {
+                location = "applicationIssue.html";
             }
 
-            let target = event.target;
-            if (target.id === "agreeNOT") {
-                window.location = "applicationIssue.html";
-            } else {
-                window.location = "chooseBank.html";
-            }
+            window.location = location;
         }
     </script>
 
