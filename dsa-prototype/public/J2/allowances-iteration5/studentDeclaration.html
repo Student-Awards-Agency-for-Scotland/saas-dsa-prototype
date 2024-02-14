@@ -91,8 +91,10 @@
                         <br>
                     </div>
                     <div class="ds_button-group">
-                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">I do not agree</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">I agree</button>
+                        <button id="agreeNOT" class="ds_button ds_button--cancel" onclick="checkBeforeNav(event)">I do
+                            not agree
+                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button id="agree" class="ds_button dsa_button" onclick="checkBeforeNav(event)">I agree</button>
                         <br/>
                     </div>
 
@@ -102,9 +104,15 @@
     </div>
 
     <script>
-        function checkBeforeNav() {
+        function checkBeforeNav(event) {
             if (!document.getElementById("confirm").checked) {
                 window.location = "studentDeclarationError.html";
+                return true;
+            }
+
+            let target = event.target;
+            if (target.id === "agreeNOT") {
+                window.location = "applicationIssue.html";
             } else {
                 window.location = "chooseBank.html";
             }
