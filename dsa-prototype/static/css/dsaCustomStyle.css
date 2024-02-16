@@ -22,6 +22,10 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+label, select {
+    cursor: pointer;
+}
+
 .ds_reveal-content::before {
     background-color: #333333;
 }
