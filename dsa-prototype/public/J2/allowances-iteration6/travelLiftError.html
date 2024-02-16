@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>DSA Allowances - Travel</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="javascript:;">You must enter a start location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must enter an end location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must add the number of return journeys per week.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">Cost can only contain numbers and a decimal point.</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">You must select a number of weeks per academic year.</a>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Disabilities and allowances
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Allowances</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+
+                    <form>
+                        <div class="ds_question">
+                            <p class="ds_hint-text" id="ds_hint">Part 2 of 3</p>
+                            <h1>Add lift</h1>
+                            <p>Please provide details of the start and end location and the number of journeys you
+                                are claiming for.</p>
+                            <br>
+                            <div class="ds_field-group">
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="start">Postcode of start location</label>
+                                    <p>A journey from the student's term-time address.</p>
+                                    <p class="ds_question__error-message">You must enter a start location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="start"/>
+                                </div>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="end">Postcode of end location</label>
+                                    <p>A journey from the student's college, university or placement.</p>
+                                    <p class="ds_question__error-message">You must enter an end location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-20 ds_input--error" type="text" id="end"/>
+                                </div>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="return">Return journeys</label>
+                                    <p>The number of return journeys the student will make per week.</p>
+                                    <p class="ds_hint-text">For example from home to university and back is one
+                                        return journey.</p>
+                                    <p class="ds_question__error-message">You must add the number of return journeys
+                                        per week.</p>
+                                    <p class="ds_question__error-message">Cost can only contain numbers and a
+                                        decimal point.</p>
+                                    <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="return"/>
+                                </div>
+                                <div class="ds_field-group ds_question--error">
+                                    <label class="ds_label" for="weeks">Weeks</label>
+                                    <p>The number of weeks return journeys will be made per academic year.</p>
+                                    <p class="ds_question__error-message">You must select a number of weeks per academic
+                                        year.</p>
+                                    <div class="ds_select-wrapper ds_input--fixed-10">
+                                        <select class="ds_select ds_input--fixed-10 ds_input--error" id="weeks">
+                                            <option></option>
+                                        </select>
+                                        <span class="ds_select-arrow" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <div class="ds_button-group">
+                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button onclick="checkBeforeNav()" class="ds_button dsa_button">Save and continue</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function checkBeforeNav() {
+            let inputs = $(".ds_input");
+            let location = "travelFinal.html";
+            let weeks = $("#weeks");
+            for (let index = 0; index < inputs.length; index++) {
+                let input = inputs[index];
+                let inputValue = input.value.trim();
+                if (!inputValue) {
+                    location = "travelLiftError.html";
+                    break;
+                }
+            }
+            if (!weeks.val()) location = "travelLiftError.html";
+            window.location = location;
+        }
+
+        window.addEventListener("load", (event) => {
+            // Dropdown week for 32 weeks
+            let dropdown = document.getElementById("weeks");
+            for (let i = 1; i <= 52; i++) {
+                let option = document.createElement("option");
+                option.value = i;
+                option.text = i;
+                dropdown.add(option);
+            }
+        });
+    </script>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>DSA Allowances - Summary</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Disabilities and allowances
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Allowances</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+
+                    <div class="ds_question">
+                        <div class="ds_question">
+                            <h1>Allowances</h1>
+
+                            <table style="width: 80%" role="presentation">
+                                <tr>
+                                    <td><h2>Consumable items</h2></td>
+                                    <td class="consumable">
+                                        <h2>Total:&nbsp;&nbsp;&nbsp;<strong>&pound;200</strong></h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Consumable items</th>
+                                    <th>
+                                        Allowance<br>
+                                        <p class="ds_hint-text dsa_vat">Per academic year.</p>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Paper</td>
+                                    <td>&pound;100</td>
+                                    <td style="text-align: right;">
+                                        <a href="consumablesListAdd.html">Change</a>
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <a href="removeElement.html?origin=summary&element=Paper">Remove</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ink</td>
+                                    <td>&pound;100</td>
+                                    <td style="text-align: right;">
+                                        <a href="consumablesListAdd.html">Change</a>
+                                    </td>
+                                    <td style="width: 10%;">
+                                        <a href="removeElement.html?origin=summary&element=Ink">Remove</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="consumablesAdd.html">Add another consumable</a>
+                            <br><br>
+                            <hr>
+                            <br>
+                            <table style="width: 80%" role="presentation">
+                                <tr>
+                                    <td>
+                                        <h2>Equipment, software and accessories</h2>
+                                    </td>
+                                    <td class="consumable">
+                                        <h2>Total:&nbsp;&nbsp;&nbsp;<strong>&pound;3,189.60</strong></h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Supplier name</th>
+                                    <th scope="col">Quote reference</th>
+                                    <th>
+                                        Cost<br>
+                                        <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Sight and sound</td>
+                                    <td>GCU45678</td>
+                                    <td>&pound;3,189.60</td>
+                                    <td>
+                                        <a href="equipment.html">View</a>
+                                    </td>
+                                    <td>
+                                        <a href="removeElement.html?origin=summary&element=Sight and sound">Remove</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="javascript:">Add another quote</a>
+                            <br><br>
+                            <hr>
+                            <br>
+                            <table style="width: 80%" role="presentation">
+                                <tr>
+                                    <td>
+                                        <h2>Non medical personal help (NMPH)</h2>
+                                    </td>
+                                    <td>
+                                    <td class="consumable">
+                                        <h2>Total:&nbsp;&nbsp;&nbsp;<strong>&pound;4,389.60</strong></h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Type of support</th>
+                                    <th scope="col">Recommended provider</th>
+                                    <th scope="col">Hourly rate<br>
+                                        <p class="ds_hint-text dsa_vat">Including VAT.</p></th>
+                                    <th>
+                                        Hours<br>
+                                        <p class="ds_hint-text dsa_vat">Per week.</p>
+                                    </th>
+                                    <th>
+                                        Weeks<br>
+                                        <p class="ds_hint-text dsa_vat">Per year.</p>
+                                    </th>
+                                    <th>
+                                        Cost<br>
+                                        <p class="ds_hint-text dsa_vat">Including VAT.</p>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Study support</td>
+                                    <td>Glasgow Caledonian University</td>
+                                    <td>86.58</td>
+                                    <td>6</td>
+                                    <td>20</td>
+                                    <td>&pound;3,189.60</td>
+                                    <td>
+                                        <a href="nmph.html">Change</a>
+                                    </td>
+                                    <td>
+                                        <a href="removeElement.html?origin=summary&element=Study support">Remove</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Note taker</td>
+                                    <td>Glasgow Caledonian University</td>
+                                    <td>15.0</td>
+                                    <td>4</td>
+                                    <td>20</td>
+                                    <td>&pound;1,200.00</td>
+                                    <td>
+                                        <a href="javascript:">Change</a>
+                                    </td>
+                                    <td>
+                                        <a href="removeElement.html?origin=summary&element=Note taker">Remove</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="javascript:">Add another NMPH allowance</a>
+                            <br><br>
+                            <hr>
+                            <br>
+                            <table style="width: 80%" role="presentation" data-smallscreen="scrolling">
+                                <tr>
+                                    <td>
+                                        <h2>Travel expenses</h2>
+                                    </td>
+                                    <td>
+                                        <a href="travel.html">Add</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="ds_button-group">
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="#" class="ds_button dsa_button">Save and
+                            continue</a>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

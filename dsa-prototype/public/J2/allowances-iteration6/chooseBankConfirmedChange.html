@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Student Declaration</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <span></span>
+            <div class="ds_warning-text ds_warning-text-new">
+                <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+                <strong class="visually-hidden">Warning</strong>
+                <div class="ds_warning-text__text">
+                    Your DSA payments have been added.
+                </div>
+                <a href="javascript:" class="close_button_fml">
+                    <img src="../../../static/images/icon-cross.svg" alt="close"/>
+                </a>
+            </div>
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Declarations
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Student</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+                    <div class="ds_question">
+                        <h1>Bank account for DSA payments confirmed</h1>
+                        <p>Please let us know if you would like us to pay your DSA into the bank account on file, or if
+                            you
+                            would like to provide us with a different bank account so that you can keep your DSA fund
+                            separate.</p>
+                        <p>Remember, we will need to see receipts for any equipment you purchase with this allowance.
+                            Find out how to upload these in our <a href="">knowledge base</a>.</p>
+                        <h2>We will pay your DSA into the following bank account</h2>
+                        <table class="ds_table dsa_allowance_table" data-smallscreen="scrolling">
+                            <thead>
+                            <tr>
+                                <th scope="col">Name on bank account</th>
+                                <th scope="col">Sort code</th>
+                                <th scope="col">Account number</th>
+                                <th scope="col">Payment for<p></p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Jane Gray</td>
+                                <td>06-02-33</td>
+                                <td>****9891</td>
+                                <td>Main funding, Disabled Students’ Allowance</td>
+                                <td><a href="chooseBankAdd.html">Change</a></td>
+                                <td>
+                                    <a href="removeElement.html?origin=chooseBankConfirmedRemove&element=bank account ****9891">Remove</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="ds_button-group">
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="applicationSummaryComplete.html" class="ds_button dsa_button">Save and continue</a>
+                        <br/>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

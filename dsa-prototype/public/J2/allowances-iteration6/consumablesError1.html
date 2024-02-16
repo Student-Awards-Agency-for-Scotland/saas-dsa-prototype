@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>DSA Allowances - Consumable Items</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="javascript:">You must describe other consumable items.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Disabilities and allowances
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Allowances</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+
+                    <div class="ds_question">
+                        <span class="small_text_grey">Part 1 of 3</span>
+                        <h1>Jane's consumable items</h1>
+                        <p>General costs related to a student's course and incurred as a
+                            result of their disability.<br>For example, printing, ink and Braille paper.</p>
+                        <span>Claimed yearly. Allowance limit per academic year:</span>
+                        <strong>&pound;1,725</strong>
+                        <h3>Select all that apply</h3>
+                        <div class="ds_field-group">
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="paper" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="paper"><strong>Paper</strong></label>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="ink" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="ink"><strong>Ink cartridges</strong></label>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="printing" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="printing"><strong>Printing</strong></label>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="photocopy" type="checkbox"/>
+                                <label class="ds_checkbox__label"
+                                       for="photocopy"><strong>Photocopying</strong></label>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="other" onclick="myFunction()"
+                                       type="checkbox" checked="checked"/>
+                                <label class="ds_checkbox__label" for="other">Other</label>
+
+                                <div class="ds_reveal-content description-container">
+                                    <div id="description" class="description ds_question--error">
+                                        <label class="ds_label" for="not_listed_description">Description</label>
+                                        <div class="ds_question__error-message">You must describe other consumable items.
+                                        </div>
+                                        <input class="ds_input ds_input--fixed-20 ds_input--error" type="text"
+                                               id="not_listed_description"/>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ds_button-group">
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Save and continue</button>
+                        <br/>
+                        <a href="equipment.html" class="secondary_form">Skip consumable items</a>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Other option
+        function myFunction() {
+            let checkBox = document.getElementById("other");
+            let text = document.getElementById("description");
+            checkBox.checked === true ? text.style.display = "block" : text.style.display = "none";
+        }
+
+        // Nav crap
+        function checkBeforeNav() {
+            let checkboxes = $(".ds_checkbox__input");
+            let other = document.getElementById("other");
+            let description = $("#not_listed_description");
+            let noneSelected = true;
+            let location = "consumablesAdd.html";
+
+            for (let index in checkboxes) {
+                let checked = checkboxes[index].checked;
+                if (checked === true) {
+                    noneSelected = false;
+                    break;
+                }
+            }
+
+            if (noneSelected) {
+                location = "consumablesError2.html";
+            } else {
+                if (other.checked) {
+                    if (!description.val().trim()) {
+                        location = "consumablesError1.html";
+                    }
+                }
+            }
+            window.location = location;
+        }
+    </script>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

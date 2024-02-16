@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>DSA Disabilities</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="javascript:">You must enter a description if the disability is not listed.</a>
+                    </li>
+                </ul>
+            </div>
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Disabilities and allowances
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Disabilities</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+
+                    <div class="ds_question">
+                        <h1>Jane's disabilities</h1>
+                        <p class="ds_hint-text">Please tell us about Jane's disabilities. Select all that apply.</p>
+
+                        <div class="ds_field-group">
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="unseen_learning" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="unseen_learning"><strong>Longstanding illness
+                                    or health condition</strong></label>
+                                <p class="ds_hint-text">An ongoing, often unseen condition such as diabetes, MS,
+                                    arthritis, epilepsy, asthma, back pain or chronic heart disease.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="social_impairment" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="social_impairment"><strong>Social or
+                                    communication impairment</strong></label>
+                                <p class="ds_hint-text">Including and not limited to Asperger’s Syndrome, autistic
+                                    spectrum disorder, ADHD, a speech disorder, or social, emotional or behavioural
+                                    difficulty.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="physical_impairment" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="physical_impairment"><strong>Physical
+                                    impairment or mobility issues</strong></label>
+                                <p class="ds_hint-text">A physical health issue that limits motor skills and
+                                    mobility, such as difficulty using arms, or a wheelchair or crutches user.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="mental_health" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="mental_health"><strong>Mental health
+                                    condition</strong></label>
+                                <p class="ds_hint-text">Including and not limited to depression, bipolar disorder,
+                                    PTSD, schizophrenia or anxiety.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="visual_impairment" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="visual_impairment"><strong>Visual
+                                    impairment</strong></label>
+                                <p class="ds_hint-text">Blind or serious visual impairment.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="hearing_impairment" type="checkbox"/>
+                                <label class="ds_checkbox__label" for="hearing_impairment"><strong>Hearing
+                                    impairment</strong></label>
+                                <p class="ds_hint-text">Deaf or partial hearing.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="specific_learning_disability"
+                                       type="checkbox"/>
+                                <label class="ds_checkbox__label" for="specific_learning_disability"><strong>Learning
+                                    difficulty</strong></label>
+                                <p class="ds_hint-text">A specific learning difficulty such as dyslexia, dyspraxia
+                                    or ADHD.</p>
+                            </div>
+                            <div class="ds_checkbox">
+                                <input class="ds_checkbox__input" id="not_listed" onclick="myFunction()"
+                                       type="checkbox" checked="checked"/>
+                                <label class="ds_checkbox__label" for="not_listed">Disability not listed</label>
+
+                                <div class="ds_reveal-content description-container">
+                                    <div id="description" class="description ds_question--error"
+                                         data-module="ds-character-count"
+                                         data-maxlength="300">
+                                        <label class="ds_label" for="not_listed_description">Description</label>
+                                        <p class="ds_hint-text">Please describe the disability.</p>
+                                        <p class="ds_question__error-message">You must enter a description if the
+                                            disability
+                                            is not listed.</p>
+                                        <p id="tooMany" class="ds_question__error-message" style="display: none;">
+                                            Description must be
+                                            no more than 300 characters.</p>
+                                        <textarea class="ds_input" rows="3" id="not_listed_description"
+                                                  maxlength="300"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ds_button-group">
+                        <a href="javascript:" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="ds_button dsa_button" onclick="checkBeforeNav()">Save and continue</button>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Other option
+        function myFunction() {
+            let checkBox = document.getElementById("not_listed");
+            let text = document.getElementById("description");
+            checkBox.checked === true ? text.style.display = "block" : text.style.display = "none";
+        }
+
+        // Too many chars error
+        let notListedDescription = document.getElementById("not_listed_description");
+        let description = document.getElementById("description");
+        let tooMany = document.getElementById("tooMany");
+        notListedDescription.onkeyup = function () {
+            if (description.getElementsByClassName("ds_input__message--error")[0]) {
+                tooMany.style.display = ""
+                description.classList.add("ds_question--error");
+            } else {
+                tooMany.style.display = "none";
+                if (description.classList.contains("ds_question--error")) {
+                    description.classList.remove("ds_question--error");
+                }
+            }
+        }
+
+        // Navigation
+        function checkBeforeNav() {
+            let checkboxes = $(".ds_checkbox__input");
+            let other = document.getElementById("not_listed");
+            let description = $("#not_listed_description");
+            let noneSelected = true;
+            let location = "disabilitiesFinal.html";
+
+            for (let index in checkboxes) {
+                let checked = checkboxes[index].checked;
+                if (checked === true) {
+                    noneSelected = false;
+                    break;
+                }
+            }
+
+            if (noneSelected) {
+                location = "disabilitiesErrors1.html";
+            } else {
+                if (other.checked) {
+                    if (!description.val().trim()) {
+                        location = "disabilitiesErrors2.html";
+                    }
+                }
+            }
+            window.location = location;
+        }
+    </script>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>

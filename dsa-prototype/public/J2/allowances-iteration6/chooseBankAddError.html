@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Student Declaration</title>
+
+    <link href="../../../scripts/design-system/dist/css/design-system.css" type="text/css" rel="stylesheet">
+    <link href="../../../static/css/dsaCustomStyle.css" type="text/css" rel="stylesheet">
+    <script src="../../../scripts/design-system/dist/scripts/design-system.js"></script>
+    <script src="../../../scripts/purify.min.js"></script>
+    <script src="../../../scripts/dsa.js"></script>
+</head>
+<body>
+<div class="ds_page">
+    <div class="ds_page__top">
+        <header class="ds_site-header ds_site-header--shadow banner" role="banner">
+            <div class="ds_wrapper">
+                <div class="ds_site-header__content">
+                    <div class="ds_site-branding">
+                        <a class="ds_site-branding__logo  ds_site-branding__link" href="https://www.saas.gov.uk"
+                           data-header="header-logo">
+                            <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                 alt="SAAS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ds_phase-banner">
+                <div class="ds_wrapper">
+                    <h3 class="ds_phase-banner__content">Apply for Disabled Students' Allowance</h3>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="ds_page__middle">
+        <div class="ds_wrapper">
+            <div class="ds_error-summary" id="error-summary" aria-labelledby="error-summary-title" role="alert">
+                <h2 class="ds_error-summary__title" id="error-summary-title">There is a problem</h2>
+
+                <ul class="ds_error-summary__list">
+                    <li>
+                        <a href="#name-error">You must enter a name.</a>
+                    </li>
+                    <li>
+                        <a href="#sort-error">You must enter a sort code.</a>
+                    </li>
+                    <li>
+                        <a href="#account-error">You must enter an account number.</a>
+                    </li>
+                </ul>
+                <span>If you no longer want to add a new bank account, <a href="chooseBank.html">cancel</a>.</span>
+            </div>
+            <nav aria-label="Breadcrumb">
+                <ol class="ds_breadcrumbs">
+                    <li class="ds_breadcrumbs__item">
+                        <a class="ds_breadcrumbs__link" href="">
+                            Declarations
+                        </a>
+                    </li>
+                    <li class="ds_breadcrumbs__item" aria-current="page">
+                        <strong>Student</strong>
+                    </li>
+                </ol>
+            </nav>
+            <main class="ds_layout  ds_layout--article">
+                <div class="ds_layout__content">
+                    <div class="ds_question">
+                        <h1>Add a new bank account</h1>
+                        <span class="dsa_hint-text">Check your DSA award notice for payments to this account</span>
+                        <div class="ds_field-group">
+                            <div class="ds_question ds_question--error" id="name-error">
+                                <label class="ds_label" for="name">Name on Account</label>
+                                <div class="ds_question__error-message">You must enter a name.</div>
+                                <input class="ds_input ds_input--fixed-20" type="text" value="" id="name"/>
+                            </div>
+                            <div class="ds_question ds_question--error" id="sort-error">
+                                <label class="ds_label" for="sort">Sort code</label>
+                                <span class="small_text_grey">Must be 6 digits long.</span>
+                                <div class="ds_question__error-message">You must enter a sort code.</div>
+                                <input class="ds_input ds_input--fixed-10" type="text" value="" id="sort"/>
+                            </div>
+                            <div class="ds_question ds_question--error" id="account-error">
+                                <label class="ds_label" for="account">Account number</label>
+                                <span class="small_text_grey">Must be between 6 and 8 digits long.</span>
+                                <div class="ds_question__error-message">You must enter an account number.</div>
+                                <input class="ds_input ds_input--fixed-20" type="text" value="" id="account"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ds_button-group">
+                        <button class="ds_button ds_button--secondary" onclick="wheretogo()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="chooseBank.html" class="secondary_form">Cancel</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        function wheretogo() {
+            let inputs = $(".ds_input");
+            for (let i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    window.location = "chooseBankAddError.html";
+                    return true;
+                }
+            }
+            window.location = "chooseBankConfirmedChange.html";
+        }
+    </script>
+
+    <div class="ds_page__bottom">
+        <footer class="ds_site-footer">
+            <div class="ds_wrapper">
+                <div class="ds_site-footer__content">
+                    <ul class="ds_site-footer__site-items">
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/" class="ds_site-branding__logo  ds_site-branding__link"
+                               data-header="header-logo">
+                                <img class="ds_site-branding__logo-image" src="../../../static/images/SAAS_logo.svg"
+                                     alt="SAAS">
+                            </a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection" id="privacy">Privacy</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/data-protection/cookies" id="cookies">Cookies</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/tools/accessibility" id="accessibility">Accessibility</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/contact-us" id="contact_us">Contact Us</a>
+                        </li>
+                        <li class="ds_site-items__item">
+                            <a href="https://www.saas.gov.uk/feedback" id="feedback">Feedback</a>
+                        </li>
+                    </ul>
+                    <div class="ds_site-footer__org">
+                        <img class="ds_site-footer__org-logo"
+                             src="../../../static/images/scottish-government--min-white.svg"
+                             alt="gov.scot">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+</body>
+</html>
