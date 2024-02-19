@@ -56,59 +56,64 @@
                     <form>
                         <div class="ds_question">
                             <div class="ds_question">
-                                <fieldset aria-describedby="ds_hint">
-                                    <p class="ds_hint-text" id="ds_hint">Part 1 of 5</p>
-                                    <h1>Jane’s equipment, software and accessories</h1>
-                                    <p>Equipment, software and accessories required to undertake the course. This
-                                        can include computing equipment, ergonomics, assistive software and other
-                                        technical
-                                        aids.</p>
-                                    <p>Claimed for the duration of the course. Allowance limit per course:
-                                        <strong>&pound;5,160</strong></p>
-                                    <br>
-                                    <div class="ds_question">
-                                        <h3>Choose an option</h3>
-                                        <div class="ds_field-group">
-                                            <div class="ds_radio">
-                                                <input type="radio" name="converter" class="ds_radio__input"
-                                                       id="package"/>
-                                                <label class="ds_radio__label"
-                                                       for="package"><strong>I have a packaged quote ofr several
-                                                    items.</strong></label>
-                                                <p class="small_text_grey">One or more suppliers has provided a
-                                                    quote. This could include consumable items, equipment,
-                                                    software accessories and ergonomic items priced as a
-                                                    package. We will ask for details and the total cost. You can
-                                                    add more than one quote.</p>
-                                            </div>
-                                            <div class="ds_radio">
-                                                <input type="radio" name="converter" class="ds_radio__input"
-                                                       id="itemised"/>
-                                                <label class="ds_radio__label" for="itemised"><strong>I do not
-                                                    have a packaged quote from a supplier, I want to add items
-                                                    individually.</strong></label>
-                                                <p class="small_text_grey">Instead of adding several items under one
-                                                    packaged quote from
-                                                    a supplier, you will need to add each individual item and
-                                                    the price separately. We will calculate on overall cost.</p>
-                                            </div>
+                                <p class="ds_hint-text">Part 1 of 2</p>
+                                <h1>Jane’s equipment, software and accessories</h1>
+                                <p>Equipment, software and accessories required by the student to undertake the
+                                    course. This can include computing equipment, ergonomics, assistive software and
+                                    other technical aids.</p>
+                                <p>Claimed for the duration of the course. Allowance limit per course:
+                                    <strong>&pound;5,160</strong></p>
+                                <br>
+                                <div class="ds_warning-text ds_warning-text-new ds_important-text">
+                                    <strong class="ds_warning-text__icon" aria-hidden="true"></strong>
+                                    <strong>Important</strong>
+                                    <div class="ds_warning-text__text">
+                                        If you have received a detailed quote from a supplier, please enter the
+                                        product name and description as shown. We will need this information to
+                                        check the receipts against any purchases made.
+                                    </div>
+                                </div>
+                                <div class="ds_question">
+                                    <div class="ds_field-group">
+                                        <label class="ds_label" for="productName">Product Name</label>
+                                        <span class="small_text_grey">Laptop make and model, name of software name, delivery, warranty or insurance.</span>
+                                        <input class="ds_input ds_input--fixed-20" type="text" id="productName"/>
+                                    </div>
+                                    <div class="ds_field-group">
+                                        <label class="ds_label" for="description">Description (optional)</label>
+                                        <span class="small_text_grey">If you have a quote showing a description please enter it here.</span>
+                                        <textarea class="ds_input ds_input--fixed-20" rows="3" id="description"
+                                                  maxlength="300"></textarea>
+                                    </div>
+                                    <div class="ds_field-group">
+                                        <label class="ds_label" for="cost">Cost</label>
+                                        <span class="small_text_grey">Including VAT.</span>
+                                        <div class="ds_currency-wrapper" data-symbol="£">
+                                            <input class="ds_input ds_input--fixed-10" type="text" value=""
+                                                   id="cost"/>
                                         </div>
                                     </div>
-                                </fieldset>
+                                </div>
                             </div>
                         </div>
                     </form>
 
                     <div class="ds_button-group">
-                        <a href="javascript:;" class="ds_button ds_button--cancel" onclick="history.back()">Back</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="equipmentError.html" class="ds_button dsa_button">Save and continue</a><br/>
-                        <a href="javascript:;" class="secondary_form">Skip equipment,software and accessories</a>
+                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:" class="secondary_form" onclick="history.back()">Cancel</a><br/>
+                        <a href="nmph.html" class="secondary_form">Skip equipment,software and accessories</a>
                     </div>
 
                 </div>
             </main>
         </div>
     </div>
+
+    <script>
+        function checkBeforeNav(){
+            window.location = "equipmentList.html";
+        }
+    </script>
 
     <div class="ds_page__bottom">
         <footer class="ds_site-footer">
