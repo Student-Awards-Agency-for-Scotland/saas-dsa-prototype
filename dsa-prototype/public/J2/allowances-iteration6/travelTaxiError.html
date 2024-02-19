@@ -142,8 +142,7 @@
                                     <div class="ds_button-group">
                                         <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">
                                             Add
-                                        </button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:" class="secondary_form">Cancel</a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +167,7 @@
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             }
-            if(window.location.search.search(/previous/i) > -1)
+            if (window.location.search.search(/previous/i) > -1)
                 location = "travelTaxiAdded.html#providers";
 
             window.location = location;
