@@ -1163,6 +1163,14 @@ a > svg, .ds_link > svg {
     }
 }
 
+.bottom_pagination {
+    display: flex;
+}
+
+.bottom_pagination .ds_pagination {
+    margin-left: auto;
+}
+
 /*------------------------------------*\
     #EMAIL
 \*------------------------------------*/
