@@ -30,7 +30,7 @@ label, select {
     background-color: #333333;
 }
 
-.consumable h2 {
+.consumable h2, h2.consumable {
     font-weight: normal;
 }
 
