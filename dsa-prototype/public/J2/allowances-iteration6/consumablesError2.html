@@ -63,7 +63,7 @@
             <main class="ds_layout  ds_layout--article">
                 <div class="ds_layout__content">
 
-                    <div class="ds_question ds_question--error">
+                    <div class="ds_question">
                         <span class="small_text_grey">Part 1 of 3</span>
                         <h1>Jane's consumable items</h1>
                         <p>General costs related to a student's course and incurred as a
@@ -71,7 +71,8 @@
                         <span>Claimed yearly. Allowance limit per academic year:</span>
                         <strong>&pound;1,725</strong>
                         <h3>Select all that apply</h3>
-                        <div class="ds_field-group">
+                        <div class="ds_field-group ds_question--error">
+                            <div class="ds_question__error-message">You must select a consumable item.</div>
                             <div class="ds_checkbox">
                                 <input class="ds_checkbox__input" id="paper" type="checkbox"/>
                                 <label class="ds_checkbox__label" for="paper"><strong>Paper</strong></label>
