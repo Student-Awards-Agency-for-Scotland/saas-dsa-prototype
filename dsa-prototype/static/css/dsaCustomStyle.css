@@ -209,6 +209,7 @@ a > svg, .ds_link > svg {
     font-weight: inherit;
     line-height: inherit;
     margin: 0;
+    text-decoration: none;
     min-height: 0;
     min-width: 0;
     padding: 0
