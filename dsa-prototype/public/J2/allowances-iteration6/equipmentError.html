@@ -129,6 +129,14 @@
 
     <script>
         function checkBeforeNav() {
+            let cost = document.getElementById("cost");
+            let productName = document.getElementById("productName");
+            let valid = /^\d{0,4}(\.\d{0,2})?$/.test(cost.value);
+
+            if(cost.value.trim() === "" || productName.value.trim() === "" || !valid){
+                window.location = "equipmentError.html"
+                return true;
+            }
             window.location = "equipmentList.html";
         }
     </script>
