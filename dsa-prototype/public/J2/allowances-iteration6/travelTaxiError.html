@@ -43,7 +43,19 @@
 
                 <ul class="ds_error-summary__list">
                     <li>
-                        <a href="javascript:;">You must add 2 quotes from local taxi providers.</a>
+                        <a href="#provider">You must add 2 quotes from local taxi providers.</a>
+                    </li>
+                    <li>
+                        <a href="#start">You must enter a start location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="#end">You must enter an end location postcode.</a>
+                    </li>
+                    <li>
+                        <a href="#return">You must add the number of return journeys per week.</a>
+                    </li>
+                    <li>
+                        <a href="#weeks">You must select a number of weeks per academic year.</a>
                     </li>
                 </ul>
             </div>
@@ -70,28 +82,36 @@
                                 are claiming for.</p>
                             <br>
                             <div class="ds_field-group">
-                                <div class="ds_field-group">
+                                <div class="ds_field-group ds_question--error">
                                     <label class="ds_label" for="start">Postcode of start location</label>
                                     <p>A journey from the student's term-time address.</p>
-                                    <input class="ds_input ds_input--fixed-30" type="text" id="start"/>
+                                    <p class="ds_question__error-message">You must enter a start location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-30 ds_input--error" type="text" id="start"/>
                                 </div>
-                                <div class="ds_field-group">
+                                <div class="ds_field-group ds_question--error">
                                     <label class="ds_label" for="end">Postcode of end location</label>
                                     <p>A journey from the student's college, university or placement.</p>
-                                    <input class="ds_input ds_input--fixed-30" type="text" id="end"/>
+                                    <p class="ds_question__error-message">You must enter an end location
+                                        postcode.</p>
+                                    <input class="ds_input ds_input--fixed-30 ds_input--error" type="text" id="end"/>
                                 </div>
-                                <div class="ds_field-group">
+                                <div class="ds_field-group ds_question--error">
                                     <label class="ds_label" for="return">Return journeys</label>
                                     <p>The number of return journeys the student will make per week.</p>
                                     <p class="ds_hint-text">For example from home to university and back is one
                                         return journey.</p>
-                                    <input class="ds_input ds_input--fixed-10" type="text" id="return"/>
+                                    <p class="ds_question__error-message">You must add the number of return journeys
+                                        per week.</p>
+                                    <input class="ds_input ds_input--fixed-10 ds_input--error" type="text" id="return"/>
                                 </div>
-                                <div class="ds_field-group">
+                                <div class="ds_field-group ds_question--error">
                                     <label class="ds_label" for="weeks">Weeks</label>
                                     <p>The number of weeks return journeys will be made per academic year.</p>
+                                    <p class="ds_question__error-message">You must select a number of weeks per academic
+                                        year.</p>
                                     <div class="ds_select-wrapper ds_input--fixed-10">
-                                        <select class="ds_select ds_input--fixed-10" id="weeks">
+                                        <select class="ds_select ds_input--fixed-10 ds_input--error" id="weeks">
                                             <option></option>
                                         </select>
                                         <span class="ds_select-arrow" aria-hidden="true"></span>
