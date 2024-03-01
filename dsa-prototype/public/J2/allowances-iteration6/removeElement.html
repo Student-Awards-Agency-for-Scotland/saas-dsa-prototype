@@ -85,6 +85,13 @@
     <script>
         function redirect() {
             let origin = new URL(location.href).searchParams.get('origin');
+            let originYes = new URL(location.href).searchParams.get('originYes');
+            let yes = document.getElementById("yes");
+
+            if (originYes && yes.checked) {
+                window.location.href = originYes + ".html";
+                return true;
+            }
             if (origin) {
                 window.location.href = origin + ".html";
             }

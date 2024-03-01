@@ -182,13 +182,13 @@
     <script>
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
-            let location = "travelTaxiOneAdded.html#providers";
+            let location = "travelTaxiOneAdded.html";
 
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             }
             if (window.location.search.search(/previous/i) > -1)
-                location = "travelTaxiAdded.html#providers";
+                location = "travelTaxiAdded.html";
 
             window.location = location;
         }
