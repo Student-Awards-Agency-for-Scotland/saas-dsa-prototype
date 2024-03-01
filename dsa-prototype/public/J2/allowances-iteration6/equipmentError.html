@@ -114,13 +114,13 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
+                        <div class="ds_button-group">
+                            <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="javascript:" class="secondary_form" onclick="history.back()">Cancel</a><br/>
+                            <a href="nmph.html" class="secondary_form">Skip equipment,software and accessories</a>
+                        </div>
                     </form>
-                    <br>
-                    <div class="ds_button-group">
-                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav()">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="javascript:" class="secondary_form" onclick="history.back()">Cancel</a><br/>
-                        <a href="nmph.html" class="secondary_form">Skip equipment,software and accessories</a>
-                    </div>
 
                 </div>
             </main>
@@ -132,12 +132,13 @@
             let cost = document.getElementById("cost");
             let productName = document.getElementById("productName");
             let valid = /^\d{0,4}(\.\d{0,2})?$/.test(cost.value);
+            let location = "equipmentList.html";
 
-            if(cost.value.trim() === "" || productName.value.trim() === "" || !valid){
-                window.location = "equipmentError.html"
-                return true;
+            if (cost.value.trim() === "" || productName.value.trim() === "" || !valid) {
+                location = "equipmentError.html";
             }
-            window.location = "equipmentList.html";
+
+            window.location = location;
         }
     </script>
 
