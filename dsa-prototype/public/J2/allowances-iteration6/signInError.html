@@ -51,6 +51,9 @@
                     <li>
                         <a href="#password">Incorrect password.</a>
                     </li>
+                    <li>
+                        <a href="#Your account is locked for 15 minutes.">Incorrect password.</a>
+                    </li>
                 </ul>
             </div>
             <main class="ds_layout  ds_layout--article">
@@ -62,14 +65,21 @@
                             <div class="ds_field-group">
                                 <label class="ds_label" for="email">Work email address</label>
                                 <div class="ds_question__error-message">Enter a valid work email address.</div>
-                                <input class="ds_input ds_question__error-message searchInputs ds_input--fixed-20" type="text" id="email"/>
+                                <input class="ds_input ds_question__error-message searchInputs ds_input--fixed-20"
+                                       type="text" id="email"/>
                             </div>
                             <br>
                             <div class="ds_field-group">
                                 <label class="ds_label" for="password">Password</label>
-                                <div class="ds_question__error-message">Your password must be 14 characters or more.</div>
+                                <div class="ds_question__error-message">Your password must be 14 characters or more.
+                                </div>
                                 <div class="ds_question__error-message">Incorrect password.</div>
-                                <input class="ds_input ds_question__error-message searchInputs ds_input--fixed-20 searchInputs" type="password" id="password"/>
+                                <div class="ds_hint-text ds_input--fixed-40">You have entered incorrect sign in details too many times. Please wait 15 minutes
+                                    to try again, or reset your password using the <a href="forgottenPassword.html">forgotten
+                                        password link</a>.
+                                </div>
+                                <input class="ds_input ds_question__error-message searchInputs ds_input--fixed-20 searchInputs"
+                                       type="password" id="password"/>
                             </div>
                             <br>
                             <a href="javascript:">Forgotten your password?</a>
