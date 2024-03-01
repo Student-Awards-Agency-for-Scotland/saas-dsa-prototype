@@ -73,7 +73,7 @@
                                            data-minimum-value="10" data-maximum-value="500" id="ink"/>
                                 </div>
                             </div>
-                            <div class="ds_question">
+                            <div id="other-question" class="ds_question">
                                 <label class="ds_label" for="other">Other</label>
                                 <span class="small_text_grey">Other description</span>
                                 <div class="ds_currency-wrapper" data-symbol="£">
@@ -126,6 +126,7 @@
         // Hide one of the elements
         if (window.location.search.search(/hide/i) > -1) {
             document.getElementById("ink-question").style.display = "none";
+            document.getElementById("other-question").style.display = "none";
         }
     </script>
 
