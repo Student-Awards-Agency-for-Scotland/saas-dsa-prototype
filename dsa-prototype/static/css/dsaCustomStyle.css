@@ -229,6 +229,15 @@ a > svg, .ds_link > svg {
     outline-color: red;
 }
 
+.show_more {
+    display: flex;
+    align-items: center;
+}
+
+.show_more span {
+    padding-left: 1em;
+}
+
 /*------------------------------------*\
     #DESCRIPTION REVEAL
 \*------------------------------------*/
