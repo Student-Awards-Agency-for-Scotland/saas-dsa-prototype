@@ -1172,6 +1172,10 @@ a > svg, .ds_link > svg {
     margin-left: auto;
 }
 
+.bottom_pagination .ds_pagination .ds_button {
+    margin-top: 0;
+}
+
 /*------------------------------------*\
     #EMAIL
 \*------------------------------------*/
