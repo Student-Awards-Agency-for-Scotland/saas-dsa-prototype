@@ -246,6 +246,14 @@ a > svg, .ds_link > svg {
     transform: none;
 }
 
+.ds_details[open] .show_more span {
+    display: none;
+}
+
+.ds_details[open] .show_more::after {
+    content: "Show less";
+}
+
 /*------------------------------------*\
     #DESCRIPTION REVEAL
 \*------------------------------------*/
