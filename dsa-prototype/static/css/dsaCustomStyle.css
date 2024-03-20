@@ -1201,6 +1201,19 @@ a > svg, .ds_link > svg {
     margin-top: 0;
 }
 
+
+.bottom_pagination .crap_button {
+    color: #006DA2;
+    background: transparent;
+    border: 0 none;
+}
+
+@media (max-width: 768px) {
+    .ds_pagination_equipment {
+        display: block;
+    }
+}
+
 /*------------------------------------*\
     #EMAIL
 \*------------------------------------*/
