@@ -104,6 +104,10 @@ label, select {
     top: 15px
 }
 
+.ds_site-provider{
+    padding-right: 40px;
+}
+
 .ds_select:focus + .ds_select-arrow {
     background-color: #CFE1E5;
 }
