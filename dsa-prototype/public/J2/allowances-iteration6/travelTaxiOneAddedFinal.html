@@ -99,42 +99,32 @@
                                     </div>
                                 </div>
                                 <br>
-                                <div class="ds_field-group">
-                                    <div class="ds_field-group">
-                                        <label class="ds_label" for="provider">Recommended provider</label>
-                                        <p class="ds_hint-text">The taxi company being used for travel.</p>
-                                        <input class="ds_input ds_input--fixed-20" type="text" id="provider"/>
-                                    </div>
-                                    <fieldset>
-                                        <legend class="ds_label">Is this a university or college approved contract
-                                            provider?
-                                        </legend>
-                                        <ul class="contract-ul">
-                                            <li class="ds_radio ds_site-items__item">
-                                                <input class="ds_radio__input" id="yes" type="radio" name="contract"/>
-                                                <label class="ds_radio__label" for="yes">Yes</label>
-                                            </li>
-                                            <li class="ds_radio ds_site-items__item">
-                                                <input class="ds_radio__input" id="no" type="radio" checked="checked"
-                                                       name="contract"/>
-                                                <label class="ds_radio__label" for="no">No</label>
-                                            </li>
-                                        </ul>
-                                    </fieldset>
-                                    <div class="ds_field-group">
-                                        <label class="ds_label" for="cost">Cost of a return journey</label>
-                                        <span class="small_text_grey">Including VAT.</span>
-                                        <div class="ds_currency-wrapper" data-symbol="£">
-                                            <input class="ds_input ds_input--fixed-10" type="text" value=""
-                                                   id="cost"/>
-                                        </div>
-                                    </div>
-                                    <div class="ds_button-group">
-                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">
-                                            Add
-                                        </button>
-                                    </div>
-                                </div>
+                                <span>You have added <strong id="providers">1</strong> recommended provider.</span>
+                                <table class="ds_table dsa_allowance_table" style="width:70%">
+                                    <thead>
+                                    <tr>
+                                        <th>
+                                            <strong>Recommended provider</strong>
+                                        </th>
+                                        <th>
+                                            <strong>Contract</strong>
+                                        </th>
+                                        <th>
+                                            <strong>Cost of return journey</strong>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>City Cabs</td>
+                                        <td>No</td>
+                                        <td>&pound;30</td>
+                                        <td>
+                                            <a href="removeElement.html?origin=travelTaxiOneAdded&element=City Cabs&originYes=travelTaxi">Remove</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </form>
@@ -165,18 +155,15 @@
         }
 
         function checkErrors() {
-            let start = document.getElementById("start");
-            let end = document.getElementById("end");
-            let rtn = document.getElementById("return");
-            let weeks = document.getElementById("weeks");
             let provider = document.getElementById("provider");
             let cost = document.getElementById("cost");
 
-            return !start.value || !end.value || !rtn.value || !weeks.value || !provider.value || !cost.value;
+            return !provider.value || !cost.value;
         }
 
-        // Dropdown week for 32 weeks
+
         window.addEventListener("load", (event) => {
+            // Dropdown week for 32 weeks
             let dropdown = document.getElementById("weeks");
             for (let i = 1; i <= 52; i++) {
                 let option = document.createElement("option");
@@ -228,4 +215,4 @@
 </div>
 
 </body>
-</html>L
+</html>

@@ -183,12 +183,13 @@
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
             let location = "travelTaxiOneAdded.html";
+            let yes = document.getElementById("yes");
 
             if (checkErrors()) {
                 location = "travelTaxiError.html";
+            } else if (yes.checked) {
+                location = "travelTaxiOneAddedFinal.html";
             }
-            if (window.location.search.search(/previous/i) > -1)
-                location = "travelTaxiAdded.html";
 
             window.location = location;
         }
@@ -198,7 +199,10 @@
             let end = document.getElementById("end");
             let rtn = document.getElementById("return");
             let weeks = document.getElementById("weeks");
-            return !start.value || !end.value || !rtn.value || !weeks.value;
+            let provider = document.getElementById("provider");
+            let cost = document.getElementById("cost");
+
+            return !start.value || !end.value || !rtn.value || !weeks.value || !provider.value || !cost.value;
         }
 
 

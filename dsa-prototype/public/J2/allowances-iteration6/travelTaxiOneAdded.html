@@ -179,21 +179,24 @@
     <script>
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
-            let location = "travelTaxiAdded.html#providers";
+
+            let location = "travelTaxiOneAdded.html";
+            let yes = document.getElementById("yes");
 
             if (checkErrors()) {
-                location = "travelTaxiError.html?previous=one";
+                location = "travelTaxiError.html";
+            } else if (yes.checked) {
+                location = "travelTaxiOneAddedFinal.html";
             }
 
             window.location = location;
         }
 
         function checkErrors() {
-            let start = document.getElementById("start");
-            let end = document.getElementById("end");
-            let rtn = document.getElementById("return");
-            let weeks = document.getElementById("weeks");
-            return !start.value || !end.value || !rtn.value || !weeks.value;
+            let provider = document.getElementById("provider");
+            let cost = document.getElementById("cost");
+
+            return !provider.value || !cost.value;
         }
 
 
