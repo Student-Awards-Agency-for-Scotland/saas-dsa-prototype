@@ -100,40 +100,81 @@
                                 </div>
                                 <br>
                                 <div class="ds_field-group">
-                                    <div class="ds_field-group">
-                                        <label class="ds_label" for="provider">Recommended provider</label>
-                                        <p class="ds_hint-text">The taxi company being used for travel.</p>
-                                        <input class="ds_input ds_input--fixed-20" type="text" id="provider"/>
-                                    </div>
                                     <fieldset>
                                         <legend class="ds_label">Is this a university or college approved contract
                                             provider?
                                         </legend>
-                                        <ul class="contract-ul">
-                                            <li class="ds_radio ds_site-items__item">
-                                                <input class="ds_radio__input" id="yes" type="radio" name="contract"/>
-                                                <label class="ds_radio__label" for="yes">Yes</label>
-                                            </li>
-                                            <li class="ds_radio ds_site-items__item">
-                                                <input class="ds_radio__input" id="no" type="radio" checked="checked"
+                                        <div class="ds_radio">
+                                            <div>
+                                                <input class="ds_radio__input" id="yes" type="radio"
                                                        name="contract"/>
-                                                <label class="ds_radio__label" for="no">No</label>
-                                            </li>
-                                        </ul>
-                                    </fieldset>
-                                    <div class="ds_field-group">
-                                        <label class="ds_label" for="cost">Cost of a return journey</label>
-                                        <span class="small_text_grey">Including VAT.</span>
-                                        <div class="ds_currency-wrapper" data-symbol="£">
-                                            <input class="ds_input ds_input--fixed-10" type="text" value=""
-                                                   id="cost"/>
+                                                <label class="ds_radio__label" for="yes">Yes</label>
+                                                <div class="ds_reveal-content ds_field-group">
+                                                    <label class="ds_label" for="provider">Recommended
+                                                        provider</label>
+                                                    <p class="ds_hint-text">The taxi company being used for
+                                                        travel.</p>
+                                                    <input class="ds_input ds_input--fixed-20" type="text"
+                                                           id="provider"/>
+                                                    <div class="ds_field-group">
+                                                        <label class="ds_label" for="cost">Cost of a return
+                                                            journey</label>
+                                                        <p class="ds_hint-text">Including VAT.</p>
+                                                        <div class="ds_currency-wrapper" data-symbol="£">
+                                                            <input class="ds_input ds_input--fixed-10" type="text"
+                                                                   value=""
+                                                                   id="cost"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="ds_button-group">
-                                        <button class="ds_button ds_button--secondary" onclick="checkBeforeNav(event)">
-                                            Add
-                                        </button>
-                                    </div>
+                                        <div class="ds_radio">
+                                            <input class="ds_radio__input" id="no" type="radio"
+                                                   name="contract"/>
+                                            <label class="ds_radio__label" for="no">No</label>
+                                            <div class="ds_reveal-content ds_field-group">
+                                                <ul class="contract-ul">
+                                                    <li class="ds_site-items__item ds_site-provider">
+                                                        <label class="ds_label" for="provider1">Recommended
+                                                            provider 1</label>
+                                                        <p class="ds_hint-text">The taxi company being used for
+                                                            travel.</p>
+                                                        <input class="ds_input ds_input--fixed-20" type="text"
+                                                               id="provider1"/>
+                                                        <div class="ds_field-group">
+                                                            <label class="ds_label" for="cost1">Cost of a return
+                                                                journey</label>
+                                                            <p class="ds_hint-text">Including VAT.</p>
+                                                            <div class="ds_currency-wrapper" data-symbol="£">
+                                                                <input class="ds_input ds_input--fixed-10" type="text"
+                                                                       value=""
+                                                                       id="cost1"/>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="ds_site-items__item">
+                                                        <label class="ds_label" for="provider2">Recommended
+                                                            provider 2</label>
+                                                        <p class="ds_hint-text">The taxi company being used for
+                                                            travel.</p>
+                                                        <input class="ds_input ds_input--fixed-20" type="text"
+                                                               id="provider2"/>
+                                                        <div class="ds_field-group">
+                                                            <label class="ds_label" for="cost2">Cost of a return
+                                                                journey</label>
+                                                            <p class="ds_hint-text">Including VAT.</p>
+                                                            <div class="ds_currency-wrapper" data-symbol="£">
+                                                                <input class="ds_input ds_input--fixed-10" type="text"
+                                                                       value=""
+                                                                       id="cost2"/>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </fieldset>
                                 </div>
                             </div>
                         </div>
@@ -223,4 +264,4 @@
 </div>
 
 </body>
-</html>L
+</html>
