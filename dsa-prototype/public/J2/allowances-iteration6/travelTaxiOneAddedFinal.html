@@ -120,7 +120,7 @@
                                     <tbody>
                                     <tr>
                                         <td>City Cabs</td>
-                                        <td>No</td>
+                                        <td>Yes</td>
                                         <td>&pound;30</td>
                                         <td>
                                             <a href="removeElement.html?origin=travelTaxiOneAdded&element=City Cabs&originYes=travelTaxi">Remove</a>
@@ -145,13 +145,10 @@
     <script>
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
-            let location = "travelTaxiOneAdded.html#providers";
-            let yes = document.getElementById("yes");
+            let location = "travelLift.html";
 
             if (checkErrors()) {
                 location = "travelTaxiError.html";
-            } else if (yes.checked) {
-                location = "travelTaxiOneAddedFinal.html#providers";
             }
 
             window.location = location;
