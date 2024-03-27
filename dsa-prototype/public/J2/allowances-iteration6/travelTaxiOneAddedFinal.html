@@ -64,19 +64,22 @@
                                 <div class="ds_field-group">
                                     <label class="ds_label" for="start">Postcode of start location</label>
                                     <p>A journey from the student's term-time address.</p>
-                                    <input class="ds_input ds_input--fixed-30" type="text" id="start"/>
+                                    <input class="ds_input ds_input--fixed-30" type="text" id="start"
+                                           value="Start Location"/>
                                 </div>
                                 <div class="ds_field-group">
                                     <label class="ds_label" for="end">Postcode of end location</label>
                                     <p>A journey from the student's college, university or placement.</p>
-                                    <input class="ds_input ds_input--fixed-30" type="text" id="end"/>
+                                    <input class="ds_input ds_input--fixed-30" type="text" id="end"
+                                           value="End Location"/>
                                 </div>
                                 <div class="ds_field-group">
                                     <label class="ds_label" for="return">Return journeys</label>
                                     <p>The number of return journeys the student will make per week.</p>
                                     <p class="ds_hint-text">For example from home to university and back is one
                                         return journey.</p>
-                                    <input class="ds_input ds_input--fixed-10" type="text" id="return"/>
+                                    <input class="ds_input ds_input--fixed-10" type="text" id="return"
+                                           value="Return Journey"/>
                                 </div>
                                 <div class="ds_field-group">
                                     <label class="ds_label" for="weeks">Weeks</label>
@@ -142,13 +145,13 @@
     <script>
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
-            let location = "travelTaxiOneAdded.html";
+            let location = "travelTaxiOneAdded.html#providers";
             let yes = document.getElementById("yes");
 
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             } else if (yes.checked) {
-                location = "travelTaxiOneAddedFinal.html";
+                location = "travelTaxiOneAddedFinal.html#providers";
             }
 
             window.location = location;
@@ -170,6 +173,7 @@
                 option.value = i;
                 option.text = i;
                 dropdown.add(option);
+                if (i === 1) option.selected = true;
             }
         });
     </script>

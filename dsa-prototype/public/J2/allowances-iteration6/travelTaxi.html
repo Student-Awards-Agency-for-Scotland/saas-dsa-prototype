@@ -152,13 +152,13 @@
     <script>
         function checkBeforeNav(event) {
             if (event) event.preventDefault();
-            let location = "travelTaxiOneAdded.html";
+            let location = "travelTaxiOneAdded.html#providers";
             let yes = document.getElementById("yes");
 
             if (checkErrors()) {
                 location = "travelTaxiError.html";
             } else if (yes.checked) {
-                location = "travelTaxiOneAddedFinal.html";
+                location = "travelTaxiOneAddedFinal.html#providers";
             }
 
             window.location = location;
