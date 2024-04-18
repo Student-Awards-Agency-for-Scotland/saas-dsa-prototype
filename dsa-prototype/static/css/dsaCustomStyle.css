@@ -126,6 +126,9 @@ label, select {
     width: 100%
 }
 
+.no_border_left{
+    border-left:0 none!important;
+}
 
 .ds_input:focus {
     outline: 2px solid #CFE1E5;
