@@ -1218,6 +1218,10 @@ a > svg, .ds_link > svg {
     .ds_pagination_equipment {
         display: block;
     }
+
+    .ds_pagination_equipment nav {
+        padding-top: 25px;
+    }
 }
 
 /*------------------------------------*\
