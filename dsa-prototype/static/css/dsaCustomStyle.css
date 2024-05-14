@@ -104,7 +104,7 @@ label, select {
     top: 15px
 }
 
-.ds_site-provider{
+.ds_site-provider {
     padding-right: 40px;
 }
 
@@ -126,8 +126,8 @@ label, select {
     width: 100%
 }
 
-.no_border_left{
-    border-left:0 none!important;
+.no_border_left {
+    border-left: 0 none !important;
 }
 
 .ds_input:focus {
@@ -1867,4 +1867,16 @@ a > svg, .ds_link > svg {
 .buttonInline {
     display: inline;
 
+}
+
+.ds_site-header__shoulder {
+    color: white;
+}
+
+.ds_header-items__item {
+
+    color: white;
+    display: inline-block;
+    margin-bottom: 16px;
+    vertical-align: top;
 }
