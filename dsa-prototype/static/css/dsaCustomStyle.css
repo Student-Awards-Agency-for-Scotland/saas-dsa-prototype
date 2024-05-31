@@ -38,6 +38,28 @@ label, select {
     border: 0 none;
 }
 
+#student-close-button {
+    width: 100px;
+}
+
+#student-close-button:hover:not(:focus) {
+    outline: none;
+}
+
+#student-close-button:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#student-close-button::before {
+    content: 'Close';
+    left: -5px;
+    position: absolute;
+    top: 9px;
+    text-decoration: underline;
+    color: #006DA2;
+}
+
 .small_text {
     color: white;
     font-size: xx-small;
@@ -1873,10 +1895,16 @@ a > svg, .ds_link > svg {
     color: white;
 }
 
-.ds_header-items__item {
+.ds_site-new-header .ds_site-items__item:not(:last-child) {
+    margin-right: 35px;
+}
 
-    color: white;
-    display: inline-block;
-    margin-bottom: 16px;
-    vertical-align: top;
+.ds_site-new-header .ds_site-items__item a {
+    color: #F8F8F8;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.ds_site-header__content nav {
+    padding-top: 22px;
 }
