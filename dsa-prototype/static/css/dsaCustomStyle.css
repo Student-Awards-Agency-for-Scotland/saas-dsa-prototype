@@ -1908,3 +1908,13 @@ a > svg, .ds_link > svg {
 .ds_site-header__content nav {
     padding-top: 22px;
 }
+
+#cookie-notice {
+    background: #002D54;
+    color: #ffffff;
+    border: 0 none;
+}
+
+.cookie-buttons .ds_button--secondary {
+    color: #FFFFFF;
+}
