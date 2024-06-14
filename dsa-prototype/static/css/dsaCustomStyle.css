@@ -1918,3 +1918,7 @@ a > svg, .ds_link > svg {
 .cookie-buttons .ds_button--secondary {
     color: #FFFFFF;
 }
+
+.ds_tabs__content .h2-container {
+    padding: 0 1em;
+}
