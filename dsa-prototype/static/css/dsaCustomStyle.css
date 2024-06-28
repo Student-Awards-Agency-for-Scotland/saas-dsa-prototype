@@ -39,25 +39,34 @@ label, select {
 }
 
 #student-close-button {
-    width: 100px;
+    width: fit-content;
 }
 
 #student-close-button:hover:not(:focus) {
     outline: none;
 }
 
-#student-close-button:focus {
-    background-color: transparent;
-    box-shadow: none;
+#student-close-button svg {
+    display: none;
 }
 
-#student-close-button::before {
-    content: 'Close';
-    left: -5px;
-    position: absolute;
-    top: 9px;
-    text-decoration: underline;
-    color: #006DA2;
+@media (max-width: 600px) {
+    #student-close-button {
+        width: 20px;
+    }
+
+    #student-close-button:focus {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #student-close-button svg {
+        display: block;
+    }
+
+    #student-close-button span {
+        display: none;
+    }
 }
 
 .small_text {
